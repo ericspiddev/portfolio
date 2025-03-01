@@ -92,10 +92,37 @@
 }
 
 /*********************** Portfolio Section ***********************/
+#portfolio-section {
+}
+.portfolio-tab-header{
+    display: flex;
+    gap: 20px;
+}
+
 .portfolio-tab {
-    background-color: black;
+    background-color: #030712;
     color: white;
-    font-size: 15px;
+    font-family: "Fira Code", serif;
+    font-size: 24px;
+    text-decoration: underline;
+    padding: 0.25em;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+}
+
+.portfolio-tab:hover {
+    cursor: pointer;
+}
+
+.portfolio-tab-content {
+    height: 60vh;
+    background-color: #030712;
+    overflow: scroll;
+}
+
+.filler {
+    height: 10vh;
+    background-color: #0B192C;
 }
 
 /*********************** Contact Section ***********************/
