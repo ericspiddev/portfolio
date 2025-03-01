@@ -94,9 +94,20 @@
 /*********************** Portfolio Section ***********************/
 #portfolio-section {
 }
+#active-tab {
+    background-color: #FF6500;
+}
+
 .portfolio-tab-header{
     display: flex;
-    gap: 20px;
+    gap: 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.portfolio-tab:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .portfolio-tab {
@@ -104,14 +115,8 @@
     color: white;
     font-family: "Fira Code", serif;
     font-size: 24px;
-    text-decoration: underline;
-    padding: 0.25em;
-    padding-right: 0.5em;
-    padding-left: 0.5em;
-}
+    padding: 0.5em;
 
-.portfolio-tab:hover {
-    cursor: pointer;
 }
 
 .portfolio-tab-content {

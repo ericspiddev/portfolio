@@ -20,8 +20,16 @@ export function PortPortfolio() {
             </div> 
             <div class="portfolio-tabs section-text-common">
                 <div class="portfolio-tab-header">
-                <button class="portfolio-tab" onClick = {() => setTab(portfolioTabTypes.WEB)}> Web </button> 
-                <button class="portfolio-tab" onClick = {() => setTab(portfolioTabTypes.EMBEDDED)}> Embedded </button> 
+                    <button class="portfolio-tab"
+                            id={tab == portfolioTabTypes.WEB ? 'active-tab': ''} 
+                            onClick = {() => setTab(portfolioTabTypes.WEB)}>
+                    Web
+                    </button>
+                    <button class="portfolio-tab"
+                            id={tab == portfolioTabTypes.EMBEDDED ? 'active-tab': ''}
+                            onClick = {() => setTab(portfolioTabTypes.EMBEDDED)}>
+                    Embedded
+                    </button>
                 </div>
                 <PortfolioTabContent tab={tab} />
             </div>
