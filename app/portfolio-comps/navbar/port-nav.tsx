@@ -13,7 +13,9 @@ export function PortNavBar()
             <li class="portfolio-nav-item"><a href="#contact-section"> <FontAwesomeIcon icon={faEnvelope}/> Contact</a></li>
             <li></li>
             <div id="portfolio-nav-banner">
+                <a href="#big-dl-resume">
                 <p>Eric Spidle</p>
+                </a>
             </div>
         </ul> 
     </nav>
