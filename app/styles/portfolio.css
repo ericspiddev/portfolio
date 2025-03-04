@@ -28,7 +28,7 @@
 
 #big-dl-resume {
     background-color: #FF6500;
-    border-radius: 0.2em;
+    border-radius: 0.4em;
     font-size: 17px;
     padding: 1em;
     font-family: "Fira Code", serif;
@@ -66,6 +66,13 @@
     margin-top: 1px;
     height: 50vh;
     width:100%; 
+}
+
+.download-container {
+    display: flex;
+    margin-top: 5vh;
+    justify-content: center;
+    align-items: center;
 }
 
 /*********************** Nav Bar ***********************/
