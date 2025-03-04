@@ -197,6 +197,33 @@
 }
 /*********************** Blog Section ***********************/
 
+.blogentry {
+    font-family: "Fira Code", serif;
+    display: flex;
+    background-color: #030712;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    background-color: 
+}
+
+.blog-preview-image {
+    height: 15%;
+    width: 50%;
+    border: 5px solid black;
+}
+
+.blog-title {    
+    font-size: 1.1em;
+    font-weight: 700; 
+}
+
+.blog-desc {
+    font-size: 0.8em;
+}
+
 /*********************** Contributions ***********************/
 
 /*********************** General/Misc ***********************/
