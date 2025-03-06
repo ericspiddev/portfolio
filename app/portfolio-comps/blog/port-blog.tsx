@@ -16,12 +16,28 @@ const blogs: BlogObject[] = [
         previewImage: "public/images/blog/riscv-blog.png",
         desc: "Article about getting an seL4 VM running on the RISC-V architechture" 
     },
+    {   link: "#",
+        title: "Coming soon",
+        previewImage: "public/images/blog/placeholder.jpg", 
+        desc: "A new article on an interesting topic is on it's way"  
+    },
     {
         link: "#",
         title: "Coming soon",
         previewImage: "public/images/blog/placeholder.jpg",
         desc: "A new article on an interesting topic is on it's way" 
-        
+    },
+    {
+        link: "#",
+        title: "Coming soon",
+        previewImage: "public/images/blog/placeholder.jpg",
+        desc: "A new article on an interesting topic is on it's way" 
+    },
+    {
+        link: "#",
+        title: "Coming soon",
+        previewImage: "public/images/blog/placeholder.jpg",
+        desc: "A new article on an interesting topic is on it's way" 
     },
     {
         link: "#",
