@@ -12,7 +12,6 @@ export default function PortTabContent({tab})
 }
 
 function tabToStr(tab: portfolioTabTypes) {
-    console.log(tab);
     switch (tab)  {
         case portfolioTabTypes.EMBEDDED: {
             return "Embedded"
