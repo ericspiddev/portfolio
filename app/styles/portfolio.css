@@ -110,6 +110,12 @@
     font-family: "Josefin Sans", serif;
     font-size: 1.3rem;
     top-margin: 100px;
+    transition: all 0.3s ease;
+}
+
+.portfolio-nav-item:hover {
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 /*********************** Portfolio Section ***********************/
@@ -287,4 +293,14 @@ body {
     margin-left: 1vw; 
     margin-right: 1vw;
 
+}
+
+.name-primary {
+    color: #ffd700;
+}
+.name-secondary {
+    color: #FF6500;
+}
+.name-teritary {
+    color: #FF746C;
 }
