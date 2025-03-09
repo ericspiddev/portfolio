@@ -42,9 +42,9 @@ export default function Home() {
             <PortNavBar/>
             <PortAbout nameClass={currClass}/>
             <PortPortfolio/>
-            <PortResume/>
-            <PortContributions/>
+            <PortContact/>
             <PortBlog/>
+            <PortContributions/>
         </>
     );
 }
