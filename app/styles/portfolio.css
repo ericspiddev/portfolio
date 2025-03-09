@@ -271,11 +271,60 @@
 
 
 /*********************** Contributions ***********************/
+#contributions-section {
+    font-family: "Josefin Sans", serif;
+}
+
+#contributions {
+    display: flex;
+    flex-direction: column;
+    background-color: #030712;
+}
+
+.feature {
+    margin-bottom: 2vh;
+    padding-top: 2vh;
+}
+
+.commit {
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-family: "Fira Code", monospace;
+}
+
+.feature-title {
+    font-size: 32px;
+    display: flex;
+    margin-left: 2vw;
+    display-direction: column;
+    gap: 20px;
+    padding: 1vh;
+}
+
+.info-icon {
+    position: relative;
+    margin-top: 2px;
+    vertical-center: sub;
+}
+
+.info-icon:hover:after {
+    font-size: 12px;
+    position: absolute;
+    display: inline-block;
+    content: attr(feature-about);
+    left: 35px;
+    top: 0px;
+    width: 15vw;
+    padding: 5px;
+    background-color: black;
+    color: white;
+}
+
 
 /*********************** General/Misc ***********************/
-body {
-    height: 1000vh;
-}
+
 
 .portfolio-header {
     font-size: 3rem;
