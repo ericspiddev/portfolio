@@ -1,7 +1,7 @@
 import { PortNavBar } from "../portfolio-comps/navbar/port-nav";
 import { PortAbout } from "../portfolio-comps/about/port-about";
 import { PortPortfolio } from "../portfolio-comps/portfolio/port-portfolio";
-import { PortResume } from "../portfolio-comps/contact/port-resume";
+import { PortContact } from "../portfolio-comps/contact/port-contact";
 import { PortContributions } from "../portfolio-comps/contributions/port-contributions";
 import { PortBlog } from "../portfolio-comps/blog/port-blog";
 import { useEffect, useState } from "react";
