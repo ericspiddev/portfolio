@@ -13,30 +13,28 @@ export function PortPortfolio() {
     return (
         <>
             <div id="porfolio-section">
-            <div class="section-common">
-                <div class="section-text-common">
-                <PortfolioHeader header="Portfolio"/>
-                <p> Projects will go here </p> 
-            </div> 
-            <div class="portfolio-tabs section-text-common">
-                <div class="portfolio-tab-header">
-                    <button class="portfolio-tab"
-                            id={tab == portfolioTabTypes.WEB ? 'active-tab': ''} 
-                            onClick = {() => setTab(portfolioTabTypes.WEB)}>
-                    Web
-                    </button>
-                    <button class="portfolio-tab"
-                            id={tab == portfolioTabTypes.EMBEDDED ? 'active-tab': ''}
-                            onClick = {() => setTab(portfolioTabTypes.EMBEDDED)}>
-                    Embedded
-                    </button>
+                <div class="section-common">
+                    <div class="section-text-common">
+                    <PortfolioHeader header="Portfolio"/>
+                    <p> Projects will go here </p> 
+                    </div> 
+                    <div class="portfolio-tabs section-text-common">
+                        <div class="portfolio-tab-header">
+                        <button class="portfolio-tab"
+                                id={tab == portfolioTabTypes.WEB ? 'active-tab': ''} 
+                                onClick = {() => setTab(portfolioTabTypes.WEB)}>
+                        Web
+                        </button>
+                        <button class="portfolio-tab"
+                                id={tab == portfolioTabTypes.EMBEDDED ? 'active-tab': ''}
+                                onClick = {() => setTab(portfolioTabTypes.EMBEDDED)}>
+                        Embedded
+                        </button>
+                    </div>
+                    <PortfolioTabContent tab={tab} />
                 </div>
-                <PortfolioTabContent tab={tab} />
             </div>
-            </div>
-            <div class="filler">
-
-            </div>
+                <div class="filler"></div>
             </div>
         </>
     );
