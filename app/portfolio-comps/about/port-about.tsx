@@ -13,8 +13,8 @@ export function PortAbout({nameClass}) {
                 <div class="download-container">
                     <a href="files/Eric_Spidle_Resume.pdf" download><button id="big-dl-resume">Download Resume </button> </a>
                 </div>
-                
             </div> 
+             <div class="filler"></div>
         </div>
     </>);
 }

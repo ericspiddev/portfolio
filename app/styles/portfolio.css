@@ -29,8 +29,10 @@
 #big-dl-resume {
     background-color: #FF6500;
     border-radius: 0.4em;
-    font-size: 17px;
-    padding: 1em;
+    height: 5vh;
+    width: 10vw;
+    font-size: 16px ;
+    padding: 1vh;
     font-family: "Fira Code", serif;
 }
 
