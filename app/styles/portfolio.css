@@ -209,7 +209,7 @@
     background-color: #0B192C;
     border: 1px solid #ff6500;
     border-radius: 1rem;
-    padding: 5px;
+    padding: 10px;
 }
 
 .contact-form textarea {
@@ -245,7 +245,7 @@
     width: 24vw;
     height: auto;
     margin: 5%;
-    border: 5px solid black;
+    border: 2px solid  #FF6500;
 }
 
 .blog-preview-image {
@@ -287,9 +287,10 @@
     background-color: #030712;
 }
 
-.feature {
-    margin-bottom: 2vh;
-    padding-top: 2vh;
+.feature { 
+    padding: 2vh;
+    border-bottom: 0.2em solid white; 
+
 }
 
 .commit {
@@ -303,6 +304,9 @@
 .feature-title {
     font-size: 32px;
     display: flex;
+    color: #FF6500;
+    text-decoration: underline;
+    text-decoration-color: white; 
     margin-left: 2vw;
     display-direction: column;
     gap: 20px;
