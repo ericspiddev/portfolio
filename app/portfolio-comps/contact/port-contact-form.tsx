@@ -23,7 +23,7 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
                 <textarea id="contact-message" placeholder="Please put your message here" required>  </textarea>
             </div>
          </div>
-          <button type="submit" id="send-message"> Send Message </button>
+          <div class="form-footer">
 
             <div class="contact-buttons">
                 <PortFavButton redirectLink={linkedInAccount} favIcon={faLinkedin} />
@@ -31,6 +31,9 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
                 <p>Resume: </p>
                 <PortFavButton redirectLink={resumePath} favIcon={faFile} downloadable={true}/>
             </div>
+
+          <button type="submit" id="send-message"> Send Message </button>
+        </div>
 
          </form>
         </>

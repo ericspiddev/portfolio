@@ -18,21 +18,20 @@
 
 #eric-spidle {
     border-color: #1E3E62;
-    border-radius: 200px;
+    border-radius: 8rem;
     position: relative;
     z-index: 1;
-    height: 70%;
-    max-height: 330px;
-    max-width: 330px;
+    min-height: 15rem;
+    max-width: 15rem;
 }
 
 #big-dl-resume {
     background-color: #FF6500;
     border-radius: 0.4em;
-    height: 5vh;
-    width: 10vw;
-    font-size: 16px ;
-    padding: 1vh;
+    min-height: 3em;
+    width: 12em;
+    font-size: 0.9rem;
+    margin-top: 2rem;
     font-family: "Fira Code", serif;
 }
 
@@ -44,11 +43,9 @@
 .about-text {
     font-family: "Josefin Sans", serif;
     font-weight: 600;
-    font-size: 2.8vh;
-    font-style: normal;
-    margin-left: 2vw; 
-    margin-right: 2vw;
-    height: 40vh;
+    font-size:  1.2rem;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .about-intro {
@@ -67,8 +64,8 @@
     justify-content: space-evenly;
     align-items: center;
     margin-top: 1px;
-    height: 50vh;
-    width:100%; 
+    min-height: 50vh;
+    max-width:100%; 
 }
 
 .download-container {
@@ -82,7 +79,7 @@
 /*********************** Nav Bar ***********************/
 #portfolio-nav-container {
     background-color: #FF6500;
-    height: 6vh;
+    min-height: 6vh;
     width: 100%;
     postion: relative;
 }
@@ -91,7 +88,7 @@
     display: flex;
     position: relative;
     justify-content: flex-end;
-    gap: 50px;
+    gap: 2rem; 
     align-items: center;
     width: 100%;
     height: 100%;
@@ -99,9 +96,9 @@
 
 #portfolio-nav-banner {
     position: absolute;
-    left: 20px;
+    left: 0.8rem;
     z-index: 2;
-    font-size: 24px;
+    font-size: 1rem;
     font-family: "Fira Code", serif;
     font-style: italic;
     text-decoration: underline;
@@ -110,8 +107,7 @@
 
 .portfolio-nav-item {
     font-family: "Josefin Sans", serif;
-    font-size: 1.3rem;
-    top-margin: 100px;
+    font-size: 1rem;
     transition: all 0.3s ease;
 }
 
@@ -166,27 +162,22 @@
 /*********************** Contact Section ***********************/
 #send-message {
     background-color: #FF6500;
-    font-size: 20px;
+    font-size: 1rem;
     padding: 0.65em;
-    margin-top: 1rem;
-    margin-bottom: 3rem;
-    position: absolute;
+    margin-top: 1em;
+    max-height: min(50%, 1em);
+    margin-bottom: 3em;
     border-radius: 1em;
-    left: 62%;
-    bottom: 0;
-    z-index: 2;
 }
 
 #send-message:hover {
     background-color: #1E3E62;
 }
 .contact-buttons {
-    position: absolute;
-    left: 35%;
-    bottom: 5%;
     display: flex;
     flex-direction: row;
-    gap: 20px;
+    gap: 0.9rem;
+    margin: auto;
 }
 
 .contact-form-container {
@@ -201,20 +192,30 @@
 }
 
 .contact-form {
-    width: 30vw;
-    margin-top: 5vh;
-    margin-bottom: 15vh;
+    min-width: clamp(10em, 50%, 30em);
+    height: auto;
+    min-height: clamp(10em, 60%, 35em);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 .contact-form input, .contact-form textarea  {
     background-color: #0B192C;
     border: 1px solid #ff6500;
     border-radius: 1rem;
-    padding: 10px;
+    padding: 0.5em;
+    margin-bottom: 0.5rem;
 }
 
-.contact-form textarea {
-    height: 20vh;
+.contact-form textarea { 
+    min-height: clamp();
 }
+
+
+.form-footer {
+    display: flex;
+    gap: 1.5em;
+}
+
 
 .form-input-field {
     display: flex; 
@@ -225,10 +226,12 @@
     background-color: #030712;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    
     grid-template-rows: 1fr 1fr;
     /*grid-column-gap: 20px; */
     place-content: center;
     padding: 1em;
+    min-height: 10em;
 
 }
 
@@ -242,9 +245,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 24vw;
-    height: auto;
-    margin: 5%;
+    width: 20rem;
+    margin: 1rem;
     border: 2px solid  #FF6500;
 }
 
@@ -253,10 +255,10 @@
     width: 100%;  
 }
 .blog-preview-image img {
-    width: 415px;
-    height: 300px;
+    width: 20em;
+    height: 12em;
     object-fit: cover;
-    border-bottom: 5px solid black;
+    border-bottom: 0.25em solid black;
 }
 
 .blog-title {    
@@ -335,7 +337,6 @@
 
 /*********************** General/Misc ***********************/
 
-
 .portfolio-header {
     font-size: 3rem;
     font-family: "Josefin Sans", serif;
@@ -343,27 +344,157 @@
     text-decoration-color: #FF6500;
     font-weight: 600;
     font-style: bold;
-    margin-top: 20px;
+    margin-top: 0.8rem;
 }
 
 .section-common {
     background-color: #0B192C;
-    font-size: 24px;
-    font-style: normal;
-    
+    font-size: 1.25rem;
+    font-style: normal; 
 }
-.section-text-common {
-    margin-left: 1vw; 
-    margin-right: 1vw;
 
+.section-text-common {
+    margin-left: 0.8rem;
+    margin-right: 0.8rem;
+}
+
+html {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 20px;
+    }
+
+    .form-footer {
+        flex-direction: column-reverse;
+        gap: 0em;
+    }
+
+    /*#portfolio-nav {*/
+    /*    gap: 1rem; */
+    /*}*/
+    /*.about-info {*/
+    /*    font-size: 0.9rem;*/
+    /*}*/
+    /*.photo-container {*/
+    /*    position: relative;*/
+    /*    display: flex;*/
+    /*    flex-direction: column;*/
+    /*    justify-content: space-evenly;*/
+    /*    align-items: center;*/
+    /*    margin-top: 1px;*/
+    /*    height: 50vh;*/
+    /*    width:100%; */
+    /*}*/
+    /*.section-text-common {*/
+    /*    margin-left: 1.5rem; */
+    /*    margin-right: 1.5rem;*/
+    /*}*/
+    /*.about-text {*/
+    /*    font-size: 1rem;*/
+    /*}*/
+    /**/
+    /*.contact-form textarea {*/
+    /*    height: 20vh;*/
+    /*}*/
+    /**/
+    /*.form-input-field {*/
+    /*    display: flex; */
+    /*    flex-direction: column;*/
+    /*}*/
+    /*.contact-buttons {*/
+    /*    left: 10rem;*/
+    /*    bottom: 1rem;*/
+    /*}*/
+    /*#send-message {*/
+    /*    font-size: 1.05rem;*/
+    /*    left: 15em;*/
+    /*    bottom: 3.5em; */
+    /*}*/
+    /**/
+    /*.filler {*/
+    /*    height: 5rem;*/
+    /*}*/
+    /*.secondary-filler {*/
+    /*    height: 3rem;*/
+    /*}*/
+    /**/
+    #blogs-container {
+         grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        max-height: 20em;
+        overflow: auto;
+    }
+    /*.blogentry {*/
+    /*    border: none;*/
+    /*}*/
+    /**/
+    /*.blog-title {    */
+    /*    font-size: 1.5rem;*/
+    /*    margin-top:  0.2rem;*/
+    /*    height: auto;*/
+    /*}*/
+    /**/
+    /*.blog-desc {*/
+    /*    font-size: 1rem;*/
+    /*    padding: 0.5em;*/
+    /*    margin: 0.5em;*/
+    /*}*/
+
+}
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+
+    #blogs-container {
+        display: block;
+        max-height: 25em;
+        margin: auto;
+    }
+    .blogentry {
+        min-width: 1em;
+        margin: auto;
+        height: auto;
+    }
+    .blog-title {
+        font-size: 1.5rem;
+        height: auto;
+    }
+    .blog-desc {
+        font-size: 1rem;
+    }
+    .photo-container {
+        flex-direction: column-reverse;
+        gap: 0px;
+
+    }
+    /*.about-text {*/
+    /*    font-size: 1.25rem;*/
+    /*    padding: 0.5em;*/
+    /*}*/
+    /*#big-dl-resume {*/
+    /*    font-size: 1.25rem;*/
+    /*}*/
+    /*.contact-form {*/
+    /*    width: 15rem;*/
+    /*    margin-top: 2em;*/
+    /*    margin-bottom: 10rem;*/
+    /*    border: none;*/
+    /*}*/
 }
 
 .name-primary {
-    color: #ffd700;
+    color: #FF6500;
+    background-color: #0B192C;
 }
 .name-secondary {
-    color: #FF6500;
+    color: #0B192C;
+    background-color: #030712;
 }
 .name-teritary {
-    color: #FF746C;
+    color: #030712;
+    background-color: #FF6500;
 }
