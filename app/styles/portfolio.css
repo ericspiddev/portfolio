@@ -169,7 +169,7 @@
     padding: 0.65em;
     margin-top: 1em;
     max-height: min(50%, 1em);
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
     border-radius: 1em;
 }
 
@@ -190,16 +190,15 @@
     flex-direction: column;
     align-items: center; 
     justify-content: center;
-    position: relative;
-
 }
 
 .contact-form {
-    max-width: min(80%, 30rem);
+    max-width: 50rem;
+    width: max(15em, 35%);
     height: auto;
     min-height: clamp(10em, 60%, 35em);
     margin-top: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: min(3rem, 5%);
 }
 .contact-form input, .contact-form textarea  {
     background-color: #0B192C;
@@ -213,9 +212,10 @@
     min-height: 10rem;
 }
 
-
 .form-footer {
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 1.5em;
     margin-bottom: 1.5em;
 }
@@ -464,7 +464,8 @@ html {
     }
 
     .hamburger-menu li {
-        margin-bottom: 0.5em;
+        border-bottom: 0.05em solid white;
+        margin-bottom: 0.75em;
     }
     #blogs-container {
         max-height: 25em;
