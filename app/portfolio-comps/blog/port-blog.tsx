@@ -1,5 +1,6 @@
 import PortfolioHeader from "../misc/portfolio-header";
 import PortBlogEntry from "./port-blog-entry";
+import {PortCarousel} from "../mobile/carousel/port-carousel";
 
 export interface BlogObject
 {
@@ -68,8 +69,10 @@ export function PortBlog() {
                             <PortBlogEntry blog={blog}/>))
                         }
                     </div>
+                    <div id="blogs-carousel">
+                       <PortCarousel items={blogs} maxIndex={blogs.length}/> 
+                    </div>
                     <div class="filler">
-                        <p> MORE &gt;  </p>
                     </div>
                 </div>
             </div>
