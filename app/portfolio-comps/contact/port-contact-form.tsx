@@ -44,24 +44,17 @@ const handleFormChange = (event) => {
     });
 };
 
-
-
-
-
-
-
-
     return(
         <>
-         <form class="contact-form-container" onSubmit={handleSubmit}  action="http://localhost:5050/api/send-mail" method="post">
+         <form class="contact-form-container" onSubmit={handleSubmit}>
          <div class="contact-form">
             <div class="form-input-field">
                 <label for="contact-name">Name:</label>
-                <input type="text" id="contact-name" name="fullName" value={contactData.fullName} onChange={handleFormChange}required/>
+                <input type="text" id="contact-name" name="fullName" value={contactData.fullName} onChange={handleFormChange} placeHolder="Your name"required/>
             </div>
             <div class="form-input-field">
                 <label for="contact-email">Email: </label>
-                <input type="email" id="contact-email" name="userEmail" value={contactData.userEmail} onChange={handleFormChange}required/>
+                <input type="email" id="contact-email" name="userEmail" value={contactData.userEmail} onChange={handleFormChange} placeHolder="Your email"required/>
             </div>
             <div class="form-input-field">
                 <label for="contact-message">Message:</label>
