@@ -499,66 +499,11 @@ html {
         min-height: 10em;
     }
 
-    /*#portfolio-nav {*/
-    /*    gap: 1rem; */
-    /*}*/
-    /*.about-info {*/
-    /*    font-size: 0.9rem;*/
-    /*}*/
-    /*.photo-container {*/
-    /*    position: relative;*/
-    /*    display: flex;*/
-    /*    flex-direction: column;*/
-    /*    justify-content: space-evenly;*/
-    /*    align-items: center;*/
-    /*    margin-top: 1px;*/
-    /*    height: 50vh;*/
-    /*    width:100%; */
-    /*}*/
     .section-text-common {
         margin-left: 1.5rem; 
         margin-right: 1.5rem;
     }
-    /*.about-text {*/
-    /*    font-size: 1rem;*/
-    /*}*/
-    /**/
-    /*.contact-form textarea {*/
-    /*    height: 20vh;*/
-    /*}*/
-    /**/
-    /*.form-input-field {*/
-    /*    display: flex; */
-    /*    flex-direction: column;*/
-    /*}*/
-    /*.contact-buttons {*/
-    /*    left: 10rem;*/
-    /*    bottom: 1rem;*/
-    /*}*/
-    /*#send-message {*/
-    /*    font-size: 1.05rem;*/
-    /*    left: 15em;*/
-    /*    bottom: 3.5em; */
-    /*}*/
-    /**/
-    /*.filler {*/ f
-    /*    height: 5rem;*/
-    /*}*/
-    /*.secondary-filler {*/
-    /*    height: 3rem;*/
-    /*}*/
-    /**/
-
-    
-    #portfolio-nav-container {
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-        flex-direction: row-reverse;
-    }
-      #portfolio-nav-banner {
-        position: static;
-    } 
+     
     .hamburger-toggle { 
         display: block;
         position: static;
@@ -599,22 +544,6 @@ html {
     .tech-selector {
         font-size: 0.8rem;
     }
-    /*.blogentry {*/
-    /*    border: none;*/
-    /*}*/
-    /**/
-    /*.blog-title {    */
-    /*    font-size: 1.5rem;*/
-    /*    margin-top:  0.2rem;*/
-    /*    height: auto;*/
-    /*}*/
-    /**/
-    /*.blog-desc {*/
-    /*    font-size: 1rem;*/
-    /*    padding: 0.5em;*/
-    /*    margin: 0.5em;*/
-    /*}*/
-
 }
 @media screen and (max-width: 500px) {
     html {
