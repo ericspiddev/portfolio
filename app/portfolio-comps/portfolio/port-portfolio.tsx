@@ -1,5 +1,6 @@
-import PortfolioHeader from "../misc/portfolio-header"
-import PortfolioTabContent from "./port-tab-content"
+import PortfolioHeader from "../misc/portfolio-header";
+import PortfolioTabContent from "./port-tab-content";
+import {PortTech} from "./port-tech";
 import { useState } from "react";
 
 export enum portfolioTabTypes {
@@ -34,7 +35,8 @@ export function PortPortfolio() {
                     <PortfolioTabContent tab={tab} />
                 </div>
             </div>
-                <div class="filler"></div>
+            <PortTech/>
+            <div class="filler"></div>
             </div>
         </>
     );
