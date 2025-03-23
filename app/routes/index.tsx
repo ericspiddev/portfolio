@@ -25,13 +25,10 @@ export default function Home() {
             }
             else if(count == 1){
                 setCurrClass('name-secondary');
-                setCount(2);
-            }
-            else {
-                setCurrClass('name-teritary');
                 setCount(0);
             }
-        }, 500);
+            
+        }, 10000);
 
         return () => clearInterval(interval);
     }, [count, currClass]);

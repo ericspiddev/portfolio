@@ -458,6 +458,17 @@ html {
     font-size: 24px;
 }
 
+.name-primary  {
+    color: #FF6500;
+    background-color: #0B192C;
+    transition: all 5s ease;
+}
+.name-secondary  {
+    color: #030712;
+    background-color: #FF6500;
+    transition: all 5s ease;
+}
+
 @media screen and (max-width: 1000px) {
     html {
         font-size: 20px;
@@ -628,32 +639,5 @@ html {
     .photo-container {
         flex-direction: column-reverse;
         gap: 0px;
-
-    } 
-    /*.about-text {*/
-    /*    font-size: 1.25rem;*/
-    /*    padding: 0.5em;*/
-    /*}*/
-    /*#big-dl-resume {*/
-    /*    font-size: 1.25rem;*/
-    /*}*/
-    /*.contact-form {*/
-    /*    width: 15rem;*/
-    /*    margin-top: 2em;*/
-    /*    margin-bottom: 10rem;*/
-    /*    border: none;*/
-    /*}*/
+    }  
 }
-/**/
-/*.name-primary {*/
-/*    color: #FF6500;*/
-/*    background-color: #0B192C;*/
-/*}*/
-/*.name-secondary {*/
-/*    color: #0B192C;*/
-/*    background-color: #030712;*/
-/*}*/
-/*.name-teritary {*/
-/*    color: #030712;*/
-/*    background-color: #FF6500;*/
-/*}*/
