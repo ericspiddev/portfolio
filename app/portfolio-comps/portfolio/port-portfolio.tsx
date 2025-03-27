@@ -4,13 +4,14 @@ import {PortTech} from "./port-tech";
 import { useState } from "react";
 
 export enum portfolioTabTypes {
-    WEB = 1,
-    EMBEDDED = 2,
+    PERSONAL,
+    PROFESSIONAL,
+    EDUCATIONAL,
 }
 
 export function PortPortfolio() { 
     
-    const [tab, setTab] = useState(portfolioTabTypes.WEB);
+    const [tab, setTab] = useState(portfolioTabTypes.PERSONAL);
     return (
         <>
             <div id="porfolio-section">
@@ -22,14 +23,19 @@ export function PortPortfolio() {
                     <div class="portfolio-tabs section-text-common">
                         <div class="portfolio-tab-header">
                         <button class="portfolio-tab"
-                                id={tab == portfolioTabTypes.WEB ? 'active-tab': ''} 
-                                onClick = {() => setTab(portfolioTabTypes.WEB)}>
-                        Web
+                                id={tab == portfolioTabTypes.PERSONAL ? 'active-tab': ''} 
+                                onClick = {() => setTab(portfolioTabTypes.PERSONAL)}>
+                        Personal
                         </button>
                         <button class="portfolio-tab"
-                                id={tab == portfolioTabTypes.EMBEDDED ? 'active-tab': ''}
-                                onClick = {() => setTab(portfolioTabTypes.EMBEDDED)}>
-                        Embedded
+                                id={tab == portfolioTabTypes.PROFESSIONAL ? 'active-tab': ''}
+                                onClick = {() => setTab(portfolioTabTypes.PROFESSIONAL)}>
+                        Professional
+                        </button>
+                        <button class="portfolio-tab"
+                                id={tab == portfolioTabTypes.EDUCATIONAL ? 'active-tab': ''}
+                                onClick = {() => setTab(portfolioTabTypes.EDUCATIONAL)}>
+                        Educational
                         </button>
                     </div>
                     <PortfolioTabContent tab={tab} />
