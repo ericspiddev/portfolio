@@ -1,7 +1,6 @@
 import {PortBlogPreview} from "./port-blog-preview";
 import {PortBlogTitle} from "./port-blog-title";
 import {PortBlogDesc} from "./port-blog-desc";
-//import { BlogObject } from "./port-blog";
 
 export default function PortBlogEntry({blog, index=-1, maxIndex=-1} : { blog: BlogObject, integer, integer} ) {
 
