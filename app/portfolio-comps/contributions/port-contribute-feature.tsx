@@ -8,7 +8,7 @@ export function PortContributeFeature({ feature }){
           <div class="feature-title">
             <p> {feature.title}:</p>
             <div class="info-icon" feature-about={feature.about}>
-                <FontAwesomeIcon  icon={faCircleQuestion} size="sm" /> 
+                <FontAwesomeIcon icon={faCircleQuestion} size="sm" />
             </div>
           </div>
         {

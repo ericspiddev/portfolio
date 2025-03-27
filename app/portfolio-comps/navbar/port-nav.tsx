@@ -18,11 +18,7 @@ export function PortNavBar()
             <li class="portfolio-nav-item"> <a href="#blog-section"> <FontAwesomeIcon icon={faComment}/> Blog</a></li>
             <li class="portfolio-nav-item"> <a href="#contributions-section"> <FontAwesomeIcon icon={faCodeCommit}/> Contributions</a></li>
             <HamburgerMenu/>
-
-            
-
-        </ul> 
-
+        </ul>
    </nav>
     )
 }

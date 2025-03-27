@@ -27,15 +27,15 @@ export default function PortTabContent({tab})
         <div class="portfolio-tab-content">
             <h1> You selected tab {tabToStr(tab)}</h1>
             <div class="port-projects">
-                <PortCard projectTitle="Lunar Logger "projectImage="images/projects/rocket.svg" 
+                <PortCard projectTitle="Lunar Logger "projectImage="images/projects/rocket.svg"
                         showProject={tab==portfolioTabTypes.PERSONAL} clickHandle={showProjectModal}/>
-                <PortCard projectTitle="Networked Coffee"projectImage="images/projects/coffee.svg" 
+                <PortCard projectTitle="Networked Coffee"projectImage="images/projects/coffee.svg"
                         showProject={tab==portfolioTabTypes.PERSONAL} clickHandle={showProjectModal}/>
                 <PortCard projectTitle="Car Dashboard" projectImage="images/projects/speedometer.svg"
                         showProject={tab==portfolioTabTypes.EDUCATIONAL} clickHandle={showProjectModal}/>
                 <PortCard projectTitle="seL4 Doom Pendulum"projectImage="images/projects/video-games.svg"
                         showProject={tab==portfolioTabTypes.EDUCATIONAL} clickHandle={showProjectModal}/>
-                <PortCard projectTitle="Magic Mirror"projectImage="images/projects/mirror.svg" 
+                <PortCard projectTitle="Magic Mirror"projectImage="images/projects/mirror.svg"
                         showProject={tab==portfolioTabTypes.PERSONAL} clickHandle={showProjectModal}/>
                 <PortCard projectTitle="Dexter Live"projectImage="images/projects/wifi.svg"
                         showProject={tab==portfolioTabTypes.PROFESSIONAL} clickHandle={showProjectModal}/>
@@ -54,12 +54,12 @@ export default function PortTabContent({tab})
 
 
 function tabToStr(tab: portfolioTabTypes) {
-    switch (tab)  {
+    switch (tab) {
         case portfolioTabTypes.EMBEDDED: {
             return "Embedded"
-        } 
+        }
         case portfolioTabTypes.WEB:{
                 return "WEB";
         }
-    } 
+    }
 }

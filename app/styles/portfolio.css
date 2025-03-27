@@ -8,7 +8,7 @@
     width: 100%;
     top: 0;
     bottom: 0;
-    position: absolute; 
+    position: absolute;
     background-image: url("images/code_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -43,7 +43,7 @@
 .about-text {
     font-family: "Josefin Sans", serif;
     font-weight: 600;
-    font-size:  1.2rem;
+    font-size: 1.2rem;
     margin-left: 2em;
     margin-right: 2em;
 }
@@ -65,7 +65,7 @@
     align-items: center;
     margin-top: 1px;
     min-height: 50vh;
-    max-width:100%; 
+    max-width:100%;
 }
 
 .download-container {
@@ -92,7 +92,7 @@
     margin-right: 1rem;
     display: flex;
     justify-content: flex-end;
-    gap: 2rem; 
+    gap: 2rem;
     align-items: center;
 }
 
@@ -158,6 +158,7 @@
     align-items: center;
     justify-content: center;
     backdrop-filter: blur(5px); /* Apply blur to the background */
+    overflow: hidden;
 }
 
 .project-modal {
@@ -195,7 +196,6 @@
     color: orange;
     font-size: 1.1em;
     font-family: "Fira Code";
-    
     background-color: #1E3E62;
     text-decoration: underline;
     margin: 0.5em;
@@ -263,7 +263,7 @@
 
 .tech-experience {
     background-color: #0B192C;
-    display: flex; 
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -271,7 +271,7 @@
 
 .tech-grid {
     align-self: center;
-    display: grid; 
+    display: grid;
     grid-template-columns: repeat(6, 8em);
     justify-items: center;
     row-gap: 1em;
@@ -284,7 +284,7 @@
     align-self: center;
 }
 
-.tech-photo:hover { 
+.tech-photo:hover {
    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
    filter: grayscale(0%) contrast(100%);
    transition: all 0.3s ease;
@@ -343,7 +343,7 @@
     font-family: "Josefin Sans", serif;
     background-color: #030712;
     flex-direction: column;
-    align-items: center; 
+    align-items: center;
     justify-content: center;
 }
 
@@ -355,7 +355,7 @@
     margin-top: 3rem;
     margin-bottom: min(3rem, 5%);
 }
-.contact-form input, .contact-form textarea  {
+.contact-form input, .contact-form textarea {
     background-color: #0B192C;
     border: 1px solid #ff6500;
     border-radius: 1rem;
@@ -363,7 +363,7 @@
     margin-bottom: 0.5rem;
 }
 
-.contact-form textarea { 
+.contact-form textarea {
     min-height: 10rem;
 }
 
@@ -377,7 +377,7 @@
 
 
 .form-input-field {
-    display: flex; 
+    display: flex;
     flex-direction: column;
 }
 /*********************** Blog Section ***********************/
@@ -385,7 +385,6 @@
     background-color: #030712;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    
     grid-template-rows: 1fr 1fr;
     /*grid-column-gap: 20px; */
     place-content: center;
@@ -445,13 +444,13 @@
 
 .blog-preview-image img {
     height: 100%;
-    min-width: 100%;  
+    min-width: 100%;
     object-fit: cover;
-    border-bottom: 0.25em solid #030712; 
+    border-bottom: 0.25em solid #030712;
     border-radius: 0.5em;
 }
 
-.blog-title {    
+.blog-title {
     font-size: 1rem;
     font-style: italic;
     text-decoration: underline;
@@ -484,9 +483,9 @@
     background-color: #030712;
 }
 
-.feature { 
+.feature {
     padding: 2vh;
-    border-bottom: 0.2em solid white; 
+    border-bottom: 0.2em solid white;
 
 }
 
@@ -503,7 +502,7 @@
     display: flex;
     color: #FF6500;
     text-decoration: underline;
-    text-decoration-color: white; 
+    text-decoration-color: white;
     margin-left: 2vw;
     display-direction: column;
     gap: 20px;
@@ -545,7 +544,7 @@
 .section-common {
     background-color: #0B192C;
     font-size: 1.25rem;
-    font-style: normal; 
+    font-style: normal;
 }
 
 .section-text-common {
@@ -554,7 +553,7 @@
 }
 
 .hidden {
-    visibility: hidden; 
+    visibility: hidden;
     display: none;
 }
 
@@ -562,13 +561,13 @@ html {
     font-size: 24px;
 }
 
-.name-primary  {
+.name-primary {
     color: #FF6500;
     background-color: #0B192C;
     transition: all 5s ease;
     /*transition: background-color 5s ease;*/
 }
-.name-secondary  {
+.name-secondary {
     color: #030712;
     background-color: #FF6500;
     transition: all 5s ease;
@@ -583,7 +582,7 @@ html {
         flex-direction: column-reverse;
         gap: 0px;
 
-    } 
+    }
 
     .portfolio-nav-item {
         display: none;
@@ -599,18 +598,18 @@ html {
     }
 
     #blogs-carousel {
-       display: block; 
-       background-color: #030712; 
+       display: block;
+       background-color: #030712;
         padding: 1em;
         min-height: 10em;
     }
 
     .section-text-common {
-        margin-left: 1.5rem; 
+        margin-left: 1.5rem;
         margin-right: 1.5rem;
     }
-     
-    .hamburger-toggle { 
+
+    .hamburger-toggle {
         display: block;
         position: static;
     }
@@ -658,7 +657,7 @@ html {
     #portfolio-nav-container {
         min-height: 3.5rem;
     }
- 
+
     .blogentry {
         min-width: 1em;
         margin: auto;
@@ -674,5 +673,5 @@ html {
     .photo-container {
         flex-direction: column-reverse;
         gap: 0px;
-    }  
+    }
 }

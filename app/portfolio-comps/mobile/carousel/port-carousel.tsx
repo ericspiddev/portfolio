@@ -7,7 +7,7 @@ export function PortCarousel({items, maxIndex}) {
     const [caroIndex, setCaroIndex] = useState(0);
     const buttonDebounce = useRef(null);
 
-    const handleCaroClick = (isForward)  => {
+    const handleCaroClick = (isForward) => {
         if(buttonDebounce.current) {
             clearTimeout(buttonDebounce.current);
         }
@@ -18,17 +18,16 @@ export function PortCarousel({items, maxIndex}) {
             }
             else if(!isForward && caroIndex == 0) {
                 setCaroIndex(maxIndex - 1);
-            } 
+            }
             else {
                 let newIndex = isForward ? caroIndex + 1 : caroIndex - 1;
                 setCaroIndex(newIndex);
-            }    
+            }
         }, 10);
-        
     };
 
     return(
-    <div class="carousel-container"> 
+    <div class="carousel-container">
         <button onClick={() => handleCaroClick(false)} class="caro-button"> <FontAwesomeIcon icon={faArrowLeftLong} /> </button>
         <PortBlogEntry blog={items[caroIndex]} index={caroIndex} maxIndex={maxIndex}/>
         <button onClick={() => handleCaroClick(true)} class="caro-button"> <FontAwesomeIcon icon={faArrowRightLong}/> </button>

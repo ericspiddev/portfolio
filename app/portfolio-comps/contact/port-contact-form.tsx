@@ -37,7 +37,7 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
   };
 
 const handleFormChange = (event) => {
-    const {name, value } = event.target; 
+    const {name, value } = event.target;
     setContactData({
         ...contactData, // keep other values the same
         [name]: value,
@@ -58,8 +58,8 @@ const handleFormChange = (event) => {
             </div>
             <div class="form-input-field">
                 <label for="contact-message">Message:</label>
-                <textarea id="contact-message" placeholder="Please put your message here" 
-                    value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required>  </textarea>
+                <textarea id="contact-message" placeholder="Please put your message here"
+                    value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required> </textarea>
             </div>
          </div>
           <div class="form-footer">

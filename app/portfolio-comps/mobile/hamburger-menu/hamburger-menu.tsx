@@ -13,7 +13,7 @@ export function HamburgerMenu() {
     return (
     <>
         <div class="hamburger-toggle">
-        <FontAwesomeIcon icon={faBars} onClick={handleHamburgerClick}/> 
+        <FontAwesomeIcon icon={faBars} onClick={handleHamburgerClick}/>
         </div>
 
         <div class= {show ? 'hamburger-menu' : 'hidden'} >

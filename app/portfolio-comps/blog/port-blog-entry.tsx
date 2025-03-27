@@ -10,7 +10,7 @@ export default function PortBlogEntry({blog, index=-1, maxIndex=-1} : { blog: Bl
         <div class="blogentry">
             <PortBlogPreview imagePath={blog.previewImage}/>
             <PortBlogTitle title={blog.title}/>
-            <PortBlogDesc descript={blog.desc}/> 
+            <PortBlogDesc descript={blog.desc}/>
             <p className={ (index > -1) ? 'caro-counter' : 'hidden'}>{index + 1}/{maxIndex}</p>
         </div>
         </a>

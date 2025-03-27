@@ -7,9 +7,9 @@ export function PortBlog() {
     return (
         <>
             <div class="section-common">
-                <div class ="section-text-common"> 
+                <div class ="section-text-common">
                     <PortfolioHeader header="Blog"/>
-                    <p> Articles I've written about all sorts of topics</p> 
+                    <p> Articles I've written about all sorts of topics</p>
                     <div id="blogs-container">
                         {
                             blogs.map((blog) => (
@@ -17,7 +17,7 @@ export function PortBlog() {
                         }
                     </div>
                     <div id="blogs-carousel">
-                       <PortCarousel items={blogs} maxIndex={blogs.length}/> 
+                       <PortCarousel items={blogs} maxIndex={blogs.length}/>
                     </div>
                     <div class="filler">
                     </div>

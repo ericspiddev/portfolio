@@ -27,7 +27,6 @@ export default function Home() {
                 setCurrClass('name-secondary');
                 setCount(0);
             }
-            
         }, 10000);
 
         return () => clearInterval(interval);

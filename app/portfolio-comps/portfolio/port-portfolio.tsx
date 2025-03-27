@@ -9,8 +9,7 @@ export enum portfolioTabTypes {
     EDUCATIONAL,
 }
 
-export function PortPortfolio() { 
-    
+export function PortPortfolio() {
     const [tab, setTab] = useState(portfolioTabTypes.PERSONAL);
     return (
         <>
@@ -18,12 +17,12 @@ export function PortPortfolio() {
                 <div class="section-common">
                     <div class="section-text-common">
                     <PortfolioHeader header="Portfolio"/>
-                    <p> Projects will go here </p> 
-                    </div> 
+                    <p> Projects will go here </p>
+                    </div>
                     <div class="portfolio-tabs section-text-common">
                         <div class="portfolio-tab-header">
                         <button class="portfolio-tab"
-                                id={tab == portfolioTabTypes.PERSONAL ? 'active-tab': ''} 
+                                id={tab == portfolioTabTypes.PERSONAL ? 'active-tab': ''}
                                 onClick = {() => setTab(portfolioTabTypes.PERSONAL)}>
                         Personal
                         </button>
