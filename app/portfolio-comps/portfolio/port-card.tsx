@@ -1,19 +1,35 @@
 import {PortTag} from "./port-tag";
 import {useState} from "react";
+import {PortProjectModal} from "./port-project-modal";
 
-export function PortCard({projectImage, projectTitle, showProject, clickHandle}) {
-    const [tab, setTab] = useState('About');
+export function PortCard({project, currentTab,}) {
+
+    const [showModal, setShowModal] = useState(false);
+    function showProjectModal() {
+        document.body.style.overflow = "hidden";
+        setShowModal(true);
+    }
+
+    function hideProjectModal() {
+        document.body.style.overflow = "auto";
+        setShowModal(false);
+    }
+    ;const [tab, setTab] = useState('About');
     return (
-    <div className={`port-project-card ${showProject ? '' : 'hidden'}`} onClick={() => clickHandle(projectTitle)}>
-        <img class="project-card-image" src={projectImage}/>
+    <>
+    <div className={`port-project-card ${project.projectType == currentTab ? '' : 'hidden'}`} onClick={showProjectModal}>
+        <img class="project-card-image" src={`images/projects/${project.projectImg}`}/>
         <div class="project-card-body">
-            <h1 class="project-card-title"> {projectTitle} </h1>
+            <h1 class="project-card-title"> {project.title} </h1>
         </div>
         <div class="project-card-footer">
             <PortTag tagText="Embed" tagColor="green"/>
             <PortTag tagText="Web" tagColor="blue"/>
             <PortTag tagText="tag" tagColor="red"/>
         </div>
+
     </div>
+        <PortProjectModal project={project} showModal={showModal} closeModal={hideProjectModal}/>
+    </>
     );
 }

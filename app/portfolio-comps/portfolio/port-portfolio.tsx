@@ -8,16 +8,16 @@ export enum portfolioTabTypes {
     PROFESSIONAL,
     EDUCATIONAL,
 }
-
 export function PortPortfolio() {
     const [tab, setTab] = useState(portfolioTabTypes.PERSONAL);
+    console.log(portfolioTabTypes.PROFESSIONAL);
     return (
         <>
             <div id="porfolio-section">
                 <div class="section-common">
                     <div class="section-text-common">
                     <PortfolioHeader header="Portfolio"/>
-                    <p> Projects will go here </p>
+                    <p class="project-header-text"> Projects I've built.. </p>
                     </div>
                     <div class="portfolio-tabs section-text-common">
                         <div class="portfolio-tab-header">
@@ -38,9 +38,12 @@ export function PortPortfolio() {
                         </button>
                     </div>
                     <PortfolioTabContent tab={tab} />
+                    <div>
+                        <p class="project-header-text"> Using these technologies...</p>
+                    </div>
+                    <PortTech/>
                 </div>
             </div>
-            <PortTech/>
             <div class="filler"></div>
             </div>
         </>

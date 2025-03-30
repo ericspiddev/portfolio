@@ -12,16 +12,13 @@ export function PortTech() {
     return (
         <>
             <div class="tech-experience">
-                <div class="tech-header">
-                    <p>Experience with...</p>
+                <div class="tech-highlight">
+                    <PortTechSelector state={languageColor} setState={setLanguageColor} selectorText="Languages"/>
+                    <PortTechSelector state={frameworkColor} setState={setFrameworkColor} selectorText="Frameworks"/>
+                    <PortTechSelector state={embeddedColor} setState={setEmbeddedColor} selectorText="Embedded"/>
+                    <PortTechSelector state={databaseColor} setState={setDatabaseColor} selectorText="Databases"/>
+                    <PortTechSelector state={devToolColor} setState={setDevToolColor} selectorText="Dev Tools"/>
                 </div>
-                    <div class="tech-highlight">
-                        <PortTechSelector state={languageColor} setState={setLanguageColor} selectorText="Languages"/>
-                        <PortTechSelector state={frameworkColor} setState={setFrameworkColor} selectorText="Frameworks"/>
-                        <PortTechSelector state={embeddedColor} setState={setEmbeddedColor} selectorText="Embedded"/>
-                        <PortTechSelector state={databaseColor} setState={setDatabaseColor} selectorText="Databases"/>
-                        <PortTechSelector state={devToolColor} setState={setDevToolColor} selectorText="Dev Tools"/>
-                    </div>
                 <div class="tech-grid">
                     <PortTextLogo state={embeddedColor} image="images/tech/linux-original.svg"/>
                     <PortTextLogo state={languageColor} image="images/tech/css3-original.svg"/>
@@ -50,6 +47,7 @@ export function PortTech() {
                     <PortTextLogo state={devToolColor} image="images/tech/vscode-original.svg"/>
                     <PortTextLogo state={embeddedColor} image="images/tech/sel4-original.svg"/>
                     <PortTextLogo state={databaseColor} image="images/tech/microsoftsqlserver-original.svg"/>
+                    <PortTextLogo state={languageColor} image="images/tech/ruby-original.svg"/>
                 </div>
             </div>
         </>

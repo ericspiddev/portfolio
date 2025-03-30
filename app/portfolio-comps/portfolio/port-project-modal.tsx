@@ -1,5 +1,6 @@
 import {useState} from "react";
-export function PortProjectModal({showModal, closeModal, projectTitle, projectDesc }){
+
+export function PortProjectModal({project, closeModal, showModal}){
     const [tab, setTab] = useState('About');
     return(
     <>
@@ -9,14 +10,18 @@ export function PortProjectModal({showModal, closeModal, projectTitle, projectDe
                     <div className="project-modal-tabs">
                         <p>About</p>
                         <p>Gallery</p>
-                        <p>Etc</p>
                     </div>
                     <div class="modal-close">
                         <button onClick={closeModal}>X</button>
                     </div>
                 </div>
-                <p className="modal-project-title"> {projectTitle}</p>
-                <p>{projectDesc}</p>
+                <div class="modal-content">
+                    <div>
+                        <p className="modal-project-title"> {project.title}</p>
+                        <p class="modal-project-desc">{project.desc}</p>
+                    </div>
+                    <img class="modal-preview-img" src={`images/projects/modal/${project.previewImg}`}/>
+                </div>
             </div>
         </div>
     </>
