@@ -17,7 +17,7 @@ export function PortPortfolio() {
                 <div class="section-common">
                     <div class="section-text-common">
                     <PortfolioHeader header="Portfolio"/>
-                    <p class="project-header-text"> Projects I've built.. </p>
+                    <p class="project-header-text"> Projects I've { portfolioTabTypes.PROFESSIONAL == tab ? 'worked on' : 'built'} ...</p>
                     </div>
                     <div class="portfolio-tabs section-text-common">
                         <div class="portfolio-tab-header">
