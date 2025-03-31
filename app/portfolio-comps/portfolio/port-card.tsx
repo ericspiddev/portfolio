@@ -17,7 +17,7 @@ export function PortCard({project, currentTab,}) {
     ;const [tab, setTab] = useState('About');
     return (
     <>
-    <div className={`port-project-card ${project.projectType == currentTab ? '' : 'hidden'}`} onClick={showProjectModal}>
+    <div className={`port-project-card ${project.projectType == currentTab ? '' : 'hidden'} clickable`} onClick={showProjectModal}>
         <img class="project-card-image" src={`images/projects/${project.projectImg}`}/>
         <div class="project-card-body">
             <h1 class="project-card-title"> {project.title} </h1>
