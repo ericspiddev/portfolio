@@ -4,6 +4,15 @@
     --bg-color: #0B192C;
     --secondary-bg-color: #030712;
     --accent-color: #FF6500;
+    --smooth-font: "Josefin Sans";
+    --sharp-font: "Fira Code";
+    --lg-screen-rem: 24px;
+    --med-screen-rem: 16px;
+    --sm-screen-rem: 12px;
+}
+
+.clickable:hover {
+    cursor: pointer;
 }
 
 
@@ -364,9 +373,6 @@ html {
     justify-content: center;
     margin: 1em;
 }
-.tech-selector:hover {
-    cursor: pointer;
-}
 
 /*********************** Contact Section ***********************/
 #send-message {
@@ -525,19 +531,48 @@ html {
 
 /*********************** Contributions ***********************/
 #contributions-section {
-    font-family: "Josefin Sans", serif;
+    font-family: var(--smooth-font), serif;
 }
 
 #contributions {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(3, 12em);
     background-color: var(--secondary-bg-color);
+
+    justify-content: space-evenly;
 }
 
 .feature {
     padding: 2vh;
-    border-bottom: 0.2em solid white;
+    margin: 1em;
+    min-height: 15em;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    background-color: var(--bg-color);
+}
 
+.feature-color {
+    width: 2.5em;
+    min-height: 2.5em;
+    border-radius: 100em;
+    margin-bottom: 1em;
+}
+
+.feature-learn-more {
+    font-size: 0.6em;
+    padding: 0.50em;
+    margin: 0.5em;
+    border-radius: 1em;
+    background-color: var(--accent-color);
+}
+
+.commit-count {
+    font-size: 0.75rem;
+    background-color: var(--secondary-bg-color);
+    padding: 0.5em;
+    margin: 1em;
 }
 
 .commit {
@@ -545,19 +580,19 @@ html {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    font-family: "Fira Code", monospace;
+    font-family: var(--sharp-font), monospace;
 }
 
 .feature-title {
-    font-size: 32px;
+    font-size: 1.33rem;
     display: flex;
-    color: var(--accent-color);
     text-decoration: underline;
     text-decoration-color: white;
     margin-left: 2vw;
     display-direction: column;
     gap: 20px;
     padding: 1vh;
+    margin-bottom: 1em;
 }
 
 .info-icon {

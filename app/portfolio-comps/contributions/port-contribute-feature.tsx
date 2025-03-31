@@ -5,16 +5,20 @@ export function PortContributeFeature({ feature }){
     return (
         <>
           <div class="feature">
-          <div class="feature-title">
-            <p> {feature.title}:</p>
-            <div class="info-icon" feature-about={feature.about}>
-                <FontAwesomeIcon icon={faCircleQuestion} size="sm" />
+            <div class="feature-title">
+                <p> {feature.title}:</p>
+                <div class="info-icon" feature-about={feature.about}></div>
             </div>
-          </div>
-        {
-            feature.commits.map((commit) => (
-            <PortContributeCommit commit={commit}/>))
-        }
+                <div class="feature-color" style={{backgroundColor: feature.color}}></div>
+                <div class="commit-count">
+                    {feature.commits.length} commits
+                </div>
+            <div>
+                Project name
+            </div>
+            <div>
+                <button class="feature-learn-more clickable" > Learn More </button>
+            </div>
         </div>
         </>
     );

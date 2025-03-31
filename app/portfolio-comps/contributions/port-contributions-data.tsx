@@ -10,6 +10,7 @@ export interface Feature {
     title : string
     commits: Commit[];
     about: string;
+    color: string;
 };
 
 export const features : Feature[] = [
@@ -17,20 +18,20 @@ export const features : Feature[] = [
         ["First title", "Second Title", "Third Title"],
         ["kdjekjdkew", "123jdk321ll", "942jd23kj43"],
         ["commit one", "commit two", "commit three"],
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui blandit ultrices nulla eu eleifend metus pellentesque. Nisi euismod mauris proin nascetur sagittis conubia felis ex. Mauris dis conubia duis ac platea habitant dictum euismod. Massa vulputate suspendisse ante sociosqu sit at consequat erat pretium. Tempor facilisi vitae arcu sit ullamcorper. Egestas mus dictumst cras dictumst bibendum ante. Est integer pulvinar lobortis euismod, pretium vivamus."),
+        "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui blandit ultrices nulla eu eleifend metus pellentesque. Nisi euismod mauris proin nascetur sagittis conubia felis ex. Mauris dis conubia duis ac platea habitant dictum euismod. Massa vulputate suspendisse ante sociosqu sit at consequat erat pretium. Tempor facilisi vitae arcu sit ullamcorper. Egestas mus dictumst cras dictumst bibendum ante. Est integer pulvinar lobortis euismod, pretium vivamus.", "grey"),
     createFeature(0, [0, 1, 2], "Feature title",
         ["First title", "Second Title", "Third Title"],
         ["kdjekjdkew", "123jdk321ll", "942jd23kj43"],
         ["commit one", "commit two", "commit three"],
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui blandit ultrices nulla eu eleifend metus pellentesque. Nisi euismod mauris proin nascetur sagittis conubia felis ex. Mauris dis conubia duis ac platea habitant dictum euismod. Massa vulputate suspendisse ante sociosqu sit at consequat erat pretium. Tempor facilisi vitae arcu sit ullamcorper. Egestas mus dictumst cras dictumst bibendum ante. Est integer pulvinar lobortis euismod, pretium vivamus."),
+        "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui blandit ultrices nulla eu eleifend metus pellentesque. Nisi euismod mauris proin nascetur sagittis conubia felis ex. Mauris dis conubia duis ac platea habitant dictum euismod. Massa vulputate suspendisse ante sociosqu sit at consequat erat pretium. Tempor facilisi vitae arcu sit ullamcorper. Egestas mus dictumst cras dictumst bibendum ante. Est integer pulvinar lobortis euismod, pretium vivamus.", "blue"),
 createFeature(0, [0, 1, 2], "Feature title",
         ["First title", "Second Title", "Third Title"],
         ["kdjekjdkew", "123jdk321ll", "942jd23kj43"],
         ["commit one", "commit two", "commit three"],
-        "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui blandit ultrices nulla eu eleifend metus pellentesque. Nisi euismod mauris proin nascetur sagittis conubia felis ex. Mauris dis conubia duis ac platea habitant dictum euismod. Massa vulputate suspendisse ante sociosqu sit at consequat erat pretium. Tempor facilisi vitae arcu sit ullamcorper. Egestas mus dictumst cras dictumst bibendum ante. Est integer pulvinar lobortis euismod, pretium vivamus."),
+        "Lorem ipsum odor amet, consectetuer adipiscing elit. Dui blandit ultrices nulla eu eleifend metus pellentesque. Nisi euismod mauris proin nascetur sagittis conubia felis ex. Mauris dis conubia duis ac platea habitant dictum euismod. Massa vulputate suspendisse ante sociosqu sit at consequat erat pretium. Tempor facilisi vitae arcu sit ullamcorper. Egestas mus dictumst cras dictumst bibendum ante. Est integer pulvinar lobortis euismod, pretium vivamus.", "#96ca4f"),
 ];
 
-function createFeature(id, ids, featureTitle, titles, shas, messages, about ) : Feature {
+function createFeature(id, ids, featureTitle, titles, shas, messages, about, color) : Feature {
     let commits : Commit[] = [];
     for (let i = 0; i < titles.length; i++) {
         commits.push(createCommit(ids[i], titles[i], shas[i], messages[i]));
@@ -39,7 +40,8 @@ function createFeature(id, ids, featureTitle, titles, shas, messages, about ) : 
         id,
         title: featureTitle,
         commits,
-        about
+        about,
+        color
     };
 }
 
