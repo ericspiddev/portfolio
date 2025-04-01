@@ -603,8 +603,26 @@ html {
     margin-left: 5vw;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 2em;
+    margin-bottom: 0.5em;
     font-family: var(--sharp-font), monospace;
+}
+
+.commit-img {
+    max-width: 1em;
+}
+
+.commit-sha{
+    display: flex;
+}
+
+.contribute-modal-body {
+    padding: 0.5em;
+}
+
+.contribute-modal-commits {
+    min-height: 50%;
+    background-color: var(--secondary-bg-color);
 }
 
 .feature-title {

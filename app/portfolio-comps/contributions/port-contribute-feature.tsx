@@ -1,7 +1,20 @@
 import { PortContributeCommit } from "./port-contribute-commit";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faInfo, faCircleQuestion} from "@fortawesome/free-solid-svg-icons"
+import {PortContributeModal} from "./port-contributions-modal";
+import {useState } from "react";
 export function PortContributeFeature({ feature }){
+
+    const [showModal, setShowModal] = useState(false);
+    function showProjectModal() {
+        document.body.style.overflow = "hidden";
+        setShowModal(true);
+    }
+
+    function hideProjectModal() {
+        document.body.style.overflow = "auto";
+        setShowModal(false);
+    }
     return (
         <>
           <div class="feature">
@@ -17,8 +30,9 @@ export function PortContributeFeature({ feature }){
                 Project name
             </div>
             <div>
-                <button class="feature-learn-more clickable" > Learn More </button>
+                <button class="feature-learn-more clickable" onClick={showProjectModal}> Learn More </button>
             </div>
+            <PortContributeModal showModal={showModal} closeModal={hideProjectModal} feature={feature}/>
         </div>
         </>
     );

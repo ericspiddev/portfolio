@@ -4,9 +4,19 @@ export function PortContributeCommit({ commit }) {
     return (
     <>
         <div class="commit">
-            <p> <FontAwesomeIcon icon={faCodeCommit}/>{commit.sha.slice(0, 7)} </p>
+            <div class="commit-sha"><img className="commit-img" src="public/images/contribute/commit.svg"/> {commit.sha.slice(0, 7)} </div>
             <p> "{commit.message}" </p>
-            <p> --- @ericspidledw</p>
+            <p> - @ericspidledw</p>
+        </div>
+        <div class="commit">
+            <div class="commit-sha"><img className="commit-img" src="public/images/contribute/commit.svg"/> {commit.sha.slice(0, 7)} </div>
+            <p> "{commit.message}" </p>
+            <p> - @ericspidledw</p>
+        </div>
+        <div class="commit">
+            <div class="commit-sha"><img className="commit-img" src="public/images/contribute/commit.svg"/> {commit.sha.slice(0, 7)} </div>
+            <p> "{commit.message}" </p>
+            <p> - @ericspidledw</p>
         </div>
     </>
     );
