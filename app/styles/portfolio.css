@@ -181,7 +181,7 @@ html {
 .port-projects {
     display: grid;
     gap: 1em;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .project-header-text {
@@ -199,6 +199,9 @@ html {
     font-size: 1.75rem;
     font-family: var(--smooth-font), serif;
     margin: 0.25em;
+    overflow: hidden;
+    padding: 0.5em;
+    min-height: 5em;
     text-align: center;
 }
 
@@ -226,7 +229,9 @@ html {
 .project-modal {
     background-color: var(--bg-color);
     max-width: 70%;
-    padding: 0.5em;
+    max-height: 80vh;
+    padding: 1em;
+    font-size: 1.1rem;
     border: 0.25em solid black;
 }
 
@@ -254,7 +259,6 @@ html {
 }
 .modal-content {
     display: flex;
-    flex-direction: column;
     gap: 0.25em;
     padding: 0.25em;
 }
@@ -281,20 +285,21 @@ html {
     align-items: center;
     justify-content: center;
     background-color: var(--bg-color);
+    min-width: 10em;
     margin: 1em;
 }
 
 .modal-project-desc {
-    font-size: 0.8em;
+    font-size: 0.6em;
     max-width: 50ch;
     margin-right: 1.5em;
+    align-self: center;
 }
 
 .modal-preview-img{
     width: 20rem;
-    height: 20rem;
+    height: 15rem;
     object-fit: contain;
-    margin: 1em;
     align-self: center;
 }
 
@@ -654,8 +659,18 @@ html {
 }
 
 
+@media screen and (max-width: 1800px) {
+    .port-projects{
+            grid-template-columns: repeat(3, 1fr);
+        }
+}
 
-
+@media screen and (max-width: 1500px) {
+    .modal-content {
+        display: flex;
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 1000px) {
     html {
         font-size: var(--med-screen-rem);
@@ -746,6 +761,14 @@ html {
         font-size: 0.8rem;
     }
 }
+
+@media screen and (max-width: 800px) {
+    .port-projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
 @media screen and (max-width: 500px) {
     html {
         font-size: var(--sm-screen-rem);
