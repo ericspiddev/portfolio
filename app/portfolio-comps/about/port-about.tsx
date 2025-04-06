@@ -8,7 +8,14 @@ export function PortAbout({nameClass}) {
             <ImageBanner nameClass={nameClass}/>
             <div class="about-text section-text-common">
                 <PortfolioHeader header={ "About" }/>
-                <p>An embedded systems/web developer that has a love for technology. My development journey began when I was 10 years old and trying to figure out how I could mod Minecraft. Since then I've enjoyed learning everything there is about software and how it works. My areas of specialty are embedded systems, specifically hypervisors and embedded Linux, and web development where I have experience with both ASP MVC and Ruby on Rails. I love solving complex problems and building out solutions that improve a company or person's everyday.</p>
+                <p>A highly motivated embedded systems and web developer who loves learning about technology.
+                My introduction to technology came when I learned how to mod Minecraft at 12 years old.
+                Ever since then I’ve always enjoyed tinkering and solving computer problems.
+                I have a wide range of experience from porting low-level drivers to a hypervisor; to designing a website using CSS and front end frameworks.
+                I am passionate about creating solutions and technologies that improve people’s lives in various ways.
+                Whether it is a simple bug fix that enhances the UX of a website or an application that improves a decades old process of a company,
+                I enjoy knowing that I helped solve someone’s problem using code. During my free time you’ll often find me gaming online with friends,
+                working on my golf swing, or hitting the gym.</p>
                 <div class="download-container">
                     <a href="files/Eric_Spidle_Resume.pdf" download><button id="big-dl-resume">Download Resume </button> </a>
                 </div>
