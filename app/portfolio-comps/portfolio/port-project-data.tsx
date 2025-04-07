@@ -8,6 +8,7 @@ export interface ModalProject
     hasGallery: boolean;
     projectType: int;
     previewImg: string;
+    achievements: string;
 };
 
 const lunarLoggerDesc = `
