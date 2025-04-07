@@ -140,7 +140,7 @@ on real hardware (QEMU was done before this). I wrote an article about which can
 
 export const projects : ModalProject[] = [
     createProject("Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png"),
-    createProject("Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, ""),
+    createProject("Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg"),
     createProject("Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg"),
     createProject("seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg"),
     createProject("Magic Mirror", magicMirrorDesc, "mirror.svg",false, 0, "magic-mirror.png"),
@@ -148,7 +148,7 @@ export const projects : ModalProject[] = [
     createProject("Dexter Controls", dexterControlsDesc, "laundry.svg", false, 1, ''),
     createProject("seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, 1, 'usb.jpg'),
     createProject("Hw-Mgr", hwMgrDesc, "share.svg", false, 1, 'hw-mgr.png'),
-    createProject("seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, ''),
+    createProject("seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg'),
     createProject("RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png'),
     createProject("GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png"),
     createProject("Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg"),
