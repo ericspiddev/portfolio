@@ -18,8 +18,8 @@ export function PortProjectModal({project, closeModal, showModal}){
       },
       {
         index: 1,
-        title: "Achievements",
-        content: "Temp accomplish",
+        title: "Results",
+        content: project.results == undefined ? ["tmp"] : project.results,
         isHidden: false
       },
       {

@@ -195,6 +195,12 @@ html {
     height: 50%;
 }
 
+.project-result-list {
+    list-style: inside;
+    max-width: 40ch;
+    margin-right: 0.5em;
+}
+
 .project-card-title {
     font-size: 1.75rem;
     font-family: var(--smooth-font), serif;

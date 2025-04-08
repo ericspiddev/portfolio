@@ -8,7 +8,7 @@ export interface ModalProject
     hasGallery: boolean;
     projectType: int;
     previewImg: string;
-    achievements: string;
+    results: string[]
 };
 
 const lunarLoggerDesc = `
@@ -18,8 +18,13 @@ of tasks. The web app allows users to add other users to a proejct and assign is
 Each project consists of categories and each category holds issues. Switching issues between
 categories is as simple as click and dragging the issue from one column to the other.
 The issues all track the created date, modified date, and estimated time for completion.
-The project uses Razor pages, C#, dotnet, javascript and microsoft SQL.
 `
+const lunarLoggerResults = [
+    "Worked with ASP MVC to create a full stack web application that",
+    "test stirng two",
+    "Utilized C#, dotnet, razor page",
+    "Test"
+]
 
 const networkedCoffeeDesc = `
 Ever wanted to make coffee from the comfort of your own bed? That is certianly possibly these days
@@ -31,6 +36,9 @@ circuitry to clean things up. (The initial project was heavily inspired by a vid
 This project utilized embedded C and the ESP-IDF. It also required a good understanding of the HTTP protocol and some web
 skills for making the webpage
 `
+const networkedCoffeeResults = [
+
+];
 
 const magicMirrorDesc = `
 The magic mirror is a project I did where using two way glass, a raspberry pi and the
@@ -42,6 +50,9 @@ This project utilizied Linux, javascript and embedded skills for setting up the 
 and configring magic mirror. Also some real world hardware skills for connecting everything up
 and actually building the mirror and frame.
 `
+const magicMirrorResults = [
+
+];
 
 const dashboardDesc = `
 An embedded car dashboard using an MSP432 and various peripheral devices. The car dashboard used I2C and SPI to communicate
@@ -52,6 +63,9 @@ using a simple off the shelf peripeheral that sent data to the MSP432. This proj
 at GVSU's project showcase (voted on by classmates). It utilized embedded C and understanding various protocols used in embedded
 systems like I2C, SPI, as well as other lowlevel concepts
 `
+const dashboardResults = [
+"Created a fully functional car dashboard that used embedded C and common embedded protocols", 
+];
 
 const napsterDesc = `
 GV napster is a peer to peer transfer app that supports a simplified version of the FTP protocol. The app provides a GUI that allows two way
@@ -61,6 +75,9 @@ so the user can quickly determine which file they'd like to grab. The original b
 requirement and time constraints was converted to Python. This project utilized python, Qt, threading and the use of network sockets to
 communicate between processes.
 `
+const napsterResults =[
+
+]
 
 const pcbDesc = `
 This project was for a circuit class I took in my undergrad where we were tasked with creating a speaker using a PCB board.
@@ -69,6 +86,9 @@ order to play sound so music from a phone could be played over the speaker. The 
 using potentiometers. This project was also selected to be 1/3 shown off at GVSU's project showcase (voted on by classmates). This project involved a
 great understanding of circuit design and the differnt types of circuits that go into turning sound waves to amplified speaker output.
 `
+const pcbResults =[
+
+]
 
 const doomPendDesc = `
 This was my senior project for GVSU's engineering program. The project was done for Dornerworks and the goal was to rework an outdated
@@ -79,6 +99,9 @@ algorithim in C and FreeRTOS and also got freeRTOS running as a guest under seL4
 to improve the robustness of the pendulum algorthim since some parameters of the system were changed while making improvements.
 The project was a success and Dornerworks still takes it to trade shows to show off seL4 capabilities. This project involved Linux,
 embedded, and seL4 skills to succeed.`
+const doomPendResults = [
+
+]
 
 const dexterLiveDesc = `
 Dexter live is a web application that provides configuration and analytics to dexter laundromat owners. The web app also provides APIs for
@@ -87,6 +110,9 @@ the cloud that can then be used to track revenue and consumer behavior. The work
 the Dexer Pay API to allow for a better mobile experience. I also used AWS Cloudfront to make the delivery of updates quicker for
 laundromats all over the world
 `
+const dexterLiveResults = [
+
+];
 
 const dexterControlsDesc = `
 Dexter controls are the embedded devices responsible for pushing data and other analytics up to Dexter Live. It also is all of the
@@ -94,6 +120,9 @@ firmware and GUI interfaces that run the Dexter Washers and Dryers. The type of 
 exposure to different tech. Sometimes I would be adding recipes or packages to the Yocto distro other times I'd be making bug fixes
 or improvements in the C++ application that handled money and user input. I also taught myself QML/Qt to fulfill Dexter's needs when
 our main GUI developer left Dornerworks.`
+const dexterControlsResults = [
+
+];
 
 const xhciUsbDesc = `
 USB has become the defacto standard for how devices interact with computers now a days. So it is no surprise that seL4 would want
@@ -104,6 +133,9 @@ projects I've tackled in my career so far as USB is an incredibly complex standa
 working in seL4 but I also created a few USB device drivers. This proved out the functionality of the XHCI driver. Later I would be
 moved to other projects but my work was the starting point for adding USB Hub support and cleaning up the driver code.
 `
+const xhciUsbResults = [
+
+];
 
 const droneDemoDesc = `
 One of my first tasks as a full time engineer at Dornerworks was to overhaul an existing seL4 demo we had to make it more
@@ -113,6 +145,9 @@ start work on any of the improvements. This involved working with Yocto recipes 
 this was done I then used Ardupilot's android app and Airsim on a laptop to make my imrpovements. Using routing rules in Linux and some
 configuration I was able to have the Ardupilot app send drone commands through seL4's VM and then display the result in Airsim.
 `
+const droneDemoResults= [
+
+]
 const hwMgrDesc = `
 hw-mgr was a tool I developed for Dornerworks (DW) as an intern. During Covid-19 many people were forced to work remotely and this caused
 a challenge when sharing hardware. One of my first tasks when starting at DW was to create a remote system that allowed for users
@@ -121,6 +156,9 @@ hardware while SSH'd into the server. Using Gitlab's API I was able to lockdown 
 well. This not only led to increased productivty but also protected more expensive hardware by keeping it in one spot. This task involved working with python,
 gitlab's API and bash to create a remote testing enviornment that engineers all across DW could use.
 `
+const hwMgrResults = [
+
+]
 
 const rcCarDesc =`
 Using a ESP32 and Android studio I and a team of engineering students were able to write a app that connected to the
@@ -130,6 +168,9 @@ Using Android studio I was able to get the application hooked up over bluetooth 
 simple control interface to send the direction and speed at which the car should drive. I am proud of this project
 since I was able to learn a new technology in such a short amount of time.
 `
+const rcCarResults = [
+
+]
 const riscvSel4GuestDesc = `
 Risc-V is an up and coming architecture that allows chip designers to use an open and royalty free ISA set to bring their
 boards to market. While I was an intern at DW my task across 2 rotations was to get a guest running under seL4 on a RISC-V
@@ -137,26 +178,29 @@ softcore Rocketchip. The rocketchip ran on the PL of a ZYNQMP SoC. I completed t
 (Thank you Robert Vanvossen and Michael Doran). At the time this was considered to be the first RISC-V guest running on seL4
 on real hardware (QEMU was done before this). I wrote an article about which can be found below in the blogs section.
 `
+const riscvSel4GuestResults = [
+
+];
 
 export const projects : ModalProject[] = [
-    createProject("Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png"),
-    createProject("Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg"),
-    createProject("Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg"),
-    createProject("seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg"),
-    createProject("Magic Mirror", magicMirrorDesc, "mirror.svg",false, 0, "magic-mirror.png"),
-    createProject("Dexter Live", dexterLiveDesc, "wifi.svg", false, 1, 'dexter-live.png'),
-    createProject("Dexter Controls", dexterControlsDesc, "laundry.svg", false, 1, ''),
-    createProject("seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, 1, 'usb.jpg'),
-    createProject("Hw-Mgr", hwMgrDesc, "share.svg", false, 1, 'hw-mgr.png'),
-    createProject("seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg'),
-    createProject("RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png'),
-    createProject("GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png"),
-    createProject("Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg"),
-    createProject("Bluetooth RC Car", rcCarDesc, "rc.svg", false, 2, ''),
+    createProject("Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png", lunarLoggerResults),
+    createProject("Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg", networkedCoffeeResults),
+    createProject("Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg", dashboardResults),
+    createProject("seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg", doomPendResults),
+    createProject("Magic Mirror", magicMirrorDesc, "mirror.svg",false, 0, "magic-mirror.png", magicMirrorResults),
+    createProject("Dexter Live", dexterLiveDesc, "wifi.svg", false, 1, 'dexter-live.png', dexterLiveResults),
+    createProject("Dexter Controls", dexterControlsDesc, "laundry.svg", false, 1, '', dexterControlsResults),
+    createProject("seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, 1, 'usb.jpg', xhciUsbResults),
+    createProject("Hw-Mgr", hwMgrDesc, "share.svg", false, 1, 'hw-mgr.png', hwMgrResults),
+    createProject("seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg', droneDemoResults),
+    createProject("RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png', riscvSel4GuestResults),
+    createProject("GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png", napsterResults),
+    createProject("Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg", pcbResults, rcCarResults),
+    createProject("Bluetooth RC Car", rcCarDesc, "rc.svg", false, 2, '', rcCarResults),
 ];
 
 
-function createProject(title, desc, projectImg, hasGallery=false, projectType, previewImg) : ModalProject
+function createProject(title, desc, projectImg, hasGallery=false, projectType, previewImg, results) : ModalProject
 {
     return {
         title,
@@ -165,5 +209,6 @@ function createProject(title, desc, projectImg, hasGallery=false, projectType, p
         hasGallery,
         projectType,
         previewImg,
+        results
     };
 }
