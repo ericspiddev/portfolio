@@ -7,7 +7,7 @@ export function PortNavBar()
     return (
     <nav id="portfolio-nav-container">
             <div id="portfolio-nav-banner">
-                <a href="#big-dl-resume">
+                <a href="#">
                 <p>Eric Spidle</p>
                 </a>
             </div>
