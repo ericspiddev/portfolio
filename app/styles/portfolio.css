@@ -228,9 +228,11 @@ html {
 
 .project-modal {
     background-color: var(--bg-color);
-    max-width: 70%;
-    max-height: 80vh;
+    min-width: 60vw;
+    min-height: 50vh;
+    max-height: 90vh;
     padding: 1em;
+    overflow: auto;
     font-size: 1.1rem;
     border: 0.25em solid black;
 }
@@ -671,7 +673,7 @@ html {
         flex-direction: column;
     }
 }
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1150px) {
     html {
         font-size: var(--med-screen-rem);
     }
@@ -762,10 +764,36 @@ html {
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 850px) {
+    .tech-grid {
+        grid-template-columns: repeat(5, 5em);
+        row-gap: 1em;
+        bottom-margin: 1em;
+    }
     .port-projects{
         grid-template-columns: repeat(2, 1fr);
     }
+    #contributions {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .tech-grid {
+        grid-template-columns: repeat(4, 5em);
+        row-gap: 1em;
+        bottom-margin: 1em;
+    }
+    .tech-highlight {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr;
+    }
+    #contributions {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
 
@@ -793,6 +821,12 @@ html {
         flex-direction: column-reverse;
         gap: 0px;
     }
+    .project-modal {
+        font-size: 1.2rem;
+        min-width: 100vw;
+        min-height: 100vh;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
@@ -808,13 +842,15 @@ html {
         gap: 0.25rem;
         grid-template-columns: repeat(2, 1fr);
     }
-    #contributions {
-        grid-template-columns: repeat(2, 12em);
+    .port-project-card {
+        min-width: 8em;
     }
+
     .feature-title {
         font-size: 1.5rem;
     }
 }
+
 .hidden { /* This needs to be last otherwise display: value could be overwritten by later rule*/
     display: none;
     visibility: hidden;
