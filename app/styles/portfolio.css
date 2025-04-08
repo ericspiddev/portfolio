@@ -6,7 +6,7 @@
     --accent-color: #FF6500;
     --smooth-font: "Josefin Sans";
     --sharp-font: "Fira Code";
-    --lg-screen-rem: 24px;
+    --lg-screen-rem: 20px;
     --med-screen-rem: 16px;
     --sm-screen-rem: 12px;
 }
@@ -97,7 +97,7 @@ html {
 .about-text {
     font-family: var(--smooth-font), serif;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     margin-left: 2em;
     margin-right: 2em;
     display: flex;
@@ -112,7 +112,7 @@ html {
 .about-intro {
     font-family: var(--smooth-font), serif;
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 5rem;
     font-style: normal;
     postion: relative;
     z-index: 2;
@@ -565,7 +565,7 @@ html {
 
 #contributions {
     display: grid;
-    grid-template-columns: repeat(3, 12em);
+    grid-template-columns: repeat(3, 14em);
     background-color: var(--secondary-bg-color);
     justify-content: space-evenly;
 }
