@@ -15,17 +15,17 @@ export const blogs: BlogObject[] = [
     },
     {
         id: "2",
-        link: "#",
-        title: "Coming soon",
-        previewImage: "/images/blog/placeholder.jpg",
-        desc: "A new article on an interesting topic is on it's way"
+        link: "https://medium.com/@ericspidledev/youve-got-mail-how-to-setup-a-simple-express-js-mail-service-e3e91d278fa2",
+        title: "You've Got Mail",
+        previewImage: "/images/blog/smtp-server.png",
+        desc: "A quick tutorial on setting up a simple backend mail server using express.js"
     },
     {
         id: "3",
         link: "#",
-        title: "Coming soon",
+        title: "Grab'n'Go",
         previewImage: "/images/blog/placeholder.jpg",
-        desc: "A new article on an interesting topic is on it's way"
+        desc: "A guide to HTML's draggable API and how you can use it to make reactive websites"
     },
     {
         id: "4",
