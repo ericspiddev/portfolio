@@ -27,7 +27,7 @@ export function PortContributeFeature({ feature }){
                     {feature.commits.length} commits
                 </div>
             <div>
-                Project name
+                <p>Project: {feature.project}</p>
             </div>
             <div>
                 <button class="feature-learn-more clickable" onClick={showProjectModal}> Learn More </button>
