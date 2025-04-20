@@ -1,9 +1,9 @@
-export interface Commit {
-    id : number;
-    title : string;
-    sha : string;
-    message : string;
-};
+// Each project feature should consist of a list of projects, repos, and PR IDs that correspond to it
+export interface FeatureBackendInfo {
+    project: string;
+    repo: string;
+    pullRequestId : number;
+}
 
 export interface Feature {
     id : number;
@@ -14,44 +14,79 @@ export interface Feature {
     color: string;
 };
 
-const armpl011About = `This pull request was a contribution made to the seL4 project. It added uart emulation for the AMBA PL011 a common ARM serial device.`
-const x86VGAAbout = `Added earlyprint/VMM prints via a VGA device for seL4. One of the big challenges with x86 and seL4 is the lack of COM ports on newer devices.`
 
-export const features : Feature[] = [
-    createFeature(0, [0, 1, 2], "PL011 Vuart",
-        ["First title", "Second Title", "Third Title"],
-        ["kdjekjdkew", "123jdk321ll", "942jd23kj43"],
-        ["commit one", "commit two", "commit three"], armpl011About, "seL4", "purple"),
-    createFeature(0, [0, 1, 2], "x86 VGA Console",
-        ["First title", "Second Title", "Third Title"],
-        ["kdjekjdkew", "123jdk321ll", "942jd23kj43"],
-        ["commit one", "commit two", "commit three"], x86VGAAbout, "seL4", "blue")
+export const vuartBackendData : FeatureBackendInfo[] = [
+    createBackendData("seL4", "camkes-vm", 134),
+    createBackendData("seL4", "seL4_projects_libs", 133),
 ];
+export const x86VgaBackendData : FeatureBackendInfo[] = [
+    createBackendData("seL4", "seL4", 1288),
+    createBackendData("seL4", "util_libs", 186),
+]
 
-function createFeature(id, ids, featureTitle, titles, shas, messages, about, project, color) : Feature {
-    let commits : Commit[] = [];
-    for (let i = 0; i < titles.length; i++) {
-        commits.push(createCommit(ids[i], titles[i], shas[i], messages[i]));
+function createBackendData(project, repo, pullRequestId) {
+    return {
+        project,
+        repo,
+        pullRequestId
     }
+}
+
+//export const features : Feature[] = [
+//    await createFeature(0, [0, 1, 2], "PL011 Vuart", armpl011About, "purple", vuartBackendData),
+//    await createFeature(1, [0, 1, 2], "x86 VGA Console", x86VGAAbout, "blue", x86VgaBackendData)
+//];
+
+async function createFeature(id, ids, featureTitle, about, color, projectData) : Feature {
+    let commits : Commit[] = [];
+    console.log("projectdat length " + projectData.length);
+    for (let i = 0; i < projectData.length; i++) {
+        let currPR = projectData[i];
+        let prCommits = await getProjectContribution(currPR.project, currPR.repo, currPR.pullRequestId);
+        console.log("PR commits is " + prCommits);
+        commits.push(prCommits);
+    }
+
+    console.log("ON FEATURE CREATE COMMITS IS " + JSON.stringify(commits));
     return {
         id,
         title: featureTitle,
-        commits,
+        commits: commits != undefined ? commits : "test",
         about,
-        project,
+        project: projectData[0].project,
         color
     };
 }
 
-function createCommit(id, title, sha, message) : Commit
+async function getProjectContribution(project, repo, pullRequestId)
 {
+    let req = `http://localhost:5050/api/contributions/${project}/${repo}?pull_id=${pullRequestId}`
+    let commits : Commit[] = [];
+    try {
+        let res = await fetch(req);
+        let prData = await res.json();
+        console.log("PrData len is " + prData.len);
+        for(let i = 0; i < prData.length; i++) {
+            let currCommit = prData[i];
+            commits.push(createCommit(currCommit.sha, currCommit.message, currCommit.author));
+        }
+        console.log("Returning commits");
+        return commits
+    } catch (error) {
+        console.log("Something went wrong!");
+    }
+}
+
+function createCommit(id, sha, message, author) : Commit
+{
+
     let commit: Commit = {
-        id,
-        title,
+        id: 1,
         sha,
         message,
+        author,
     }
-
+    console.log("Commit is : " + JSON.stringify(commit));
     return commit;
 }
 

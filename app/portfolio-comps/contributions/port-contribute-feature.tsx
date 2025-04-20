@@ -1,10 +1,15 @@
-import { PortContributeCommit } from "./port-contribute-commit";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faInfo, faCircleQuestion} from "@fortawesome/free-solid-svg-icons"
 import {PortContributeModal} from "./port-contributions-modal";
 import {useState } from "react";
 export function PortContributeFeature({ feature }){
-
+    function getCommitTotals(pull_requests) {
+        let totalCommits = 0;
+        pull_requests.forEach(pull_request => {
+            totalCommits += pull_request.commits.length;
+        });
+        return totalCommits;
+    }
     const [showModal, setShowModal] = useState(false);
     function showProjectModal() {
         document.body.style.overflow = "hidden";
@@ -19,12 +24,12 @@ export function PortContributeFeature({ feature }){
         <>
           <div class="feature">
             <div class="feature-title">
-                <p> {feature.title}:</p>
+                <p> {feature.displayTitle}:</p>
                 <div class="info-icon" feature-about={feature.about}></div>
             </div>
                 <div class="feature-color" style={{backgroundColor: feature.color}}></div>
                 <div class="commit-count">
-                    {feature.commits.length} commits
+                    {getCommitTotals(feature.pull_requests)} commits
                 </div>
             <div>
                 <p>Project: {feature.project}</p>

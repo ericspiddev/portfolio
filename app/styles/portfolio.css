@@ -624,17 +624,47 @@ html {
     margin-left: 1.25em;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    padding-top: 0.5em;
     gap: 2em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.75em;
     font-family: var(--sharp-font), monospace;
 }
 
+.feature-title {
+    font-size: 1.5em;
+    text-decoration: underline;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.commit-list {
+    background-color: var(--secondary-bg-color);
+    padding: 0.25em;
+}
+.commit-message {
+    width: 50ch;
+}
+
+.commit-author {
+    display: flex;
+    align-items: center;
+    right-margin: 0.5em;
+}
+
+.repo-title{
+    font-size: 1.2em;
+    text-decoration: underline;
+}
+
 .commit-img {
-    max-width: 1em;
+    max-width: 1.2em;
 }
 
 .commit-sha{
     display: flex;
+    align-items: center;
 }
 
 .contribute-modal-body {
