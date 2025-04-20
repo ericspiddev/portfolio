@@ -707,6 +707,29 @@ html {
     color: white;
 }
 
+.banner {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 2.5em;
+    opacity: 95%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 0.5em;
+    background-color: var(--bg-color);
+    font-family: var(--smooth-font);
+    border: var(--secondary-bg-color) 0.25em solid;
+    min-width: 30%;
+    animation: animatetop 1s;
+}
+
+@keyframes animatetop{
+    from{top:-300px;opacity:0}
+    to{top:2.5em;opacity:1}
+}
 
 @media screen and (max-width: 1800px) {
     .port-projects{
@@ -718,6 +741,10 @@ html {
     .modal-content {
         display: flex;
         flex-direction: column;
+    }
+    .banner {
+        padding: 1em;
+        min-width: 40%;
     }
 }
 @media screen and (max-width: 1150px) {
@@ -823,6 +850,10 @@ html {
     }
     #contributions {
         grid-template-columns: repeat(3, 1fr);
+    }
+    .banner {
+        padding: 1em;
+        width: 60%;
     }
 }
 

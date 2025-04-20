@@ -2,18 +2,30 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { PortFavButton } from "./port-fav-button"
-import { useState } from 'react';
+import {PortBanner} from "./port-banner";
+import { useState, useEffect } from 'react';
 
 export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
     const linkedInAccount = "https://www.linkedin.com/in/espidle/";
     const githubAccount = "https://github.com/ericspiddev";
     const resumePath = "public/files/Eric_Spidle_Resume.pdf";
 
+    const [showBanner, setShowBanner] = useState(false);
+    const [bannerMsg, setBannerMsg] = useState("Message Sent Successfully! " + String.fromCodePoint(0x2705));
+
     const [contactData, setContactData] = useState({
         fullName: '',
         userEmail: '',
         customMessage: ''
     });
+
+    useEffect(() => {
+      const bannerTime = setInterval(() => {
+        setShowBanner(false);
+      }, 3000);
+        return () => clearInterval(bannerTime);
+    }, [showBanner])
+
  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
@@ -26,13 +38,15 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
       });
 
       if (response.ok) {
-        console.log('Success')
-        // Optionally, you can update the UI with a success message or reset the form
+        console.log('Successfully sent email message ')
+        setBannerMsg("Message Sent Successfully! " + String.fromCodePoint(0x2705))
       } else {
-        console.error('Error:')
+        console.error('Error: something went wrong sending the message with error code ' + response.status)
+        setBannerMsg("Message failed to send! " + String.fromCodePoint(0x274C))
       }
+        setShowBanner(true);
     } catch (error) {
-      console.error('Request failed', error);
+        console.error('Request failed', error);
     }
   };
 
@@ -74,6 +88,7 @@ const handleFormChange = (event) => {
           <button type="submit" id="send-message"> Send Message </button>
         </div>
          </form>
+        <PortBanner show={showBanner} resultMsg={bannerMsg}/>
         </>
     );
 }
