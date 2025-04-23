@@ -1,5 +1,5 @@
 import { PortContributePullRequest } from "./port-contribute-pull-request";
-export function PortContributeModal({closeModal, showModal, feature}) {
+export function PortContributeModal({closeModal, showModal, feature, mergedMsg, reviewMsg}) {
     function isLoading(pull_reqs) {
         if (pull_reqs.length === 0) {
             return 1;
@@ -20,9 +20,10 @@ export function PortContributeModal({closeModal, showModal, feature}) {
                 <p> {feature.about} </p>
                 <div className="modal-repo">
                 {
-                    feature.pull_requests.map(pull_request => <PortContributePullRequest pull_request={pull_request}/>)
+                    feature.pull_requests.map(pull_request => <PortContributePullRequest pull_request={pull_request}
+                                    mergedMsg={mergedMsg}
+                                    reviewMsg={reviewMsg}/>)
                 }
-
                 </div>
                 </div>
                 </div>

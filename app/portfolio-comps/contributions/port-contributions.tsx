@@ -41,9 +41,10 @@ export function PortContributions() {
 
     async function updateFeatureCommits(featureName) {
         let newPrData = await getProjectContributions(featureName); // Features consists of 1 or more repos which consists of 1 or more commits
+        console.log("New pr data is" + JSON.stringify(newPrData));
         setFeatures(features =>
             features.map(currentFeature => {
-                return (currentFeature.titleId == featureName) ? {...currentFeature, pull_requests: newPrData} : currentFeature;
+                return (currentFeature.titleId == featureName) ? {...currentFeature, pull_requests: newPrData.prs, project: newPrData.project} : currentFeature;
             })
         );
     }
@@ -61,6 +62,7 @@ export function PortContributions() {
 
     async function getProjectContributions(featureName)
     {
+        let ret = {}
         let req = `http://localhost:5050/api/contributions/${featureName}` // make the request PER feature
         let contributions = {}
         try {
@@ -69,13 +71,17 @@ export function PortContributions() {
         } catch (error) {
             console.error("Something went wrong getting contributions " + error);
         }
-        return requestToPullRequest(contributions);
+        ret["project"] = contributions["project"];
+        ret["prs"] = requestToPullRequest(contributions);
+        return ret;
     }
 
     function requestToPullRequest(reqData) {
         let pullReqs = [];
         for(const [key, value] of Object.entries(reqData)) {
-            pullReqs.push({repo: key, commits : value})
+            if(key != "project"){
+                pullReqs.push({repo: key, commits : value})
+            }
         }
         return pullReqs;
     }
