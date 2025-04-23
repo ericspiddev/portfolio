@@ -306,6 +306,11 @@ html {
     background-color: var(--bg-color);
     min-width: 10em;
     margin: 1em;
+    transition: all 0.3s ease;
+}
+
+.port-project-card:hover {
+    transform: scale(1.05);
 }
 
 .modal-project-desc {
