@@ -636,12 +636,15 @@ html {
     font-family: var(--sharp-font), monospace;
 }
 
-.feature-title {
-    font-size: 1.5em;
-    text-decoration: underline;
-    min-width: 100%;
+.feature-title { /*This is being used in two spots we should fix that*/
     display: flex;
+    min-width: 100%;
     justify-content: center;
+    font-size: 1.33rem;
+    text-decoration: underline;
+    text-decoration-color: white;
+    display-direction: column;
+    margin-bottom: 1em;
 }
 
 .commit-list {
@@ -679,18 +682,6 @@ html {
 .contribute-modal-commits {
     min-height: 50%;
     background-color: var(--secondary-bg-color);
-}
-
-.feature-title {
-    font-size: 1.33rem;
-    display: flex;
-    text-decoration: underline;
-    text-decoration-color: white;
-    margin-left: 2vw;
-    display-direction: column;
-    gap: 20px;
-    padding: 1vh;
-    margin-bottom: 1em;
 }
 
 .info-icon {
