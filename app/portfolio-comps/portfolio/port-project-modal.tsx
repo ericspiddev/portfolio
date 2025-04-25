@@ -9,6 +9,11 @@ export function PortProjectModal({project, closeModal, showModal}){
         setTab(index);
     }
 
+    function closeModalAndResetTab() {
+        setTab(0);
+        closeModal();
+    }
+
     const [tab, setTab] = useState(0);
     const tabs : TabObject[] = [
       {
@@ -39,7 +44,7 @@ export function PortProjectModal({project, closeModal, showModal}){
                      <ProjModalTabs tabs={tabs} setTab={setTabIndex}/>
                     </div>
                     <div class="modal-close">
-                        <button onClick={closeModal}>X</button>
+                        <button onClick={closeModalAndResetTab}>X</button>
                     </div>
                 </div>
                 <div class="modal-content">
