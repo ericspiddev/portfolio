@@ -239,7 +239,7 @@ html {
 
 .project-modal {
     background-color: var(--bg-color);
-    min-width: 60vw;
+    min-width: 70vw;
     min-height: 50vh;
     max-height: 90vh;
     padding: 1em;
@@ -272,6 +272,7 @@ html {
 }
 .modal-content {
     display: flex;
+    justify-content: space-between;
     gap: 0.25em;
     padding: 0.25em;
 }
