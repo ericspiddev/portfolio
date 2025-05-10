@@ -20,10 +20,10 @@ categories is as simple as click and dragging the issue from one column to the o
 The issues all track the created date, modified date, and estimated time for completion.
 `
 const lunarLoggerResults = [
-    "Worked with ASP MVC to create a full stack web application that",
-    "test stirng two",
-    "Utilized C#, dotnet, razor page",
-    "Test"
+    "Worked with ASP MVC to create a full stack web application that supports the typical CRUD operations",
+    "Created responsive, draggable issue cards using JS's drag API",
+    "Used bootstrap and Sass to create a custom space theme for the site",
+    "Wrote custom logic that allows project owners to add and remove users from projects",
 ]
 
 const networkedCoffeeDesc = `
@@ -37,7 +37,11 @@ This project utilized embedded C and the ESP-IDF. It also required a good unders
 skills for making the webpage
 `
 const networkedCoffeeResults = [
-
+    "Utilized the ESP32 IDF to bootstrap a project",
+    "Created an HTTP server in C that parsed requests made to the ESP32",
+    "Wrote a timer driver that turns the coffee machine off after 5 minutes for safety",
+    "Wired up a circuit from the ESP32 and relays to bridge the DC/AC gap between the ESP32 and the coffee machine",
+    "Exposure to lwip and other embedded libraries"
 ];
 
 const magicMirrorDesc = `
@@ -51,7 +55,11 @@ and configring magic mirror. Also some real world hardware skills for connecting
 and actually building the mirror and frame.
 `
 const magicMirrorResults = [
-
+    "Setup a rapsberry pi and rapsdebian for running the mirror",
+    "Built a frame and backing structure to display the laptop screen through 2-way glass",
+    "Customized some modules to include messages that were relevant to me",
+    "Setup static IP/network configs and SSH to allow for easy debug and config access",
+    "Started work on my own custom module to pull data from the web and display it to the mirror",
 ];
 
 const dashboardDesc = `
@@ -64,7 +72,9 @@ at GVSU's project showcase (voted on by classmates). It utilized embedded C and 
 systems like I2C, SPI, as well as other lowlevel concepts
 `
 const dashboardResults = [
-"Created a fully functional car dashboard that used embedded C and common embedded protocols", 
+    "Used common embedded protocols to archi",
+    "Voted 1 of 3 projects to attend Grand Valley's Project Showcase for best in class",
+
 ];
 
 const napsterDesc = `
@@ -76,7 +86,10 @@ requirement and time constraints was converted to Python. This project utilized 
 communicate between processes.
 `
 const napsterResults =[
-
+    "Created a fully functional peer to peer Qt application that communicated over sockets",
+    "Integrated backend code with front end code in python based on users's commands",
+    "Implemented a simple FTP protocol that supported list, create, get and put commands",
+    "Wrote the inital backend in C using low level socket APIs (ended up going to python for Qt)",
 ]
 
 const pcbDesc = `
@@ -87,7 +100,10 @@ using potentiometers. This project was also selected to be 1/3 shown off at GVSU
 great understanding of circuit design and the differnt types of circuits that go into turning sound waves to amplified speaker output.
 `
 const pcbResults =[
-
+    "Used OP amps and filter circuits to design a speaker that amplified audio signals",
+    "Integrated a microphone, and speakers to the circuit to to create a full stereo system",
+    "Also integrated an audio jack so the music could be played off of a phone",
+    "Voted 1 of 3 projects to attend Grand Valley's Project Showcase for best in class",
 ]
 
 const doomPendDesc = `
@@ -100,7 +116,10 @@ to improve the robustness of the pendulum algorthim since some parameters of the
 The project was a success and Dornerworks still takes it to trade shows to show off seL4 capabilities. This project involved Linux,
 embedded, and seL4 skills to succeed.`
 const doomPendResults = [
-
+    "Rewrote the original control algorithm in C (was python)",
+    "Integrated the algorithm with freeRTOS to provde realtime capabilitles",
+    "Virtualized freeRTOS under seL4",
+    "Point of Contact with Dornerworks to ensure expections were met and everyone was on the same page ",
 ]
 
 const dexterLiveDesc = `
@@ -169,7 +188,10 @@ simple control interface to send the direction and speed at which the car should
 since I was able to learn a new technology in such a short amount of time.
 `
 const rcCarResults = [
-
+    "Designed a Android app that drove a RC car using bluetooth",
+    "Worked with Android Studio's Bluetooth API to initalize, receive and respond to data",
+    "Created a GUI interface that turned button presses into directions for the car",
+    "Completed the course in about 6 Weeks without ever writing a mobile app before",
 ]
 const riscvSel4GuestDesc = `
 Risc-V is an up and coming architecture that allows chip designers to use an open and royalty free ISA set to bring their
