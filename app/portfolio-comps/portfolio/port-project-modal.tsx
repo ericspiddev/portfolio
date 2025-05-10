@@ -30,9 +30,9 @@ export function PortProjectModal({project, closeModal, showModal}){
       },
       {
         index: 2,
-        title: "Gallery",
-        content: "Photos eventually",
-        isHidden: true
+        title: "Demo",
+        content: project.demo,
+        isHidden: false
       },
     ]
     return(
@@ -52,7 +52,7 @@ export function PortProjectModal({project, closeModal, showModal}){
                         <p className="modal-project-title"> {project.title}</p>
                         <ProjModalTabContent tabs={tabs} currTab={tab}/>
                     </div>
-                    <img class= {`modal-preview-img ${project.previewImg == '' ? 'hidden' : '' }`} src={`images/projects/modal/${project.previewImg}`}/>
+                    <img class= {`modal-preview-img ${(project.previewImg == '' || tab == 2) ? 'hidden' : '' }`} src={`images/projects/modal/${project.previewImg}`}/>
                 </div>
                 <div class="modal-content-fullscreen">
                     <p className="modal-project-title"> {project.title}</p>

@@ -258,6 +258,18 @@ html {
     gap: 2em;
 }
 
+.port-video-container {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    justify-content: center;
+}
+
+.port-video {
+    max-width: 60%;
+    padding: 0.5em;
+}
+
 .modal-close {
     font-size: 1.5em;
     margin: 0.10em;

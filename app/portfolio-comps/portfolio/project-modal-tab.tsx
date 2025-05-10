@@ -9,7 +9,7 @@ export function ProjModalTabs({tabs, setTab}) {
     <>
        {
         tabs.map((tab) => (
-        <p className={`clickable ${tab.isHidden ? 'hidden': ''}`} onClick={() => setTab(tab.index)}> {tab.title} </p>))
+        <p className={`clickable ${tab.content == undefined ? 'hidden': ''}`} onClick={() => setTab(tab.index)}> {tab.title} </p>))
         }
     </>
     );

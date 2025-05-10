@@ -8,6 +8,7 @@ export interface ModalProject
     hasGallery: boolean;
     projectType: int;
     previewImg: string;
+    demo: string;
     results: string[]
 };
 
@@ -205,7 +206,7 @@ const riscvSel4GuestResults = [
 ];
 
 export const projects : ModalProject[] = [
-    createProject("Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png", lunarLoggerResults),
+    createProject("Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png", lunarLoggerResults, "videos/test-video.mp4"),
     createProject("Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg", networkedCoffeeResults),
     createProject("Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg", dashboardResults),
     createProject("seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg", doomPendResults),
@@ -217,12 +218,12 @@ export const projects : ModalProject[] = [
     createProject("seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg', droneDemoResults),
     createProject("RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png', riscvSel4GuestResults),
     createProject("GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png", napsterResults),
-    createProject("Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg", pcbResults, rcCarResults),
+    createProject("Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg", pcbResults ),
     createProject("Bluetooth RC Car", rcCarDesc, "rc.svg", false, 2, '', rcCarResults),
 ];
 
 
-function createProject(title, desc, projectImg, hasGallery=false, projectType, previewImg, results) : ModalProject
+function createProject(title, desc, projectImg, hasGallery=false, projectType, previewImg, results, demo) : ModalProject
 {
     return {
         title,
@@ -231,6 +232,7 @@ function createProject(title, desc, projectImg, hasGallery=false, projectType, p
         hasGallery,
         projectType,
         previewImg,
+        demo,
         results
     };
 }

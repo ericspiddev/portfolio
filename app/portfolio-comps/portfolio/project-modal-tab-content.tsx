@@ -1,7 +1,9 @@
 import {PortProjectResult} from "./project-result";
+import {PortModalVideo} from "./port-modal-video";
 
 export function ProjModalTabContent({tabs, currTab}) {
-    if (currTab != 1) {
+    const data = tabs[currTab].content;
+    if (currTab == 0) {
         return (
             <div>
                 {
@@ -12,9 +14,14 @@ export function ProjModalTabContent({tabs, currTab}) {
             </div>
         );
     }
-    else {
+    else if (currTab == 1) {
         return (
-            <PortProjectResult results={tabs[currTab].content}/>
+            <PortProjectResult results={data}/>
+        );
+    }
+    else {
+        return(
+            <PortModalVideo vid={data}/>
         );
     }
 }
