@@ -22,10 +22,10 @@ export const blogs: BlogObject[] = [
     },
     {
         id: "3",
-        link: "#",
+        link: "https://medium.com/@ericspidledev/grab-n-go-a-guide-to-html-s-to-drag-and-drop-api-7b7ff0fb2603",
         title: "Grab'n'Go",
-        previewImage: "/images/blog/placeholder.jpg",
-        desc: "A guide to HTML's draggable API and how you can use it to make reactive websites"
+        previewImage: "/images/blog/draggable.png",
+        desc: "A guide to HTML's draggable API and how you can use it to make interactive elements"
     },
     {
         id: "4",
