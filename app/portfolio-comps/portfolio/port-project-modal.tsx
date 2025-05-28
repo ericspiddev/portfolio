@@ -2,6 +2,7 @@ import {useState} from "react";
 import {ProjModalTabs} from "./project-modal-tab";
 import {ProjModalTabContent} from "./project-modal-tab-content";
 import {PortProjectResult} from "./project-result";
+import {PortModalVideo} from "./port-modal-video";
 
 export function PortProjectModal({project, closeModal, showModal}){
 
@@ -12,6 +13,10 @@ export function PortProjectModal({project, closeModal, showModal}){
     function closeModalAndResetTab() {
         setTab(0);
         closeModal();
+    }
+
+    function hasDemo(tabs) {
+        return tabs[2].content != undefined;
     }
 
     const [tab, setTab] = useState(0);
@@ -48,7 +53,7 @@ export function PortProjectModal({project, closeModal, showModal}){
                     </div>
                 </div>
                 <div class="modal-content">
-                    <div>
+                    <div className={`${tab == 2 ? 'full' : ''}`}>
                         <p className="modal-project-title"> {project.title}</p>
                         <ProjModalTabContent tabs={tabs} currTab={tab}/>
                     </div>
@@ -61,6 +66,10 @@ export function PortProjectModal({project, closeModal, showModal}){
                     <p className={`modal-project-desc`}> {tabs[0].content}</p>
                     <p className="modal-section-header"> {tabs[1].title}</p>
                     <PortProjectResult results={tabs[1].content}/>
+                    <div className={`${hasDemo(tabs) ? '' : 'hidden'}`}>
+                    <p className="modal-section-header"> {tabs[2].title}</p>
+                    <PortModalVideo vid={tabs[2].content}/>
+                    </div>
                 </div>
             </div>
         </div>

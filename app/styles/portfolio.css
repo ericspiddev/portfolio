@@ -258,15 +258,19 @@ html {
     gap: 2em;
 }
 
+.full {
+    width: 100%;
+}
+
 .port-video-container {
     display: flex;
     align-items: center;
-    max-width: 100%;
     justify-content: center;
+    width: 100%;
 }
 
 .port-video {
-    max-width: 60%;
+    max-width: 40%;
     padding: 0.5em;
 }
 
@@ -906,6 +910,11 @@ html {
         align-items: center;
         font-size: 1.25em;
         font-family: var(--smooth-font), serif;
+    }
+
+    .port-video {
+        max-width: 100%;
+        padding: 0.5em;
     }
 
     .modal-preview-img {
