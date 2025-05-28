@@ -250,6 +250,7 @@ html {
 
 .project-modal-header{
     display: flex;
+    flex-direction: row-reverse;
     gap: 2em;
     justify-content: space-between;
 }
@@ -649,8 +650,8 @@ html {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-evenly;
     padding-top: 0.5em;
-    gap: 2em;
     margin-bottom: 0.75em;
     font-family: var(--sharp-font), monospace;
 }
@@ -677,7 +678,6 @@ html {
 .commit-author {
     display: flex;
     align-items: center;
-    right-margin: 0.5em;
 }
 
 .repo-title{
@@ -768,13 +768,17 @@ html {
         min-width: 40%;
     }
 }
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1250px) {
     html {
         font-size: var(--med-screen-rem);
     }
     .photo-container {
         flex-direction: column-reverse;
         gap: 0px;
+    }
+
+    .commit-list {
+        justify-content: space-between;
 
     }
 
@@ -876,6 +880,9 @@ html {
         padding: 1em;
         width: 60%;
     }
+    .commit-message {
+        width: 25ch;
+    }
 }
 
 
@@ -894,8 +901,8 @@ html {
 
     .project-modal {
         font-size: 1.2rem;
-        min-width: 100vw;
-        min-height: 100vh;
+        min-width: 100%;
+        min-height: 100%;
     }
 
     .modal-content {
@@ -939,10 +946,14 @@ html {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    .commit-message {
+        width: 15ch;
+    }
+
 }
 
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     html {
         font-size: var(--sm-screen-rem);
     }
@@ -996,6 +1007,37 @@ html {
 
     .about-intro {
         font-size: 4rem;
+    }
+    .commit {
+        justify-content: space-between;
+        font-size: 10px;
+    }
+
+    .commit-message {
+        width: 15ch;
+    }
+
+    #contributions {
+        grid-template-columns: 80%;
+    }
+}
+
+
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 10px;
+    }
+    .tech-grid {
+        grid-template-columns: repeat(3, 4em);
+    }
+
+    .tech-selector {
+        padding: 0.5em;
+        font-size: 0.9rem;
+    }
+
+    .tech-highlight {
+        gap: 1em;
     }
 }
 

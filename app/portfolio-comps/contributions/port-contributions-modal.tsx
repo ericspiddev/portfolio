@@ -11,10 +11,10 @@ export function PortContributeModal({closeModal, showModal, feature, mergedMsg, 
         <div className={`project-modal-overlay ${showModal ? '' : 'hidden'}`}>
             <div className={`project-modal`}>
                 <div className="project-modal-header">
-                    <p className="modal-title">{feature.displayTitle}</p>
                     <div class="modal-close">
                         <button onClick={closeModal}>X</button>
                     </div>
+                    <p className="modal-title">{feature.displayTitle}</p>
                 </div>
                 <div className="contribute-modal-body">
                 <p> {feature.about} </p>
