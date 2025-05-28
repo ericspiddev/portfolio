@@ -410,11 +410,13 @@ html {
     margin-bottom: 5em;
     margin-top: 1em;
 }
+
 .tech-photo {
     width: 3.5rem;
     -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%) contrast(80%);
     align-self: center;
+    transition: all 1s ease;
 }
 
 .tech-photo:hover {
