@@ -1,7 +1,7 @@
 export function PortBlogTitle({title="Title"}){
     return (
     <>
-        <div class="blog-title">
+        <div className="blog-title">
             <p> {title} </p>
         </div>
     </>

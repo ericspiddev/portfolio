@@ -1,7 +1,7 @@
 export function PortBlogDesc({descript="test desc"}){
     return (
     <>
-        <div class="blog-desc">
+        <div className="blog-desc">
             <p> {descript} </p>
         </div>
     </>

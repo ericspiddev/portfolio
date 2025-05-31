@@ -3,7 +3,7 @@ export function PortContributePullRequest({ pull_request, mergedMsg, reviewMsg }
 {
     return (
     <>
-        <div class="repo-info">
+        <div className="repo-info">
             <p className="repo-title"> {pull_request.repo} </p>
             <p className="repo-merged">{pull_request.commits.is_merged ? `${mergedMsg}` : `${reviewMsg}`}</p>
         </div>

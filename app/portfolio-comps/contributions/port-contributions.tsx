@@ -89,12 +89,12 @@ export function PortContributions() {
     return (
         <>
             <div id="contributions-section">
-                <div class="section-common">
-                    <div class="section-text-common">
+                <div className="section-common">
+                    <div className="section-text-common">
                         <PortfolioHeader header="Contributions"/>
                         <p>Contributions will go here</p>
                     </div>
-                    <div class="section-text-common">
+                    <div className="section-text-common">
                         <div id="contributions">
                         {
                             features.map((feature) => ( // map over each feature...
@@ -103,7 +103,7 @@ export function PortContributions() {
                         </div>
                     </div>
                 </div>
-                <div class="filler"></div>
+                <div className="filler"></div>
             </div>
         </>
     );

@@ -48,18 +48,18 @@ export function PortProjectModal({project, closeModal, showModal}){
                     <div className="project-modal-tabs">
                      <ProjModalTabs tabs={tabs} setTab={setTabIndex}/>
                     </div>
-                    <div class="modal-close">
+                    <div className="modal-close">
                         <button onClick={closeModalAndResetTab}>X</button>
                     </div>
                 </div>
-                <div class="modal-content">
+                <div className="modal-content">
                     <div className={`${tab == 2 ? 'full' : ''}`}>
                         <p className="modal-project-title"> {project.title}</p>
                         <ProjModalTabContent tabs={tabs} currTab={tab}/>
                     </div>
-                    <img class= {`modal-preview-img ${(project.previewImg == '' || tab == 2) ? 'hidden' : '' }`} src={`images/projects/modal/${project.previewImg}`}/>
+                    <img className= {`modal-preview-img ${(project.previewImg == '' || tab == 2) ? 'hidden' : '' }`} src={`images/projects/modal/${project.previewImg}`}/>
                 </div>
-                <div class="modal-content-fullscreen">
+                <div className="modal-content-fullscreen">
                     <p className="modal-project-title"> {project.title}</p>
                     <img className= {`modal-preview-img ${project.previewImg == '' ? 'hidden' : '' }`} src={`images/projects/modal/${project.previewImg}`}/>
                     <p className="modal-section-header"> {tabs[0].title}</p>

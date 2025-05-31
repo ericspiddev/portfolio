@@ -22,6 +22,6 @@ export function PortTechSelector({state, setState, selectorText}) {
             onMouseEnter={() => handleTechMouseEnter(setState)}
             onMouseLeave={() => handleTechMouseLeave(setState)}
             onClick={() => setState(true)}
-            class="tech-selector">{selectorText}</button>
+            className="tech-selector">{selectorText}</button>
     );
 }

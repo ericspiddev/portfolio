@@ -29,11 +29,11 @@ export function HamburgerMenu() {
 
     return (
     <>
-        <div class="hamburger-toggle">
+        <div className="hamburger-toggle">
             <FontAwesomeIcon icon={faBars} onClick={handleHamburgerClick} ref={buttonRef} size="lg"/>
         </div>
 
-        <div class= {show ? 'hamburger-menu' : 'hidden'} ref={menuRef}>
+        <div className= {show ? 'hamburger-menu' : 'hidden'} ref={menuRef}>
         <ul>
             <li onClick={handleHamburgerClick} ><a href="#about-section"> <FontAwesomeIcon icon={faCircleInfo}/> About</a> </li>
             <li onClick={handleHamburgerClick}><a href="#portfolio-section"> <FontAwesomeIcon icon={faCode}/> Portfolio </a></li>

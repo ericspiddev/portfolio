@@ -27,9 +27,9 @@ export function PortCarousel({items, maxIndex}) {
     };
 
     return(
-    <div class="carousel-container">
-        <button onClick={() => handleCaroClick(false)} class="caro-button clickable"> <FontAwesomeIcon icon={faArrowLeftLong} /> </button>
+    <div className="carousel-container">
+        <button onClick={() => handleCaroClick(false)} className="caro-button clickable"> <FontAwesomeIcon icon={faArrowLeftLong} /> </button>
         <PortBlogEntry blog={items[caroIndex]} index={caroIndex} maxIndex={maxIndex}/>
-        <button onClick={() => handleCaroClick(true)} class="caro-button clickable"> <FontAwesomeIcon icon={faArrowRightLong}/> </button>
+        <button onClick={() => handleCaroClick(true)} className="caro-button clickable"> <FontAwesomeIcon icon={faArrowRightLong}/> </button>
     </div>);
 }

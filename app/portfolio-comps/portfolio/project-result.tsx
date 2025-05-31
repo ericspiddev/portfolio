@@ -1,7 +1,7 @@
 export function PortProjectResult({results}) {
     return (
         <div>
-            <ul class="project-result-list">
+            <ul className="project-result-list">
 
             {
                 results.map((result) => (

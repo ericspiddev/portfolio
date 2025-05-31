@@ -6,8 +6,8 @@ import {blogs} from "./port-blog-data";
 export function PortBlog() {
     return (
         <>
-            <div class="section-common">
-                <div class ="section-text-common">
+            <div className="section-common">
+                <div className="section-text-common">
                     <PortfolioHeader header="Blog"/>
                     <p> Articles I've written about all sorts of topics</p>
                     <div id="blogs-container">
@@ -19,7 +19,7 @@ export function PortBlog() {
                     <div id="blogs-carousel">
                        <PortCarousel items={blogs} maxIndex={blogs.length}/>
                     </div>
-                    <div class="filler">
+                    <div className="filler">
                     </div>
                 </div>
             </div>

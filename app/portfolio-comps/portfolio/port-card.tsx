@@ -18,11 +18,11 @@ export function PortCard({project, currentTab,}) {
     return (
     <>
     <div className={`port-project-card ${project.projectType == currentTab ? '' : 'hidden'} clickable`} onClick={showProjectModal}>
-        <img class="project-card-image" src={`images/projects/${project.projectImg}`}/>
-        <div class="project-card-body">
-            <h1 class="project-card-title"> {project.title} </h1>
+        <img className="project-card-image" src={`images/projects/${project.projectImg}`}/>
+        <div className="project-card-body">
+            <h1 className="project-card-title"> {project.title} </h1>
         </div>
-        <div class="project-card-footer">
+        <div className="project-card-footer">
             <PortTag tagText="Embed" tagColor="green"/>
             <PortTag tagText="Web" tagColor="blue"/>
             <PortTag tagText="tag" tagColor="red"/>

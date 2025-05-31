@@ -94,25 +94,25 @@ function getFieldMaxSize(size, name){
 
     return(
         <>
-         <form class="contact-form-container" onSubmit={handleSubmit}>
-         <div class="contact-form">
-            <div class="form-input-field">
+         <form className="contact-form-container" onSubmit={handleSubmit}>
+         <div className="contact-form">
+            <div className="form-input-field">
                 <label htmlFor="contact-name">Name: {buildTextCounter(contactData.fullName.length, "medium")} </label>
                 <input type="text" id="contact-name" name="fullName" value={contactData.fullName} onChange={handleFormChange} placeholder="Your name"required/>
             </div>
-            <div class="form-input-field">
+            <div className="form-input-field">
                 <label htmlFor="contact-email">Email: {buildTextCounter(contactData.userEmail.length, "medium")} </label>
                 <input type="email" id="contact-email" name="userEmail" value={contactData.userEmail} onChange={handleFormChange} placeholder="Your email"required/>
             </div>
-            <div class="form-input-field">
+            <div className="form-input-field">
                 <label htmlFor="contact-message">Message: {buildTextCounter(contactData.customMessage.length, "large")}</label>
                 <textarea id="contact-message" placeholder="Please put your message here"
                     value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required> </textarea>
             </div>
          </div>
-          <div class="form-footer">
+          <div className="form-footer">
 
-            <div class="contact-buttons">
+            <div className="contact-buttons">
                 <PortFavButton redirectLink={mediumAccount} favIcon={faMedium} title="Medium"/>
                 <PortFavButton redirectLink={linkedInAccount} favIcon={faLinkedin} title="Linkedin"/>
                 <PortFavButton redirectLink={instaAccount} favIcon={faInstagram} title="Instagram"/>

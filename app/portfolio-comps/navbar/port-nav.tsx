@@ -12,11 +12,11 @@ export function PortNavBar()
                 </a>
             </div>
         <ul id="portfolio-nav">
-            <li class="portfolio-nav-item"><a href="#about-section"> <FontAwesomeIcon icon={faCircleInfo}/> About</a> </li>
-            <li class="portfolio-nav-item"><a href="#portfolio-section"> <FontAwesomeIcon icon={faCode}/> Portfolio </a></li>
-            <li class="portfolio-nav-item"><a href="#contact-section"> <FontAwesomeIcon icon={faEnvelope}/> Contact</a></li>
-            <li class="portfolio-nav-item"> <a href="#blog-section"> <FontAwesomeIcon icon={faComment}/> Blog</a></li>
-            <li class="portfolio-nav-item"> <a href="#contributions-section"> <FontAwesomeIcon icon={faCodeCommit}/> Contributions</a></li>
+            <li className="portfolio-nav-item"><a href="#about-section"> <FontAwesomeIcon icon={faCircleInfo}/> About</a> </li>
+            <li className="portfolio-nav-item"><a href="#portfolio-section"> <FontAwesomeIcon icon={faCode}/> Portfolio </a></li>
+            <li className="portfolio-nav-item"><a href="#contact-section"> <FontAwesomeIcon icon={faEnvelope}/> Contact</a></li>
+            <li className="portfolio-nav-item"> <a href="#blog-section"> <FontAwesomeIcon icon={faComment}/> Blog</a></li>
+            <li className="portfolio-nav-item"> <a href="#contributions-section"> <FontAwesomeIcon icon={faCodeCommit}/> Contributions</a></li>
             <HamburgerMenu/>
         </ul>
    </nav>

@@ -6,8 +6,8 @@ export default function PortTabContent({tab})
 {
     return(
     <>
-        <div class="portfolio-tab-content">
-            <div class="port-projects">
+        <div className="portfolio-tab-content">
+            <div className="port-projects">
                 {
                     projects.map((project => (
                     <>

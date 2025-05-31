@@ -11,15 +11,15 @@ export function PortTech() {
 
     return (
         <>
-            <div class="tech-experience">
-                <div class="tech-highlight">
+            <div className="tech-experience">
+                <div className="tech-highlight">
                     <PortTechSelector state={languageColor} setState={setLanguageColor} selectorText="Languages"/>
                     <PortTechSelector state={frameworkColor} setState={setFrameworkColor} selectorText="Frameworks"/>
                     <PortTechSelector state={embeddedColor} setState={setEmbeddedColor} selectorText="Embedded"/>
                     <PortTechSelector state={databaseColor} setState={setDatabaseColor} selectorText="Databases"/>
                     <PortTechSelector state={devToolColor} setState={setDevToolColor} selectorText="Dev Tools"/>
                 </div>
-                <div class="tech-grid">
+                <div className="tech-grid">
                     <PortTextLogo state={embeddedColor} image="images/tech/linux-original.svg"/>
                     <PortTextLogo state={languageColor} image="images/tech/css3-original.svg"/>
                     <PortTextLogo state={languageColor} image="images/tech/c-original.svg"/>
