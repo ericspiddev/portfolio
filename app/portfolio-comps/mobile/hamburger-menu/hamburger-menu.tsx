@@ -9,7 +9,6 @@ export function HamburgerMenu() {
     const buttonRef = useRef(null);
 
     const handleHamburgerClick = () => {
-        console.log(show);
         setShow(!show);
     }
 

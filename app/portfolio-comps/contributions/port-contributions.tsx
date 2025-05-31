@@ -43,7 +43,6 @@ export function PortContributions() {
 
     async function updateFeatureCommits(featureName) {
         let newPrData = await getProjectContributions(featureName); // Features consists of 1 or more repos which consists of 1 or more commits
-        console.log("New pr data is" + JSON.stringify(newPrData));
         setFeatures(features =>
             features.map(currentFeature => {
                 return (currentFeature.titleId == featureName) ? {...currentFeature, pull_requests: newPrData.prs, project: newPrData.project} : currentFeature;

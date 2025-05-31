@@ -10,7 +10,6 @@ export enum portfolioTabTypes {
 }
 export function PortPortfolio() {
     const [tab, setTab] = useState(portfolioTabTypes.PERSONAL);
-    console.log(portfolioTabTypes.PROFESSIONAL);
     return (
         <>
             <div id="porfolio-section">

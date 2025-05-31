@@ -32,22 +32,14 @@ function createBackendData(project, repo, pullRequestId) {
     }
 }
 
-//export const features : Feature[] = [
-//    await createFeature(0, [0, 1, 2], "PL011 Vuart", armpl011About, "purple", vuartBackendData),
-//    await createFeature(1, [0, 1, 2], "x86 VGA Console", x86VGAAbout, "blue", x86VgaBackendData)
-//];
-
 async function createFeature(id, ids, featureTitle, about, color, projectData) : Feature {
     let commits : Commit[] = [];
-    console.log("projectdat length " + projectData.length);
     for (let i = 0; i < projectData.length; i++) {
         let currPR = projectData[i];
         let prCommits = await getProjectContribution(currPR.project, currPR.repo, currPR.pullRequestId);
-        console.log("PR commits is " + prCommits);
         commits.push(prCommits);
     }
 
-    console.log("ON FEATURE CREATE COMMITS IS " + JSON.stringify(commits));
     return {
         id,
         title: featureTitle,
@@ -65,7 +57,6 @@ async function getProjectContribution(project, repo, pullRequestId)
     try {
         let res = await fetch(req);
         let prData = await res.json();
-        console.log("PrData len is " + prData.len);
         for(let i = 0; i < prData.length; i++) {
             let currCommit = prData[i];
             commits.push(createCommit(currCommit.sha, currCommit.message, currCommit.author));
@@ -86,7 +77,6 @@ function createCommit(id, sha, message, author) : Commit
         message,
         author,
     }
-    console.log("Commit is : " + JSON.stringify(commit));
     return commit;
 }
 
