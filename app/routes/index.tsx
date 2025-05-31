@@ -34,7 +34,7 @@ export default function Home() {
 
     return (
         <>
-            <script src="https://kit.fontawesome.com/b24df79285.js" crossorigin="anonymous"></script>
+            <script src="https://kit.fontawesome.com/b24df79285.js" crossOrigin="anonymous"></script>
             <PortNavBar/>
             <PortAbout nameClass={currClass}/>
             <PortPortfolio/>

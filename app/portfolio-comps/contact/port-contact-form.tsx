@@ -97,15 +97,15 @@ function getFieldMaxSize(size, name){
          <form class="contact-form-container" onSubmit={handleSubmit}>
          <div class="contact-form">
             <div class="form-input-field">
-                <label for="contact-name">Name: {buildTextCounter(contactData.fullName.length, "medium")} </label>
-                <input type="text" id="contact-name" name="fullName" value={contactData.fullName} onChange={handleFormChange} placeHolder="Your name"required/>
+                <label htmlFor="contact-name">Name: {buildTextCounter(contactData.fullName.length, "medium")} </label>
+                <input type="text" id="contact-name" name="fullName" value={contactData.fullName} onChange={handleFormChange} placeholder="Your name"required/>
             </div>
             <div class="form-input-field">
-                <label for="contact-email">Email: {buildTextCounter(contactData.userEmail.length, "medium")} </label>
-                <input type="email" id="contact-email" name="userEmail" value={contactData.userEmail} onChange={handleFormChange} placeHolder="Your email"required/>
+                <label htmlFor="contact-email">Email: {buildTextCounter(contactData.userEmail.length, "medium")} </label>
+                <input type="email" id="contact-email" name="userEmail" value={contactData.userEmail} onChange={handleFormChange} placeholder="Your email"required/>
             </div>
             <div class="form-input-field">
-                <label for="contact-message">Message: {buildTextCounter(contactData.customMessage.length, "large")}</label>
+                <label htmlFor="contact-message">Message: {buildTextCounter(contactData.customMessage.length, "large")}</label>
                 <textarea id="contact-message" placeholder="Please put your message here"
                     value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required> </textarea>
             </div>
