@@ -45,11 +45,11 @@ export function PortProjectModal({project, closeModal, showModal}){
         <div className={`project-modal-overlay ${showModal ? '' : 'hidden'}`}>
             <div className={`project-modal`}>
                 <div className="project-modal-header">
-                    <div className="project-modal-tabs">
-                     <ProjModalTabs tabs={tabs} setTab={setTabIndex}/>
-                    </div>
                     <div className="modal-close">
                         <button onClick={closeModalAndResetTab}>X</button>
+                    </div>
+                    <div className="project-modal-tabs">
+                     <ProjModalTabs tabs={tabs} setTab={setTabIndex}/>
                     </div>
                 </div>
                 <div className="modal-content">
