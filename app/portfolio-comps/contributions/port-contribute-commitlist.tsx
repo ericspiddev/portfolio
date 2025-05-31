@@ -5,7 +5,7 @@ export function PortContributeCommitList({ commitList })
     <>
         <div className="commit-list">
         {
-            commitList.map(commit => (<PortContributeCommit commit={commit}/>))
+            commitList.map(commit => (<PortContributeCommit commit={commit} key={commit.sha}/>))
         }
         </div>
     </>

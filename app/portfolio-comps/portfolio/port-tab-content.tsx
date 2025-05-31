@@ -10,9 +10,7 @@ export default function PortTabContent({tab})
             <div className="port-projects">
                 {
                     projects.map((project => (
-                    <>
-                        <PortCard project={project} currentTab={tab}/>
-                    </>
+                        <PortCard key={project.id} project={project} currentTab={tab}/>
                     )))
                 }
             </div>

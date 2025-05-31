@@ -2,6 +2,7 @@ import { portfolioTabTypes } from './port-portfolio';
 
 export interface ModalProject
 {
+    id : integer
     title : string;
     desc : string;
     projectImg: string;
@@ -10,6 +11,11 @@ export interface ModalProject
     previewImg: string;
     demo: string;
     results: string[]
+};
+
+interface projectResult {
+    id: integer,
+    result: string,
 };
 
 const lunarLoggerDesc = `
@@ -233,25 +239,26 @@ const riscvSel4GuestResults = [
 ];
 
 export const projects : ModalProject[] = [
-    createProject("Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png", lunarLoggerResults, "lunar-logger.mp4"),
-    createProject("Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg", networkedCoffeeResults),
-    createProject("Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg", dashboardResults),
-    createProject("seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg", doomPendResults, "doom-demo.mp4"),
-    createProject("Magic Mirror", magicMirrorDesc, "mirror.svg",false, 0, "magic-mirror.png", magicMirrorResults),
-    createProject("Dexter Live", dexterLiveDesc, "wifi.svg", false, 1, 'dexter-live.png', dexterLiveResults),
-    createProject("Dexter Controls", dexterControlsDesc, "laundry.svg", false, 1, 'dexter-controls.png', dexterControlsResults),
-    createProject("seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, 1, 'usb.jpg', xhciUsbResults),
-    createProject("Hw-Mgr", hwMgrDesc, "share.svg", false, 1, 'hw-mgr.png', hwMgrResults),
-    createProject("seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg', droneDemoResults),
-    createProject("RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png', riscvSel4GuestResults),
-    createProject("GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png", napsterResults),
-    createProject("Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg", pcbResults ),
-    createProject("Bluetooth RC Car", rcCarDesc, "rc.svg", false, 2, "android-rc-app.png", rcCarResults, "rc-car.mp4"),
+    createProject(0,"Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png", lunarLoggerResults, "lunar-logger.mp4"),
+    createProject(1,"Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg", networkedCoffeeResults),
+    createProject(2,"Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg", dashboardResults),
+    createProject(3,"seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg", doomPendResults, "doom-demo.mp4"),
+    createProject(4,"Magic Mirror", magicMirrorDesc, "mirror.svg",false, 0, "magic-mirror.png", magicMirrorResults),
+    createProject(5,"Dexter Live", dexterLiveDesc, "wifi.svg", false, 1, 'dexter-live.png', dexterLiveResults),
+    createProject(6,"Dexter Controls", dexterControlsDesc, "laundry.svg", false, 1, 'dexter-controls.png', dexterControlsResults),
+    createProject(7,"seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, 1, 'usb.jpg', xhciUsbResults),
+    createProject(8,"Hw-Mgr", hwMgrDesc, "share.svg", false, 1, 'hw-mgr.png', hwMgrResults),
+    createProject(9,"seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg', droneDemoResults),
+    createProject(10,"RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png', riscvSel4GuestResults),
+    createProject(11,"GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png", napsterResults),
+    createProject(12,"Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg", pcbResults ),
+    createProject(13,"Bluetooth RC Car", rcCarDesc, "rc.svg", false, 2, "android-rc-app.png", rcCarResults, "rc-car.mp4"),
 ];
 
-function createProject(title, desc, projectImg, hasGallery=false, projectType, previewImg, results, demo) : ModalProject
+function createProject(id, title, desc, projectImg, hasGallery=false, projectType, previewImg, results, demo) : ModalProject
 {
     return {
+        id,
         title,
         desc,
         projectImg,

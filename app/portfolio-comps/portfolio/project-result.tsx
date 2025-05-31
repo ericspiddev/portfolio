@@ -5,7 +5,7 @@ export function PortProjectResult({results}) {
 
             {
                 results.map((result) => (
-                    <li className="result"> {result} </li>
+                    <li className="result" key={result}> {result} </li>
                 ))
             }
             </ul>

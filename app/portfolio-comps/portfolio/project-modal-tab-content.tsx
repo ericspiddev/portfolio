@@ -8,7 +8,7 @@ export function ProjModalTabContent({tabs, currTab}) {
             <div>
                 {
                     tabs.map((tab) => (
-                        <p className={`modal-project-desc ${tab.index == currTab ? '' : 'hidden'}`}> {tab.content}</p>
+                        <p className={`modal-project-desc ${tab.index == currTab ? '' : 'hidden'}`} key={tab.index}> {tab.content}</p>
                     ))
                 }
             </div>

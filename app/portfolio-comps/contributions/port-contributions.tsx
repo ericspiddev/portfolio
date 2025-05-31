@@ -11,6 +11,7 @@ interface Commit {
 };
 
 interface Feature {
+    id: integer,
     displayTitle : string,
     pull_requests : PullRequest[],
     about : string,
@@ -19,6 +20,7 @@ interface Feature {
 }
 
 interface PullRequest {
+    id: integer,
     project : string, // base project
     repo: string, // actual repo
     commits : Commit[], // commits from to be added
@@ -78,9 +80,11 @@ export function PortContributions() {
 
     function requestToPullRequest(reqData) {
         let pullReqs = [];
+        let id = 0;
         for(const [key, value] of Object.entries(reqData)) {
             if(key != "project"){
-                pullReqs.push({repo: key, commits : value})
+                pullReqs.push({repo: key, commits : value, id: id})
+                id += 1;
             }
         }
         return pullReqs;
@@ -98,7 +102,7 @@ export function PortContributions() {
                         <div id="contributions">
                         {
                             features.map((feature) => ( // map over each feature...
-                            <PortContributeFeature feature={feature}/>))
+                            <PortContributeFeature key={feature.titleId} feature={feature}/>))
                         }
                         </div>
                     </div>

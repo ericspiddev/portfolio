@@ -20,7 +20,7 @@ export function PortContributeModal({closeModal, showModal, feature, mergedMsg, 
                 <p> {feature.about} </p>
                 <div className="modal-repo">
                 {
-                    feature.pull_requests.map(pull_request => <PortContributePullRequest pull_request={pull_request}
+                    feature.pull_requests.map(pull_request => <PortContributePullRequest key={pull_request.id} pull_request={pull_request}
                                     mergedMsg={mergedMsg}
                                     reviewMsg={reviewMsg}/>)
                 }

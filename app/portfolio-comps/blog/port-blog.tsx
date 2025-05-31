@@ -13,7 +13,7 @@ export function PortBlog() {
                     <div id="blogs-container">
                         {
                             blogs.map((blog) => (
-                            <PortBlogEntry blog={blog}/>))
+                            <PortBlogEntry blog={blog} key={blog.id}/>))
                         }
                     </div>
                     <div id="blogs-carousel">
