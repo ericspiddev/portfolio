@@ -107,7 +107,7 @@ function getFieldMaxSize(size, name){
             <div className="form-input-field">
                 <label htmlFor="contact-message">Message: {buildTextCounter(contactData.customMessage.length, "large")}</label>
                 <textarea id="contact-message" placeholder="Please put your message here"
-                    value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required> </textarea>
+                    value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required></textarea>
             </div>
          </div>
           <div className="form-footer">
