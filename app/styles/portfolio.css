@@ -64,7 +64,7 @@ html {
     top: 0;
     bottom: 0;
     position: absolute;
-    background-image: url("images/code_background.jpg");
+    background-image: url("/images/backgrounds/code_background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 1;
