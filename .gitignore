@@ -4,3 +4,4 @@ tags
 # React Router
 /.react-router/
 /build/
+.env

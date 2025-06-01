@@ -1,4 +1,5 @@
 // Each project feature should consist of a list of projects, repos, and PR IDs that correspond to it
+import {apiUrl} from "../../env/env";
 export interface FeatureBackendInfo {
     project: string;
     repo: string;
@@ -52,7 +53,8 @@ async function createFeature(id, ids, featureTitle, about, color, projectData) :
 
 async function getProjectContribution(project, repo, pullRequestId)
 {
-    let req = `http://localhost:5050/api/contributions/${project}/${repo}?pull_id=${pullRequestId}`
+
+    let req = `${apiUrl}/api/62567c58947/contributions/${project}/${repo}?pull_id=${pullRequestId}`
     let commits : Commit[] = [];
     try {
         let res = await fetch(req);

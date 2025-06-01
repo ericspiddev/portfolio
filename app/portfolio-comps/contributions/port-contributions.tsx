@@ -2,6 +2,7 @@ import PortfolioHeader from "../misc/portfolio-header";
 import {PortContributeFeature} from "./port-contribute-feature";
 import {vuartBackendData, x86VgaBackendData} from "./port-contributions-data";
 import {useState, useEffect} from "react";
+import {apiUrl} from "../../env/env";
 
 interface Commit {
     id : number;
@@ -64,7 +65,7 @@ export function PortContributions() {
     async function getProjectContributions(featureName)
     {
         let ret = {}
-        let req = `http://localhost:5050/api/contributions/${featureName}` // make the request PER feature
+        let req = `${apiUrl}/api/62567c58947/contributions/${featureName}` // make the request PER feature
         let contributions = {}
         try {
             let res = await fetch(req);

@@ -4,6 +4,7 @@ import { faFile } from '@fortawesome/free-solid-svg-icons'
 import { PortFavButton } from "./port-fav-button"
 import {PortBanner} from "./port-banner";
 import { useState, useEffect } from 'react';
+import {apiUrl} from "../../env/env";
 
 export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
     const linkedInAccount = "https://www.linkedin.com/in/espidle/";
@@ -31,7 +32,7 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
  const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await fetch('http://localhost:5050/api/send-mail', {
+      const response = await fetch(`${apiUrl}/api/30b6adadfbf49/send-mail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
