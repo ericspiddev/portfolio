@@ -12,4 +12,5 @@ function get_env_var(var_name) {
 
 const apiBaseUrl = get_env_var("API_URL");
 const apiPort = get_env_var("API_PORT");
-export const apiUrl = `${apiBaseUrl}:${apiPort}`;
+export const apiUrl = apiPort !== undefined ? `${apiBaseUrl}:${apiPort}` : `${apiBaseUrl}`;
+

@@ -956,8 +956,14 @@ html {
     html {
         font-size: var(--sm-screen-rem);
     }
+
     #portfolio-nav-container {
         min-height: 3.5rem;
+    }
+
+    .blog-preview-image img {
+        height: auto;
+        width: 100%;
     }
 
     .blogentry {
