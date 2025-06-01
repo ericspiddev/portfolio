@@ -45,7 +45,6 @@ export function PortTech() {
                     <PortTextLogo state={languageColor} image="images/tech/javascript-original.svg"/>
                     <PortTextLogo state={languageColor} image="images/tech/java-original.svg"/>
                     <PortTextLogo state={devToolColor} image="images/tech/vscode-original.svg"/>
-                    <PortTextLogo state={embeddedColor} image="images/tech/sel4-original.svg"/>
                     <PortTextLogo state={databaseColor} image="images/tech/microsoftsqlserver-original.svg"/>
                     <PortTextLogo state={languageColor} image="images/tech/ruby-original.svg"/>
                 </div>
