@@ -1,4 +1,9 @@
-import { portfolioTabTypes } from './port-portfolio';
+
+export enum portfolioTabTypes {
+    PROFESSIONAL,
+    PERSONAL,
+    EDUCATIONAL,
+}
 
 export interface ModalProject
 {
@@ -231,28 +236,43 @@ softcore Rocketchip. The rocketchip ran on the PL of a ZYNQMP SoC. I completed t
 on real hardware (QEMU was done before this). I wrote an article about this which can be found below in the blogs section.
 `
 const riscvSel4GuestResults = [
-    "Successfully booted a buildroot linux guest underneath seL4 on RISC-V.",
-    "Debugged various issues when trying to boot the guest that resulted in digging through RISC-V assembly",
-    "Added support to the seL4 RISC-V VMM for 16 bit instructions (similar to Thumb2 on ARM)",
-    "Fixed some issues with interrupts and ACKing in the RISC-V VMM with some help (Thanks Robbie)",
-    "Received an outstanding techncial contribution award at DW as a co-op for this task",
+    "successfully booted a buildroot linux guest underneath sel4 on risc-v.",
+    "debugged various issues when trying to boot the guest that resulted in digging through risc-v assembly",
+    "added support to the sel4 risc-v vmm for 16 bit instructions (similar to thumb2 on arm)",
+    "fixed some issues with interrupts and acking in the risc-v vmm with some help (thanks robbie)",
+    "received an outstanding techncial contribution award at dw as a co-op for this task",
+];
+
+const scoutDesc = `
+Nvim-scout is a neovim extension that brings a UI searchbar to Neovim. When switching over from other IDEs I found
+I missed the search bar that came with them. For that reason I created nvim-scout, while neovim's '/' search implements
+most of the functionality out of te box nvim-scout provides a UI with better feedback for searching. The searchbar also
+allows for easier toggling of search types and the use of vim motions to edit your search query. If you'd like to see more
+please visit my github's nvim-scout project`;
+
+const scoutResults = [
+    "Created a nvim extension that can be installed through Lazy.nvim",
+    "Added search modes for lua patterns and matching case",
+    "Supported custom themes and styles for the searchbar",
+    "Used auto commands to reposition and resize searchbar",
 ];
 
 export const projects : ModalProject[] = [
-    createProject(0,"Lunar Logger", lunarLoggerDesc, "rocket.svg", false, 0, "lunar-logger-demo.png", lunarLoggerResults, "lunar-logger.mp4"),
-    createProject(1,"Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, 0, "coffee-maker.svg", networkedCoffeeResults),
-    createProject(2,"Car Dashboard", dashboardDesc, "speedometer.svg", false, 2, "dashboard-demo.jpg", dashboardResults),
-    createProject(3,"seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, 2, "doom-pend-demo.jpg", doomPendResults, "doom-demo.mp4"),
-    createProject(4,"Magic Mirror", magicMirrorDesc, "mirror.svg",false, 0, "magic-mirror.png", magicMirrorResults),
-    createProject(5,"Dexter Live", dexterLiveDesc, "wifi.svg", false, 1, 'dexter-live.png', dexterLiveResults),
-    createProject(6,"Dexter Controls", dexterControlsDesc, "laundry.svg", false, 1, 'dexter-controls.png', dexterControlsResults),
-    createProject(7,"seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, 1, 'usb.jpg', xhciUsbResults),
-    createProject(8,"Hw-Mgr", hwMgrDesc, "share.svg", false, 1, 'hw-mgr.png', hwMgrResults),
-    createProject(9,"seL4 Drone Demo", droneDemoDesc, "drone.svg", false, 1, 'ardupilot-planner.jpg', droneDemoResults),
-    createProject(10,"RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, 1, 'risc-v.png', riscvSel4GuestResults),
-    createProject(11,"GV Napster", napsterDesc, "data-transfer.svg", false, 2, "gv-napster-demo.png", napsterResults),
-    createProject(12,"Stereo PCB", pcbDesc, "music.svg", false, 2, "pcb.jpg", pcbResults ),
-    createProject(13,"Bluetooth RC Car", rcCarDesc, "rc.svg", false, 2, "android-rc-app.png", rcCarResults, "rc-car.mp4"),
+    createProject(0,"Lunar Logger", lunarLoggerDesc, "rocket.svg", false, portfolioTabTypes.PERSONAL, "lunar-logger-demo.png", lunarLoggerResults, "lunar-logger.mp4"),
+    createProject(1,"Networked Coffee", networkedCoffeeDesc, "coffee.svg", false, portfolioTabTypes.PERSONAL, "coffee-maker.svg", networkedCoffeeResults),
+    createProject(2,"Car Dashboard", dashboardDesc, "speedometer.svg", false, portfolioTabTypes.EDUCATIONAL, "dashboard-demo.jpg", dashboardResults),
+    createProject(3,"seL4 Doom Pendulum",doomPendDesc, "video-games.svg", false, portfolioTabTypes.EDUCATIONAL, "doom-pend-demo.jpg", doomPendResults, "doom-demo.mp4"),
+    createProject(4,"Magic Mirror", magicMirrorDesc, "mirror.svg",false, portfolioTabTypes.PERSONAL, "magic-mirror.png", magicMirrorResults),
+    createProject(5,"Dexter Live", dexterLiveDesc, "wifi.svg", false, portfolioTabTypes.PROFESSIONAL, 'dexter-live.png', dexterLiveResults),
+    createProject(6,"Dexter Controls", dexterControlsDesc, "laundry.svg", false, portfolioTabTypes.PROFESSIONAL, 'dexter-controls.png', dexterControlsResults),
+    createProject(7,"seL4 XHCI USB", xhciUsbDesc, "usb.svg", false, portfolioTabTypes.PROFESSIONAL, 'usb.jpg', xhciUsbResults),
+    createProject(8,"Hw-Mgr", hwMgrDesc, "share.svg", false, portfolioTabTypes.PROFESSIONAL, 'hw-mgr.png', hwMgrResults),
+    createProject(9,"seL4 Drone Demo", droneDemoDesc, "drone.svg", false, portfolioTabTypes.PROFESSIONAL, 'ardupilot-planner.jpg', droneDemoResults),
+    createProject(10,"RISC-V seL4 Guest", riscvSel4GuestDesc, "riscv.svg", false, portfolioTabTypes.PROFESSIONAL, 'risc-v.png', riscvSel4GuestResults),
+    createProject(11,"GV Napster", napsterDesc, "data-transfer.svg", false, portfolioTabTypes.EDUCATIONAL, "gv-napster-demo.png", napsterResults),
+    createProject(12,"Stereo PCB", pcbDesc, "music.svg", false, portfolioTabTypes.EDUCATIONAL, "pcb.jpg", pcbResults ),
+    createProject(13,"Bluetooth RC Car", rcCarDesc, "rc.svg", false, portfolioTabTypes.EDUCATIONAL, "android-rc-app.png", rcCarResults, "rc-car.mp4"),
+    createProject(14,"Nvim-Scout", scoutDesc, "scout.svg", false, portfolioTabTypes.PERSONAL, "nvim-scout-example.png", scoutResults, "nvim-scout.mp4"),
 ];
 
 function createProject(id, title, desc, projectImg, hasGallery=false, projectType, previewImg, results, demo) : ModalProject
