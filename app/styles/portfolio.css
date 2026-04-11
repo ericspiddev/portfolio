@@ -11,6 +11,11 @@
     --sm-screen-rem: 12px;
 }
 
+body {
+    color: white;
+    background-color: #000000
+}
+
 .clickable:hover {
     cursor: pointer;
 }
