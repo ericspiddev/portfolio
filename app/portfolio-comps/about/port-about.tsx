@@ -6,8 +6,9 @@ export function PortAbout({nameClass}) {
     return (<>
         <div id="about-section-container" className="section-common">
             <ImageBanner nameClass={nameClass}/>
-            <div className="about-text section-text-common">
-                <PortfolioHeader header={ "About" }/>
+            <div className="section-text-common">
+            <PortfolioHeader header={ "About" }/>
+            <div className="about-text">
                 <p>A highly motivated embedded systems and web developer who loves learning about technology.
                 My introduction to technology came when I learned how to mod Minecraft at 12 years old.
                 Ever since then I’ve always enjoyed tinkering and solving computer problems.
@@ -19,6 +20,7 @@ export function PortAbout({nameClass}) {
                 <div className="download-container">
                     <a href="files/Eric_Spidle_Resume.pdf" download><button id="big-dl-resume">Download Resume </button> </a>
                 </div>
+            </div>
             </div>
              <div className="filler"></div>
         </div>

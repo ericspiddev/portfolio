@@ -96,7 +96,6 @@ export function PortContributions() {
                 <div className="section-common">
                     <div className="section-text-common">
                         <PortfolioHeader header="Contributions"/>
-                        <p>Contributions will go here</p>
                     </div>
                     <div className="section-text-common">
                         <div id="contributions">
