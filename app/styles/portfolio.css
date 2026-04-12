@@ -206,8 +206,15 @@ html {
 
 .project-result-list {
     list-style: inside;
-    max-width: 40ch;
+    list-style-type: none;
+    max-width: 50ch;
     margin-right: 0.5em;
+}
+
+.project-result-list li::before {
+  content: "=>";
+  color: var(--accent-color);
+  margin-right: 10px;
 }
 
 .project-card-title {
@@ -242,10 +249,10 @@ html {
 }
 
 .project-modal {
+    border-radius: 1.25em;
     background-color: var(--bg-color);
-    min-width: 70vw;
-    min-height: 50vh;
-    max-height: 90vh;
+    width: 70vw;
+    height: 75vh;
     padding: 1em;
     overflow: auto;
     font-size: 1.1rem;
@@ -275,7 +282,7 @@ html {
 }
 
 .port-video {
-    max-width: 40%;
+    max-width: 80%;
     padding: 0.5em;
 }
 
@@ -319,11 +326,10 @@ html {
 }
 
 .project-modal-tabs p{
-    color: white;
     font-size: 1.1em;
     font-family: var(--sharp-font);
-    text-decoration: underline;
     padding: 0.5em;
+    border-radius: 1em;
     background-color: var(--secondary-bg-color);
 }
 
@@ -349,6 +355,7 @@ html {
     max-width: 50ch;
     margin-right: 1.5em;
     align-self: center;
+    overflow: scroll
 }
 
 .modal-preview-img {
@@ -384,7 +391,6 @@ html {
 
 .portfolio-tab {
     background-color: var(--secondary-bg-color);
-    color: white;
     font-family: var(--sharp-font), serif;
     font-size: 1rem;
     padding: 0.5em;
@@ -453,6 +459,10 @@ html {
     padding: 0.5em;
     border-radius: 0.5em;
     background-color: var(--bg-color);
+}
+
+.tech-selector:hover {
+    color: var(--accent-color);
 }
 
 .tech-highlight {
@@ -913,6 +923,7 @@ html {
     }
 
     .project-modal {
+        border-radius: 0px;
         font-size: 1.2rem;
         min-width: 100%;
         min-height: 100%;
