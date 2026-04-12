@@ -236,11 +236,11 @@ softcore Rocketchip. The rocketchip ran on the PL of a ZYNQMP SoC. I completed t
 on real hardware (QEMU was done before this). I wrote an article about this which can be found below in the blogs section.
 `
 const riscvSel4GuestResults = [
-    "successfully booted a buildroot linux guest underneath sel4 on risc-v.",
-    "debugged various issues when trying to boot the guest that resulted in digging through risc-v assembly",
-    "added support to the sel4 risc-v vmm for 16 bit instructions (similar to thumb2 on arm)",
-    "fixed some issues with interrupts and acking in the risc-v vmm with some help (thanks robbie)",
-    "received an outstanding techncial contribution award at dw as a co-op for this task",
+    "Successfully booted a buildroot linux guest underneath sel4 on risc-v.",
+    "Debugged various issues when trying to boot the guest that resulted in digging through risc-v assembly",
+    "Added support to the sel4 risc-v vmm for 16 bit instructions (similar to thumb2 on arm)",
+    "Fixed some issues with interrupts and acking in the risc-v vmm with some help (thanks robbie)",
+    "Received an outstanding techncial contribution award at dw as a co-op for this task",
 ];
 
 const scoutDesc = `
@@ -251,10 +251,13 @@ allows for easier toggling of search types and the use of vim motions to edit yo
 please visit my github's nvim-scout project`;
 
 const scoutResults = [
-    "Created a nvim extension that can be installed through Lazy.nvim",
+    "Created an extension for my own use of having a searchbar in neovim",
+    "Supported installation through Lazy.nvim",
     "Added search modes for lua patterns and matching case",
     "Supported custom themes and styles for the searchbar",
     "Used auto commands to reposition and resize searchbar",
+    "Wrote a README so others could use the extension and install it themselves",
+    "Currently has 11 stars on github"
 ];
 
 export const projects : ModalProject[] = [
