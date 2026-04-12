@@ -3,6 +3,8 @@ import {ProjModalTabs} from "./project-modal-tab";
 import {ProjModalTabContent} from "./project-modal-tab-content";
 import {PortProjectResult} from "./project-result";
 import {PortModalVideo} from "./port-modal-video";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faX} from "@fortawesome/free-solid-svg-icons";
 
 export function PortProjectModal({project, closeModal, showModal}){
 
@@ -46,10 +48,10 @@ export function PortProjectModal({project, closeModal, showModal}){
             <div className={`project-modal`}>
                 <div className="project-modal-header">
                     <div className="modal-close">
-                        <button onClick={closeModalAndResetTab}>X</button>
+                        <button className="clickable" onClick={closeModalAndResetTab}><FontAwesomeIcon icon={faX}/></button>
                     </div>
                     <div className="project-modal-tabs">
-                     <ProjModalTabs tabs={tabs} setTab={setTabIndex}/>
+                     <ProjModalTabs tabs={tabs} setTab={setTabIndex} currTab={tab}/>
                     </div>
                 </div>
                 <div className="modal-content">

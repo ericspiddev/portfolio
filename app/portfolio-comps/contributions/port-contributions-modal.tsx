@@ -1,4 +1,6 @@
 import { PortContributePullRequest } from "./port-contribute-pull-request";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {faX} from "@fortawesome/free-solid-svg-icons";
 export function PortContributeModal({closeModal, showModal, feature, mergedMsg, reviewMsg}) {
     function isLoading(pull_reqs) {
         if (pull_reqs.length === 0) {
@@ -12,7 +14,7 @@ export function PortContributeModal({closeModal, showModal, feature, mergedMsg, 
             <div className={`project-modal`}>
                 <div className="project-modal-header">
                     <div className="modal-close">
-                        <button onClick={closeModal}>X</button>
+                        <button className="clickable" onClick={closeModal}><FontAwesomeIcon icon={faX}/></button>
                     </div>
                     <p className="modal-title">{feature.displayTitle}</p>
                 </div>

@@ -285,6 +285,9 @@ html {
     margin-right: 0.5em;
 }
 
+.modal-close:hover {
+    color: var(--accent-color);
+}
 .modal-project-title {
     font-size: 2.5em;
     text-align: start;
