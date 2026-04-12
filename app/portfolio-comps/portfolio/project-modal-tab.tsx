@@ -4,12 +4,14 @@ export interface TabObject {
     content : string;
     isHidden : boolean
 };
-export function ProjModalTabs({tabs, setTab}) {
+export function ProjModalTabs({tabs, setTab, currTab}) {
     return (
     <>
        {
         tabs.map((tab) => (
-        <p key={tab.index} className={`clickable ${tab.content == undefined ? 'hidden': ''}`} onClick={() => setTab(tab.index)}> {tab.title} </p>))
+        <p key={tab.index}
+           className={`clickable ${tab.content == undefined ? 'hidden': ''} ${tab.index == currTab ? 'active-tab' : '' }`}
+           onClick={() => setTab(tab.index)}> {tab.title} </p>))
         }
     </>
     );

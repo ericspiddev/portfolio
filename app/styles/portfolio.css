@@ -288,12 +288,18 @@ html {
 .modal-close:hover {
     color: var(--accent-color);
 }
+
+.active-tab {
+    color: var(--accent-color);
+}
+
 .modal-project-title {
     font-size: 2.5em;
     text-align: start;
     font-style: italic;
     font-family: var(--smooth-font), serif;
 }
+
 .modal-content {
     display: flex;
     justify-content: space-between;
