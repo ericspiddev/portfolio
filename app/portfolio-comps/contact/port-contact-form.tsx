@@ -9,7 +9,6 @@ import {apiUrl} from "../../env/env";
 export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
     const linkedInAccount = "https://www.linkedin.com/in/espidle/";
     const githubAccount = "https://github.com/ericspiddev";
-    const instaAccount = "https://instagram.com/espidle";
     const mediumAccount = "https://medium.com/@ericspidledev";
     const resumePath = "public/files/Eric_Spidle_Resume.pdf";
 
@@ -116,7 +115,6 @@ function getFieldMaxSize(size, name){
             <div className="contact-buttons">
                 <PortFavButton redirectLink={mediumAccount} favIcon={faMedium} title="Medium"/>
                 <PortFavButton redirectLink={linkedInAccount} favIcon={faLinkedin} title="Linkedin"/>
-                <PortFavButton redirectLink={instaAccount} favIcon={faInstagram} title="Instagram"/>
                 <PortFavButton redirectLink={githubAccount} favIcon={faGithub} title="Github"/>
                 <PortFavButton redirectLink={resumePath} favIcon={faFile} downloadable={true} title="Resume"/>
             </div>

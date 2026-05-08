@@ -257,7 +257,7 @@ const scoutResults = [
     "Supported custom themes and styles for the searchbar",
     "Used auto commands to reposition and resize searchbar",
     "Wrote a README so others could use the extension and install it themselves",
-    "Currently has 11 stars on github"
+    "Currently has 10 stars on github"
 ];
 
 export const projects : ModalProject[] = [

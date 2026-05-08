@@ -9,7 +9,7 @@ export const blogs: BlogObject[] = [
     {
         id: "1",
         link: "https://www.dornerworks.com/blog/sel4-on-risc-v-rocket-chip/",
-        title: "seL4 Virtualized on Risc-V",
+        title: "seL4 RISC-V Guest",
         previewImage: "/images/blog/riscv-blog.png",
         desc: "Article about getting an seL4 VM running on the RISC-V architechture"
     },

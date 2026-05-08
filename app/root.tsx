@@ -39,6 +39,12 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png"/>
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png"/>
         <link rel="manifest" href="/images/favicon/site.webmanifest"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Datatype:wght@100..900&family=Limelight&display=swap" rel="stylesheet"/>
+        <link href="https://fonts.googleapis.com/css2?family=Habibi&display=swap" rel="stylesheet"/>
+
         <Links />
       </head>
       <body>

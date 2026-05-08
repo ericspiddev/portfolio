@@ -4,8 +4,14 @@
     --bg-color: #0B192C;
     --secondary-bg-color: #030712;
     --accent-color: #FF6500;
-    --smooth-font: "Josefin Sans";
+    --accent-color: #f57e42;
+    --smooth-font: "Habibi";
     --sharp-font: "Fira Code";
+    --mono-font: "Datatype";
+    --test-font: "limelight";
+    --heading-font: "limelight";
+    --title-font: "Josefin Sans";
+    --body-font: "Habibi";
     --lg-screen-rem: 20px;
     --med-screen-rem: 16px;
     --sm-screen-rem: 12px;
@@ -22,10 +28,11 @@ body {
 
 .portfolio-header {
     font-size: 3rem;
-    font-family: var(--smooth-font), serif;
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-    font-weight: 600;
+    font-family: var(--heading-font), sans-serif;
+    color: var(--accent-color);
+    /* text-decoration: underline; */
+    /* text-decoration-color: var(--accent-color); */
+    font-weight: 1000;
     font-style: bold;
     margin-top: 0.8rem;
 }
@@ -47,12 +54,14 @@ html {
 }
 
 .name-primary {
+    font-family: var(--title-font), serif;
     color: var(--accent-color);
     background-color: var(--bg-color);
     transition: background-color 5s ease, color 5s ease;
     /*transition: background-color 5s ease;*/
 }
 .name-secondary {
+    font-family: var(--title-font), serif;
     color: var(--secondary-bg-color);
     background-color: var(--accent-color);
     transition: background-color 5s ease, color 5s ease;
@@ -100,7 +109,7 @@ html {
 }
 
 .about-text {
-    font-family: var(--smooth-font), serif;
+    font-family: var(--body-font), serif;
     font-weight: 600;
     font-size: 1.5rem;
     margin-left: 2em;
@@ -143,7 +152,7 @@ html {
 
 /*********************** Nav Bar ***********************/
 #portfolio-nav-container {
-    background-color: var(--accent-color);
+    background-color: var(--bg-color);
     min-height: 3.5rem;
     display: flex;
     position: sticky;
@@ -163,7 +172,8 @@ html {
 
 #portfolio-nav-banner {
     margin-left: 1rem;
-    font-family: var(--sharp-font), serif;
+    font-family: var(--test-font), serif;
+    color: var(--accent-color);
     font-style: italic;
     font-size: 1.25rem;
     text-decoration: underline;
@@ -171,7 +181,8 @@ html {
 }
 
 .portfolio-nav-item {
-    font-family: var(--smooth-font), serif;
+    color: var(--accent-color);
+    font-family: var(--test-font), serif;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -194,8 +205,11 @@ html {
 }
 
 .project-header-text {
-    font-size: 1.25em;
     margin-bottom: 1em;
+}
+
+.section-desc {
+    font-size: 1.5em;
 }
 
 .project-card-image {
@@ -219,7 +233,7 @@ html {
 
 .project-card-title {
     font-size: 1.75rem;
-    font-family: var(--smooth-font), serif;
+    font-family: var(--title-font), serif;
     margin: 0.25em;
     overflow: hidden;
     padding: 0.5em;
@@ -251,6 +265,7 @@ html {
 .project-modal {
     border-radius: 1.25em;
     background-color: var(--bg-color);
+    font-family: var(--sharp-font);
     width: 70vw;
     height: 75vh;
     padding: 1em;
@@ -304,7 +319,7 @@ html {
     font-size: 2.5em;
     text-align: start;
     font-style: italic;
-    font-family: var(--smooth-font), serif;
+    font-family: var(--title-font), serif;
 }
 
 .modal-content {
@@ -327,14 +342,13 @@ html {
 
 .project-modal-tabs p{
     font-size: 1.1em;
-    font-family: var(--sharp-font);
+    font-family: var(--title-font);
     padding: 0.5em;
     border-radius: 1em;
     background-color: var(--secondary-bg-color);
 }
 
 .port-project-card {
-    border: solid 0.33em black;
     border-radius: 1.2em;
     display: flex;
     flex-direction: column;
@@ -455,7 +469,7 @@ html {
 }
 
 .tech-selector {
-    font-family: Fira Code;
+    font-family: var(--title-font);
     padding: 0.5em;
     border-radius: 0.5em;
     background-color: var(--bg-color);
@@ -496,7 +510,7 @@ html {
 
 .contact-form-container {
     display: flex;
-    font-family: var(--smooth-font), serif;
+    font-family: var(--title-font), serif;
     background-color: var(--secondary-bg-color);
     flex-direction: column;
     align-items: center;
@@ -513,7 +527,6 @@ html {
 }
 .contact-form input, .contact-form textarea {
     background-color: var(--bg-color);
-    border: 1px solid #ff6500;
     border-radius: 1rem;
     padding: 0.5em;
     margin-bottom: 0.5rem;
@@ -554,17 +567,17 @@ html {
 #blogs-carousel {
     display: none;
 }
+
 .blogentry {
     font-family: var(--sharp-font), serif;
     display: flex;
     background-color: var(--bg-color);
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    max-width: 20rem;
-    margin: 1rem;
-    /*border: 2px solid var(--accent-color);*/
-    text-align: center;
+    /* align-items: center; */
+    /* justify-content: center; */
+    max-width: 22rem;
+    margin: 1.25rem;
+    /*text-align: center;*/
     border-radius: 0.5em;
     transition: all 0.3s ease;
 }
@@ -594,26 +607,30 @@ html {
 }
 
 .blog-preview-image img {
-    height: 100%;
+    max-height: 100%;
     min-width: 100%;
     object-fit: cover;
-    border-bottom: 0.25em solid var(--secondary-bg-color);
     border-radius: 0.5em;
 }
 
 .blog-title {
-    font-size: 1rem;
-    font-style: italic;
-    text-decoration: underline;
+    margin-top: 1em;
+    font-size: 1.35rem;
+    font-family: var(--title-font);
+    color: #f57e42;
+    /* text-decoration: underline; */
+    /* text-decoration-color: var(--accent-color); */
     font-weight: 700;
     min-height: 1rem;
+    padding: 0.25em 0.75rem;
 }
 
 .blog-desc {
-    padding-right: 0.5em;
-    padding-left: 0.5em;
     font-size: 0.8em;
     min-height: 8em;
+    font: var(--body-font);
+    padding: 0.5em 0.75rem 6em 0.75em;
+    margin-top: -0.5rem;
 }
 
 .caro-counter {
@@ -624,10 +641,6 @@ html {
 }
 
 /*********************** Contributions ***********************/
-#contributions-section {
-    font-family: var(--smooth-font), serif;
-}
-
 #contributions {
     display: grid;
     grid-template-columns: repeat(3, 14em);
@@ -837,7 +850,7 @@ html {
 
     .hamburger-menu {
         display: flex; /* Hide menu items by default */
-        font-family: var(--sharp-font), serif;
+        font-family: var(--mono-font), serif;
         font-size: 1.2rem;
         text-align: center;
         position: absolute;
@@ -997,10 +1010,13 @@ html {
         height: auto;
     }
     .blog-title {
+        margin-top: 0.5em;
         font-size: 1.5rem;
+        padding: 0.5em 0.5em;
         height: auto;
     }
     .blog-desc {
+        padding: 0 1em;
         font-size: 1rem;
     }
     .photo-container {

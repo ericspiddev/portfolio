@@ -12,7 +12,6 @@ export function PortPortfolio() {
                 <div className="section-common">
                     <div className="section-text-common">
                     <PortfolioHeader header="Portfolio"/>
-                    <p className="project-header-text"> Projects I've { portfolioTabTypes.PROFESSIONAL == tab ? 'worked on' : 'built'} ...</p>
                     </div>
                     <div className="portfolio-tabs section-text-common">
                         <div className="portfolio-tab-header">
@@ -34,7 +33,7 @@ export function PortPortfolio() {
                     </div>
                     <PortfolioTabContent tab={tab} />
                     <div>
-                        <p className="project-header-text"> Using these technologies...</p>
+                        <p className="project-header-text section-desc"> Using these technologies...</p>
                     </div>
                     <PortTech/>
                 </div>

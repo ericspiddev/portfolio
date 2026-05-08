@@ -9,7 +9,6 @@ export function PortBlog() {
             <div className="section-common">
                 <div className="section-text-common">
                     <PortfolioHeader header="Blog"/>
-                    <p> Articles I've written about various topics</p>
                     <div id="blogs-container">
                         {
                             blogs.map((blog) => (
