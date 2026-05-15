@@ -11,7 +11,7 @@ export function PortTech() {
 
     return (
         <>
-            <div className="tech-experience">
+            <div className="section-content tech-experience ">
                 <div className="tech-highlight">
                     <PortTechSelector state={languageColor} setState={setLanguageColor} selectorText="Languages"/>
                     <PortTechSelector state={frameworkColor} setState={setFrameworkColor} selectorText="Frameworks"/>

@@ -98,7 +98,7 @@ export function PortContributions() {
                         <PortfolioHeader header="Contributions"/>
                     </div>
                     <div className="section-text-common">
-                        <div id="contributions">
+                        <div className=" section-content contributions-container">
                         {
                             features.map((feature) => ( // map over each feature...
                             <PortContributeFeature key={feature.titleId} feature={feature}/>))

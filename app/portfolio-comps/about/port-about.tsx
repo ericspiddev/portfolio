@@ -7,9 +7,8 @@ export function PortAbout({nameClass}) {
         <div id="about-section-container" className="section-common">
             <ImageBanner nameClass={nameClass}/>
             <div className="section-text-common">
-            <PortfolioHeader header={ "About" }/>
-            <div className="about-text">
-                <p>A highly motivated embedded systems and web developer who loves learning about technology.
+                <PortfolioHeader header={ "About" }/>
+                <p className="about-text">A highly motivated embedded systems and web developer who loves learning about technology.
                 My introduction to technology came when I learned how to mod Minecraft at 12 years old.
                 Ever since then I’ve always enjoyed tinkering and solving computer problems.
                 I have a wide range of experience from porting low-level drivers to a hypervisor; to designing a website using CSS and front end frameworks.

@@ -9,8 +9,7 @@ export function PortBlog() {
             <div className="section-common">
                 <div className="section-text-common">
                     <PortfolioHeader header="Blog"/>
-                    <p> Articles I've written about various topics</p>
-                    <div id="blogs-container">
+                    <div className="section-content blogs-container">
                         {
                             blogs.map((blog) => (
                             <PortBlogEntry blog={blog} key={blog.id}/>))

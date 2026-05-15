@@ -95,7 +95,7 @@ function getFieldMaxSize(size, name){
 
     return(
         <>
-         <form className="contact-form-container" onSubmit={handleSubmit}>
+         <form className="section-content contact-form-container" onSubmit={handleSubmit}>
          <div className="contact-form">
             <div className="form-input-field">
                 <label htmlFor="contact-name">Name: {buildTextCounter(contactData.fullName.length, "medium")} </label>
@@ -116,7 +116,6 @@ function getFieldMaxSize(size, name){
             <div className="contact-buttons">
                 <PortFavButton redirectLink={mediumAccount} favIcon={faMedium} title="Medium"/>
                 <PortFavButton redirectLink={linkedInAccount} favIcon={faLinkedin} title="Linkedin"/>
-                <PortFavButton redirectLink={instaAccount} favIcon={faInstagram} title="Instagram"/>
                 <PortFavButton redirectLink={githubAccount} favIcon={faGithub} title="Github"/>
                 <PortFavButton redirectLink={resumePath} favIcon={faFile} downloadable={true} title="Resume"/>
             </div>

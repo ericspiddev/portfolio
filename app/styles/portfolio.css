@@ -20,6 +20,12 @@ body {
     cursor: pointer;
 }
 
+
+.section-content {
+    background-color: var(--secondary-bg-color);
+    border-radius: 25px;
+}
+
 .portfolio-header {
     font-size: 3rem;
     font-family: var(--smooth-font), serif;
@@ -47,12 +53,14 @@ html {
 }
 
 .name-primary {
+    font-family: var(--sharp-font);
     color: var(--accent-color);
     background-color: var(--bg-color);
     transition: background-color 5s ease, color 5s ease;
     /*transition: background-color 5s ease;*/
 }
 .name-secondary {
+    font-family: var(--sharp-font);
     color: var(--secondary-bg-color);
     background-color: var(--accent-color);
     transition: background-color 5s ease, color 5s ease;
@@ -372,8 +380,7 @@ html {
 }
 
 /*********************** Portfolio Section ***********************/
-#portfolio-section {
-}
+
 #active-tab {
     color: var(--accent-color);
 }
@@ -398,7 +405,6 @@ html {
 }
 
 .portfolio-tab-content {
-    background-color: var(--secondary-bg-color);
     overflow: scroll;
 }
 
@@ -412,7 +418,6 @@ html {
 }
 
 .tech-experience {
-    background-color: var(--secondary-bg-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -455,7 +460,7 @@ html {
 }
 
 .tech-selector {
-    font-family: Fira Code;
+    font-family: var(--sharp-font);
     padding: 0.5em;
     border-radius: 0.5em;
     background-color: var(--bg-color);
@@ -508,12 +513,11 @@ html {
     width: max(15em, 35%);
     height: auto;
     min-height: clamp(10em, 60%, 35em);
-    margin-top: 3rem;
-    margin-bottom: min(3rem, 5%);
+    margin-top: 1.5rem;
+    margin-bottom: min(3rem, 2%);
 }
 .contact-form input, .contact-form textarea {
     background-color: var(--bg-color);
-    border: 1px solid #ff6500;
     border-radius: 1rem;
     padding: 0.5em;
     margin-bottom: 0.5rem;
@@ -536,8 +540,7 @@ html {
     flex-direction: column;
 }
 /*********************** Blog Section ***********************/
-#blogs-container {
-    background-color: var(--secondary-bg-color);
+.blogs-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -547,7 +550,7 @@ html {
 
 }
 
-#blogs-container a {
+.blogs-container a {
     place-self: center;
 }
 
@@ -628,10 +631,9 @@ html {
     font-family: var(--smooth-font), serif;
 }
 
-#contributions {
+.contributions-container {
     display: grid;
     grid-template-columns: repeat(3, 14em);
-    background-color: var(--secondary-bg-color);
     justify-content: space-evenly;
 }
 
@@ -777,7 +779,7 @@ html {
 
 @media screen and (max-width: 1800px) {
     .port-projects{
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
         }
 }
 
@@ -814,7 +816,7 @@ html {
         gap: 0em;
     }
 
-    #blogs-container {
+    .blogs-container {
         display: none;
     }
 
@@ -896,7 +898,8 @@ html {
     .port-projects{
         grid-template-columns: repeat(2, 1fr);
     }
-    #contributions {
+
+    .contributions-container {
         grid-template-columns: repeat(3, 1fr);
     }
     .banner {
@@ -1047,7 +1050,7 @@ html {
         width: 15ch;
     }
 
-    #contributions {
+    .contributions-container {
         grid-template-columns: 80%;
     }
 }
