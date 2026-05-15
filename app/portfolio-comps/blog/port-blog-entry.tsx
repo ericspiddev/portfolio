@@ -7,7 +7,7 @@ export default function PortBlogEntry({blog, index=-1, maxIndex=-1} : { blog: Bl
     return (
     <>
         <a href={blog.link}>
-        <div className="blogentry">
+        <div className="blogentry hover-enlarge">
             <PortBlogPreview imagePath={blog.previewImage}/>
             <PortBlogTitle title={blog.title}/>
             <PortBlogDesc descript={blog.desc}/>

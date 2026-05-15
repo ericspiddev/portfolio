@@ -9,6 +9,7 @@
     --lg-screen-rem: 20px;
     --med-screen-rem: 16px;
     --sm-screen-rem: 12px;
+
 }
 
 body {
@@ -20,6 +21,9 @@ body {
     cursor: pointer;
 }
 
+.hover-enlarge:hover {
+    transform: scale(1.05);
+}
 
 .section-content {
     background-color: var(--secondary-bg-color);
@@ -184,9 +188,6 @@ html {
     transition: all 0.3s ease;
 }
 
-.portfolio-nav-item:hover {
-    transform: scale(1.05);
-}
 .hamburger-toggle {
     display: none;
 }
@@ -352,10 +353,6 @@ html {
     min-width: 10em;
     margin: 1em;
     transition: all 0.3s ease;
-}
-
-.port-project-card:hover {
-    transform: scale(1.05);
 }
 
 .modal-project-desc {
@@ -570,10 +567,6 @@ html {
     text-align: center;
     border-radius: 0.5em;
     transition: all 0.3s ease;
-}
-
-.blogentry:hover {
-    transform: scale(1.05);
 }
 
 .caro-button {
