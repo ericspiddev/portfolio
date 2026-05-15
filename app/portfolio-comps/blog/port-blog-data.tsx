@@ -27,25 +27,4 @@ export const blogs: BlogObject[] = [
         previewImage: "/images/blog/draggable.png",
         desc: "A guide to HTML's draggable API and how you can use it to make interactive elements"
     },
-    {
-        id: "4",
-        link: "#",
-        title: "Coming soon",
-        previewImage: "/images/blog/placeholder.jpg",
-        desc: "A new article on an interesting topic is on it's way"
-    },
-    {
-        id: "5",
-        link: "#",
-        title: "Coming soon",
-        previewImage: "/images/blog/placeholder.jpg",
-        desc: "A new article on an interesting topic is on it's way"
-    },
-    {
-        id: "6",
-        link: "#",
-        title: "Coming soon",
-        previewImage: "/images/blog/placeholder.jpg",
-        desc: "A new article on an interesting topic is on it's way"
-    },
 ];
