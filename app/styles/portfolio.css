@@ -379,7 +379,7 @@ html {
 /*********************** Portfolio Section ***********************/
 
 #active-tab {
-    color: var(--accent-color);
+    border-top: 5px var(--accent-color) solid;
 }
 
 .portfolio-tab-header{
@@ -387,18 +387,15 @@ html {
     gap: 1.5rem;
     font-weight: 600;
     transition: all 0.3s ease;
-}
-
-.portfolio-tab:hover {
-    transform: scale(1.05);
+    margin-left: 1em;
 }
 
 .portfolio-tab {
+    border-radius: 5px 5px 0 0;
     background-color: var(--secondary-bg-color);
     font-family: var(--sharp-font), serif;
     font-size: 1rem;
     padding: 0.5em;
-
 }
 
 .portfolio-tab-content {
