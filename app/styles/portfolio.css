@@ -61,6 +61,7 @@ html {
     color: var(--accent-color);
     background-color: var(--bg-color);
     border-radius: 25px;
+    letter-spacing: -10px;
     transition: background-color 5s ease, color 5s ease;
     /*transition: background-color 5s ease;*/
 }
@@ -69,6 +70,7 @@ html {
     color: var(--secondary-bg-color);
     background-color: var(--accent-color);
     border-radius: 25px;
+    letter-spacing: -10px;
     transition: background-color 5s ease, color 5s ease;
 }
 
