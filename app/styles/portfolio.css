@@ -403,10 +403,6 @@ html {
 
 /*********************** Portfolio Section ***********************/
 
-#active-tab {
-    border-top: 5px var(--accent-color) solid;
-}
-
 .portfolio-tab-header{
     display: flex;
     gap: 1.5rem;
@@ -415,7 +411,13 @@ html {
     margin-left: 1em;
 }
 
+#active-tab {
+    opacity: 100%;
+    border-top: 5px var(--accent-color) solid;
+}
+
 .portfolio-tab {
+    opacity: 50%;
     border-radius: 5px 5px 0 0;
     background-color: var(--secondary-bg-color);
     font-family: var(--sharp-font), serif;
