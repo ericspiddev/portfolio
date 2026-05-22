@@ -42,20 +42,15 @@ export function PortContributeFeature({ feature }){
     return (
         <>
           <div className="feature">
-            <div className="feature-title">
-                <p> {feature.displayTitle}:</p>
-                <div className="info-icon" feature-about={feature.about}></div>
+            <div className="feature-title underline-header">
+                 {feature.displayTitle}
             </div>
-                <div className="feature-color" style={{backgroundColor: feature.color}}></div>
                 <div className="commit-count">
                     {getCommitTotals(feature.pull_requests)} commits
                 </div>
                 <div className="commit-count">
                     {isMerged ? `${mergedMsg}` : `${reviewMsg}`}
                 </div>
-            <div>
-                <p>Project: {feature.project}</p>
-            </div>
             <div>
                 <button className="feature-learn-more clickable" onClick={showProjectModal}> Learn More </button>
             </div>
