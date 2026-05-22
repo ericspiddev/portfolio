@@ -120,7 +120,7 @@ function getFieldMaxSize(size, name){
                 <PortFavButton redirectLink={resumePath} favIcon={faFile} downloadable={true} title="Resume"/>
             </div>
 
-          <button type="submit" id="send-message"> Send Message </button>
+          <button type="submit" id="send-message" className="clickable"> Send Message </button>
         </div>
          </form>
         <PortBanner show={showBanner} resultMsg={bannerMsg}/>

@@ -17,7 +17,7 @@ export function PortAbout({nameClass}) {
                 I enjoy knowing that I helped solve someone’s problem using code. During my free time you’ll often find me gaming online with friends,
                 working on my golf swing, or hitting the gym.</p>
                 <div className="download-container">
-                    <a href="files/Eric_Spidle_Resume.pdf" download><button id="big-dl-resume">Download Resume </button> </a>
+                    <a href="files/Eric_Spidle_Resume.pdf" download><button className="clickable" id="big-dl-resume">Download Resume </button> </a>
                 </div>
             </div>
             </div>
