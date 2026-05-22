@@ -4,7 +4,7 @@
     --bg-color: #0B192C;
     --secondary-bg-color: #030712;
     --accent-color-bg: hsl(25 100 60);
-    --try: hsl(24.5 100 55);
+    --button-color: hsl(24.5 100 55);
     --accent-color: hsl(24 100 50);
     --smooth-font: "Nunito";
     --header-font: "Merriweather";
@@ -111,17 +111,17 @@ html {
 }
 
 #big-dl-resume {
-    background-color: var(--accent-color);
-    border-radius: 0.4em;
-    min-height: 3em;
-    padding: 1.25em;
-    font-size: 0.9rem;
+    background-color: var(--button-color);
+    border-radius: 1rem;
+    min-height: 3rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
     margin-top: 2rem;
     font-family: var(--smooth-font), serif;
 }
 
 #big-dl-resume:hover {
-    background-color: #1E3E62;
+    background-color: var(--accent-color);
 }
 
 .about-text {
@@ -509,7 +509,7 @@ html {
 
 /*********************** Contact Section ***********************/
 #send-message {
-    background-color: var(--accent-color-bg);
+    background-color: var(--button-color);
     font-size: 1rem;
     padding: 0.65em;
     margin-top: 1.65em;
