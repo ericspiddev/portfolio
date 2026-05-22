@@ -76,8 +76,8 @@ html {
 }
 .name-secondary {
     font-family: var(--sharp-font);
-    color: var(--secondary-bg-color);
-    background-color: var(--accent-color);
+    color: var(--card-bg);
+    background-color: var(--accent-color-bg);
     border-radius: 25px;
     letter-spacing: -10px;
     transition: background-color 5s ease, color 5s ease;
@@ -117,7 +117,7 @@ html {
     padding: 1.25em;
     font-size: 0.9rem;
     margin-top: 2rem;
-    font-family: var(--sharp-font), serif;
+    font-family: var(--smooth-font), serif;
 }
 
 #big-dl-resume:hover {
@@ -125,6 +125,7 @@ html {
 }
 
 .about-text {
+    background-color: var(--card-bg);
     font-family: var(--smooth-font), serif;
     font-weight: 600;
     font-size: 1.5rem;
@@ -140,7 +141,7 @@ html {
 }
 
 .about-intro {
-    font-family: var(--smooth-font), serif;
+    font-family: var(--sharp-font), serif;
     font-weight: 400;
     font-size: 5rem;
     font-style: normal;
@@ -168,7 +169,7 @@ html {
 
 /*********************** Nav Bar ***********************/
 #portfolio-nav-container {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-bg);
     min-height: 3.5rem;
     display: flex;
     position: sticky;
@@ -188,13 +189,13 @@ html {
 
 #portfolio-nav-banner {
     margin-left: 1rem;
-    font-family: var(--sharp-font), serif;
+    font-family: var(--header-font), serif;
     font-style: italic;
     font-size: 1.25rem;
 }
 
 .portfolio-nav-item {
-    font-family: var(--smooth-font), serif;
+    font-family: var(--header-font), serif;
     font-size: 1rem;
     transition: all 0.3s ease;
 }
@@ -368,13 +369,12 @@ html {
 }
 
 .port-project-card {
-    border: solid 0.33em black;
     border-radius: 1.2em;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
     min-width: 10em;
     margin: 1em;
     transition: all 0.3s ease;
@@ -479,10 +479,10 @@ html {
 }
 
 .tech-selector {
-    font-family: var(--sharp-font);
+    font-family: var(--header-font);
     padding: 0.5em;
     border-radius: 0.5em;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
 }
 
 .tech-selector:hover {
@@ -499,7 +499,7 @@ html {
 
 /*********************** Contact Section ***********************/
 #send-message {
-    background-color: var(--accent-color);
+    background-color: var(--accent-color-bg);
     font-size: 1rem;
     padding: 0.65em;
     margin-top: 1.65em;
@@ -509,8 +509,9 @@ html {
 }
 
 #send-message:hover {
-    background-color: #1E3E62;
+    background-color: var(--accent-color);
 }
+
 .contact-buttons {
     display: flex;
     flex-direction: row;
@@ -536,7 +537,7 @@ html {
     margin-bottom: min(3rem, 2%);
 }
 .contact-form input, .contact-form textarea {
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
     border-radius: 1rem;
     padding: 0.5em;
     margin-bottom: 0.5rem;
@@ -595,9 +596,9 @@ html {
     display: none;
 }
 .blogentry {
-    font-family: var(--sharp-font), serif;
+    font-family: var(--smooth-font), serif;
     display: flex;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
     flex-direction: column;
     max-width: 20rem;
     margin: 1rem;
@@ -636,8 +637,8 @@ html {
 .blog-title {
     margin-top: 10px;
     margin-left: 10px;
-    color: hsl(26 100 50);
     font-size: 1rem;
+    font-family: var(--header-font);
     font-weight: 700;
     min-height: 1rem;
 }
@@ -677,7 +678,7 @@ html {
     display: flex;
     flex-direction: column;
     border-radius: 1em;
-    background-color: var(--bg-color);
+    background-color: var(--card-bg);
 }
 
 .feature-color {
@@ -692,7 +693,8 @@ html {
     padding: 0.50em;
     margin: 0.5em;
     border-radius: 1em;
-    background-color: var(--accent-color);
+    font-family: var(--smooth-font);
+    background-color: var(--accent-color-bg);
 }
 
 .commit-count {
@@ -716,6 +718,7 @@ html {
 .feature-title { /*This is being used in two spots we should fix that*/
     display: flex;
     min-width: 100%;
+    font-family: var(--header-font);
     justify-content: center;
     font-size: 1.33rem;
     text-decoration: underline;
