@@ -380,6 +380,12 @@ html {
     transition: all 0.3s ease;
 }
 
+.port-project-card:hover .project-card-title {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
+}
+
 .modal-project-desc {
     font-size: 1em;
     max-width: 50ch;
@@ -488,7 +494,9 @@ html {
 }
 
 .tech-selector:hover {
-    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
 }
 
 .tech-highlight {
