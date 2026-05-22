@@ -543,12 +543,26 @@ html {
 
 .contact-label {
     margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 .form-input-field {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
+}
+
+.form-input-field input:focus, textarea:focus, label:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
+
+}
+
+.form-input-field:focus-within label {
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 3px;
+
 }
 /*********************** Blog Section ***********************/
 .blogs-container {

@@ -98,15 +98,15 @@ function getFieldMaxSize(size, name){
          <form className="section-content contact-form-container" onSubmit={handleSubmit}>
          <div className="contact-form">
             <div className="form-input-field">
-                <label htmlFor="contact-name" className="contact-label">Name: {buildTextCounter(contactData.fullName.length, "medium")} </label>
+                <label htmlFor="contact-name" className="contact-label">Name</label>
                 <input type="text" id="contact-name" name="fullName" value={contactData.fullName} onChange={handleFormChange} placeholder="Your name"required/>
             </div>
             <div className="form-input-field">
-                <label htmlFor="contact-email" className="contact-label">Email: {buildTextCounter(contactData.userEmail.length, "medium")} </label>
+                <label htmlFor="contact-email" className="contact-label">Email</label>
                 <input type="email" id="contact-email" name="userEmail" value={contactData.userEmail} onChange={handleFormChange} placeholder="Your email"required/>
             </div>
             <div className="form-input-field">
-                <label htmlFor="contact-message" className="contact-label" >Message: {buildTextCounter(contactData.customMessage.length, "large")}</label>
+                <label htmlFor="contact-message" className="contact-label" >Message</label>
                 <textarea id="contact-message" placeholder="Please put your message here"
                     value={contactData.customMessage} onChange={handleFormChange} name="customMessage" required></textarea>
             </div>
