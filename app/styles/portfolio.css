@@ -3,9 +3,13 @@
 :root {
     --bg-color: #0B192C;
     --secondary-bg-color: #030712;
-    --accent-color: #FF6500;
-    --smooth-font: "Josefin Sans";
+    --accent-color-bg: hsl(25 100 60);
+    --try: hsl(24.5 100 55);
+    --accent-color: hsl(24 100 50);
+    --smooth-font: "Nunito";
+    --header-font: "Merriweather";
     --sharp-font: "Fira Code";
+    --card-bg: hsl(220 65 12);
     --lg-screen-rem: 20px;
     --med-screen-rem: 16px;
     --sm-screen-rem: 12px;
