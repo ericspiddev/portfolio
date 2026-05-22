@@ -22,6 +22,5 @@ export function PortAbout({nameClass}) {
             </div>
             </div>
              <div className="filler"></div>
-        </div>
     </>);
 }
