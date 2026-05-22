@@ -220,6 +220,11 @@ html {
     margin-bottom: 1em;
 }
 
+.tech-header-text {
+    font-size: 1.25em;
+    margin-top: 1em;
+}
+
 .project-card-image {
     width: 50%;
     margin: 0.5em;

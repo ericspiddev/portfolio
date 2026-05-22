@@ -34,7 +34,7 @@ export function PortPortfolio() {
                     </div>
                     <PortfolioTabContent tab={tab} />
                     <div>
-                        <p className="project-header-text"> Using these technologies...</p>
+                        <p className="tech-header-text"> Using these technologies...</p>
                     </div>
                     <PortTech/>
                 </div>
