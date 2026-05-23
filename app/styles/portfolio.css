@@ -899,11 +899,11 @@ html {
 
     .hamburger-menu {
         display: flex; /* Hide menu items by default */
-        font-family: var(--sharp-font), serif;
+        font-family: var(--header-font), serif;
+        background-color: var(--accent-color-bg);
         font-size: 1.2rem;
         text-align: center;
         position: absolute;
-        background-color: var(--accent-color);
         top: 2.9em;
         padding: 1.2em;
         right:0;
