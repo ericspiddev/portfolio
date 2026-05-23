@@ -14,8 +14,8 @@ export function PortContributeFeature({ feature }){
     useEffect(() => {
         isFullyMerged(feature.pull_requests);
     }, [feature])
-    const mergedMsg = String.fromCodePoint(0x1f7e2) + " Merged "
-    const reviewMsg = String.fromCodePoint(0x1f7e1) + " Under Review"
+    const mergedSymbol = String.fromCodePoint(0x1f7e2)
+    const underReviewSymbol = String.fromCodePoint(0x1f7e1)
 
     const [isMerged, setIsMerged] = useState(false);
     function isFullyMerged(pull_requests) {
@@ -41,22 +41,19 @@ export function PortContributeFeature({ feature }){
     }
     return (
         <>
-          <div className="feature">
+          <div className="feature hover-enlarge">
             <div className="feature-title underline-header">
                  {feature.displayTitle}
             </div>
-                <div className="commit-count">
+                <div className="commit-count" title={ isMerged ? 'Merged' : 'In Review'}>
+                    <span className="mr-status"> {isMerged ? `${mergedSymbol}` : `${underReviewSymbol}`} </span>
                     {getCommitTotals(feature.pull_requests)} commits
-                </div>
-                <div className="commit-count">
-                    {isMerged ? `${mergedMsg}` : `${reviewMsg}`}
                 </div>
             <div>
                 <button className="feature-learn-more clickable" onClick={showProjectModal}> Learn More </button>
             </div>
             <PortContributeModal showModal={showModal} closeModal={hideProjectModal} feature={feature}
-                reviewMsg={reviewMsg}
-                mergedMsg={mergedMsg}/>
+                mergedMsg={mergedSymbol} reviewMsg={underReviewSymbol}/>
         </div>
         </>
     );
