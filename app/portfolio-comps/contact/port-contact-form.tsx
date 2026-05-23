@@ -12,9 +12,13 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
     const instaAccount = "https://instagram.com/espidle";
     const mediumAccount = "https://medium.com/@ericspidledev";
     const resumePath = "public/files/Eric_Spidle_Resume.pdf";
+    const sentMsg = "Message Sent!";
+    const failedMsg = "Failed to send!";
 
+
+    const [bannerType, setBannerType] = useState("success");
     const [showBanner, setShowBanner] = useState(false);
-    const [bannerMsg, setBannerMsg] = useState("Message Sent Successfully! " + String.fromCodePoint(0x2705));
+    const [bannerMsg, setBannerMsg] = useState(sentMsg);
 
     const [contactData, setContactData] = useState({
         fullName: '',
@@ -42,7 +46,8 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
 
       if (response.ok) {
         console.log('Successfully sent email message ')
-        setBannerMsg("Message Sent Successfully! " + String.fromCodePoint(0x2705))
+        setBannerType("success")
+        setBannerMsg(sentMsg);
         setContactData({
             fullName: '',
             userEmail: '',
@@ -51,7 +56,8 @@ export function PortContactForm({ favIcon, redirectLink, downloadable=false}) {
 
       } else {
         console.error('Error: something went wrong sending the message with error code ' + response.status)
-        setBannerMsg("Message failed to send! " + String.fromCodePoint(0x274C))
+        setBannerMsg(failedMsg);
+        setBannerType("fail")
       }
         setShowBanner(true);
     } catch (error) {
@@ -123,7 +129,7 @@ function getFieldMaxSize(size, name){
           <button type="submit" id="send-message" className="clickable"> Send Message </button>
         </div>
          </form>
-        <PortBanner show={showBanner} resultMsg={bannerMsg}/>
+        <PortBanner show={showBanner} resultMsg={bannerMsg} bannerType={bannerType}/>
         </>
     );
 }

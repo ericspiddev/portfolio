@@ -13,7 +13,11 @@
     --lg-screen-rem: 20px;
     --med-screen-rem: 16px;
     --sm-screen-rem: 12px;
-
+    --success-bg: hsl(144 93 30);
+    --success-text: hsl(130 97 13);
+    --success-border: #01410C;
+    --fail-bg: hsl(0 95 49);
+    --fail-text: hsl(0 96 28);
 }
 
 body {
@@ -806,18 +810,27 @@ html {
     left: 50%;
     transform: translate(-50%, -50%);
     top: 2.5em;
-    opacity: 95%;
     font-size: 1em;
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 999;
     padding: 0.5em;
-    background-color: var(--bg-color);
+    border-radius: 1em;
     font-family: var(--smooth-font);
-    border: var(--secondary-bg-color) 0.25em solid;
     min-width: 30%;
     animation: animatetop 1s;
+}
+
+.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 2px solid var(--success-border);
+}
+
+.fail {
+    background-color: var(--fail-bg);
+    color: var(--fail-text);
 }
 
 @keyframes animatetop{
@@ -838,7 +851,7 @@ html {
     }
     .banner {
         padding: 1em;
-        min-width: 40%;
+        min-width: 27.5%;
     }
 }
 @media screen and (max-width: 1250px) {
