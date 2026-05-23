@@ -31,7 +31,7 @@ export function PortContributions() {
     const x86VGAAbout = `Added earlyprint/VMM prints via a VGA device for seL4. One of the big challenges with x86 and seL4 is the lack of COM ports on newer devices.`
     const [features, setFeatures] = useState([
         createFeature("PL011 Vuart", armpl011About, "purple", "pl011_vuart"),
-        createFeature("x86 VGA Console", x86VGAAbout, "blue", "x86_vga")
+        createFeature("VGA Console", x86VGAAbout, "blue", "x86_vga")
     ]);
 
     useEffect(() => {
