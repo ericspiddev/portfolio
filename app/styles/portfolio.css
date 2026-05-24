@@ -597,6 +597,10 @@ html {
     margin-top: 25px;
 }
 
+.form-input-field label {
+    font-size: 1.5rem;
+}
+
 .form-input-field input:focus, textarea:focus, label:focus {
     outline: none;
     box-shadow: 0 0 8px rgba(255, 140, 0, 0.6);
