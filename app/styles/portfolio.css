@@ -1099,6 +1099,13 @@ html {
 }
 
 
+@media screen and (max-width: 650px) {
+    .about-intro h1 {
+        font-size: 0.9em;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
     html {
         font-size: var(--sm-screen-rem);
@@ -1131,11 +1138,11 @@ html {
     }
 
     .feature {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
     }
 
     .contributions-container {
-        grid-template-columns: 80%;
+        grid-template-columns: 40%;
     }
 
 }
@@ -1203,12 +1210,17 @@ html {
         margin: 1em;
     }
 
-
     .contributions-container {
-        grid-template-columns: 80%;
+        grid-template-columns: 60%;
     }
+
 }
 
+@media screen and (max-width: 400px) {
+    .contributions-container {
+        grid-template-columns: 70%;
+    }
+}
 
 @media screen and (max-width: 350px) {
     html {
