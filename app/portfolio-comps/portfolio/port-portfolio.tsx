@@ -17,14 +17,14 @@ export function PortPortfolio() {
                     <div className="portfolio-tabs section-text-common">
                         <div className="portfolio-tab-header">
                         <button className="clickable portfolio-tab"
-                                id={tab == portfolioTabTypes.PERSONAL ? 'active-tab': ''}
-                                onClick = {() => setTab(portfolioTabTypes.PERSONAL)}>
-                        Personal
-                        </button>
-                        <button className="clickable portfolio-tab"
                                 id={tab == portfolioTabTypes.PROFESSIONAL ? 'active-tab': ''}
                                 onClick = {() => setTab(portfolioTabTypes.PROFESSIONAL)}>
                         Professional
+                        </button>
+                        <button className="clickable portfolio-tab"
+                                id={tab == portfolioTabTypes.PERSONAL ? 'active-tab': ''}
+                                onClick = {() => setTab(portfolioTabTypes.PERSONAL)}>
+                        Personal
                         </button>
                         <button className="clickable portfolio-tab"
                                 id={tab == portfolioTabTypes.EDUCATIONAL ? 'active-tab': ''}
