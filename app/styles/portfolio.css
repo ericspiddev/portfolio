@@ -306,12 +306,17 @@ html {
     border: 0.25em solid black;
 }
 
-.project-modal-header{
+.project-modal-header {
     display: flex;
     flex-direction: row-reverse;
     gap: 2em;
     justify-content: space-between;
 }
+
+.project-modal-header p {
+    font-family: var(--header-font);
+}
+
 .project-modal-tabs{
     display: flex;
     gap: 2em;
@@ -344,10 +349,13 @@ html {
 }
 
 .active-tab {
-    color: var(--accent-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 5px;
 }
 
 .modal-project-title {
+    margin: 0.25em 0 0.5em 0;
     font-size: 2.5em;
     text-align: start;
     font-style: italic;
@@ -374,8 +382,8 @@ html {
 
 .project-modal-tabs p{
     font-size: 1.1em;
-    font-family: var(--sharp-font);
-    padding: 0.5em;
+    font-family: var(--header-font);
+    padding: 0.65em 1.75em;
     border-radius: 1em;
     background-color: var(--secondary-bg-color);
 }
