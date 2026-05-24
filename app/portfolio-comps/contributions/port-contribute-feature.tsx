@@ -52,9 +52,9 @@ export function PortContributeFeature({ feature }){
             <div>
                 <button className="feature-learn-more clickable" onClick={showProjectModal}> Learn More </button>
             </div>
+        </div>
             <PortContributeModal showModal={showModal} closeModal={hideProjectModal} feature={feature}
                 mergedMsg={mergedSymbol} reviewMsg={underReviewSymbol}/>
-        </div>
         </>
     );
 }

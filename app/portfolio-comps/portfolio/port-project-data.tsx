@@ -199,7 +199,7 @@ const droneDemoResults= [
     "Setup Linux ip routing rules to allow mission planner to communicate with the docker container running in a VM",
 ]
 const hwMgrDesc = `
-hw-mgr was a tool I developed for Dornerworks (DW) as an intern. During Covid-19 many people were forced to work remotely and this caused
+Hw-mgr is a tool I developed for Dornerworks (DW) as an intern. During Covid-19 many people were forced to work remotely and this caused
 a challenge when sharing hardware. One of my first tasks when starting at DW was to create a remote system that allowed for users
 to check out, test on, and return hardware virtually. Utilizing DW's CI server at the time I wrote a python application that allowed users to share
 hardware while SSH'd into the server. Using Gitlab's API I was able to lockdown hardware that was currently in use for a CI/CD pipeline as
