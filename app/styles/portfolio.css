@@ -249,6 +249,8 @@ html {
     list-style-type: none;
     max-width: 50ch;
     margin-right: 0.5em;
+    height: 80%;
+    overflow-y: scroll;
 }
 
 .project-result-list li::before {
@@ -299,7 +301,6 @@ html {
     width: 70vw;
     height: 75vh;
     padding: 1em;
-    overflow: auto;
     font-size: 1.1rem;
     border: 0.25em solid black;
 }
@@ -328,11 +329,16 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
+    object-fit: contain;
     width: 100%;
+    max-height: 90%;
 }
 
 .port-video {
+    display: block;
+    object-fit: contain;
     max-width: 80%;
+    aspect-ratio: 16/9;
     padding: 0.5em;
 }
 
@@ -349,11 +355,11 @@ html {
 .active-tab {
     text-decoration: underline;
     text-decoration-color: var(--accent-color);
-    text-decoration-thickness: 5px;
+    text-decoration-thickness: 3px;
 }
 
 .modal-project-title {
-    margin: 0.25em 0 0.5em 0;
+    margin: 0.25em 0 0.25em 0;
     font-size: 2.5em;
     text-align: start;
     font-style: italic;
@@ -365,6 +371,7 @@ html {
     justify-content: space-between;
     gap: 0.25em;
     padding: 0.25em;
+    height: 90%;
 }
 
 .modal-content-fullscreen {
@@ -383,7 +390,7 @@ html {
     background-color: var(--secondary-bg-color);
 
     font-size: 1.1em;
-    padding: 0.65em 1.75em;
+    padding: 0.65em 1.5em;
     border-radius: 1em;
 }
 
@@ -408,8 +415,15 @@ html {
 .modal-project-desc {
     font-size: 1em;
     max-width: 50ch;
+    height: 80%;
     margin-right: 1.5em;
+    padding-bottom: 1em;
     align-self: center;
+    overflow-y: auto;
+    line-height: 2;
+}
+
+.modal-scrollable {
     overflow-y: auto;
 }
 
@@ -866,6 +880,25 @@ html {
         padding: 1em;
         min-width: 27.5%;
     }
+    .project-modal {
+        overflow-y: auto;
+    }
+    .modal-project-desc {
+        margin-right: 0;
+        overflow-y: visible;
+    }
+    .project-result-list {
+        overflow-y: visible;
+    }
+
+    .port-video {
+        aspect-ratio: auto;
+    }
+
+    .modal-preview-img {
+        margin-top: 2em;
+        padding-bottom: 3em;
+    }
 }
 @media screen and (max-width: 1250px) {
     html {
@@ -1011,6 +1044,13 @@ html {
 
 }
 
+
+@media screen and (max-height: 750px) {
+    .project-modal {
+        overflow-y: auto;
+    }
+}
+
 @media screen and (max-width: 750px) {
     .port-projects{
         grid-template-columns: repeat(2, 1fr);
@@ -1073,6 +1113,8 @@ html {
     }
 
     .modal-preview-img {
+        margin-top: 0;
+        padding-bottom: 1em;
         height: 15em;
         width: 15em;
     }
@@ -1083,8 +1125,11 @@ html {
     }
 
     .modal-section-header{
+        font-family: var(--header-font);
         font-size: 2em;
         text-decoration: underline;
+        text-decoration-color: var(--accent-color);
+        text-decoration-thickness: 3px;
         align-self: flex-start;
     }
 

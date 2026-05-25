@@ -54,7 +54,7 @@ export function PortProjectModal({project, closeModal, showModal}){
                      <ProjModalTabs tabs={tabs} setTab={setTabIndex} currTab={tab}/>
                     </div>
                 </div>
-                <div className="modal-content">
+                <div className={`modal-content ${tab == 2 ? 'modal-scrollable' : ''}`}>
                     <div className={`${tab == 2 ? 'full' : ''}`}>
                         <p className="modal-project-title"> {project.title}</p>
                         <ProjModalTabContent tabs={tabs} currTab={tab}/>

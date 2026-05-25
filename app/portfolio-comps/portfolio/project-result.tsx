@@ -1,6 +1,5 @@
 export function PortProjectResult({results}) {
     return (
-        <div>
             <ul className="project-result-list">
 
             {
@@ -9,6 +8,5 @@ export function PortProjectResult({results}) {
                 ))
             }
             </ul>
-        </div>
     );
 }
