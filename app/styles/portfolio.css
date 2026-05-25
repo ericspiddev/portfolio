@@ -1034,6 +1034,7 @@ html {
     .commit-count {
         font-size: 0.8rem;
         padding: 1em;
+        white-space: nowrap;
     }
 
     .project-modal-tabs p {
