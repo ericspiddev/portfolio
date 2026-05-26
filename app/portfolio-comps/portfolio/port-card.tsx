@@ -22,12 +22,6 @@ export function PortCard({project, currentTab,}) {
         <div className="project-card-body">
             <h1 className="project-card-title"> {project.title} </h1>
         </div>
-        <div className="project-card-footer">
-            <PortTag tagText="Embed" tagColor="green"/>
-            <PortTag tagText="Web" tagColor="blue"/>
-            <PortTag tagText="tag" tagColor="red"/>
-        </div>
-
     </div>
         <PortProjectModal project={project} showModal={showModal} closeModal={hideProjectModal}/>
     </>
