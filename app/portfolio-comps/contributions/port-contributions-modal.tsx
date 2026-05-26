@@ -11,15 +11,15 @@ export function PortContributeModal({closeModal, showModal, feature, mergedMsg, 
     return (
     <>
         <div className={`project-modal-overlay ${showModal ? '' : 'hidden'}`}>
-            <div className={`project-modal`}>
+            <div className={`project-modal modal-scrollable`}>
                 <div className="project-modal-header">
                     <div className="modal-close">
                         <button className="clickable" onClick={closeModal}><FontAwesomeIcon icon={faX}/></button>
                     </div>
-                    <p className="modal-title">{feature.displayTitle}</p>
+                    <p className="feature-modal-title">{feature.displayTitle}</p>
                 </div>
                 <div className="contribute-modal-body">
-                <p> {feature.about} </p>
+                <p class="feature-modal-about"> {feature.about} </p>
                 <div className="modal-repo">
                 {
                     feature.pull_requests.map(pull_request => <PortContributePullRequest key={pull_request.id} pull_request={pull_request}

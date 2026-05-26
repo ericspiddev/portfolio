@@ -736,8 +736,26 @@ html {
     background-color: var(--accent-color-bg);
 }
 
+.feature-modal-title {
+    font-family: var(--header-font);
+    font-size: 2em;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
+    text-decoration-thickness: 4px;
+}
+
+.feature-modal-about {
+    font-family: var(--smooth-font);
+    font-size: 1.2em;
+}
+
 .mr-status {
     margin-right: 0.5em;
+}
+
+.modal-mr-status {
+    text-align: right;
+    font-family: var(--header-font);
 }
 
 .commit-count {
@@ -749,14 +767,13 @@ html {
 }
 
 .commit {
-    margin-left: 1.25em;
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    padding-top: 0.5em;
+    justify-content: flex-start;
+    gap: 5em;
+    margin-left: 5em;
+    padding: 1.5em 0;
     margin-bottom: 0.75em;
-    font-family: var(--sharp-font), monospace;
+    font-family: var(--smooth-font), monospace;
 }
 
 .feature-title { /*This is being used in two spots we should fix that*/
@@ -773,10 +790,22 @@ html {
 
 .commit-list {
     background-color: var(--secondary-bg-color);
-    padding: 0.25em;
+    border-radius: 0.75em;
+    padding: 0.5em;
+    margin-bottom: 2em;
 }
+
+.commit-repo {
+    font-family: var(--header-font);
+    display: flex;
+    font-size: 1.2em;
+    gap: 0.75em;
+    padding: 0.5em 1em;
+}
+
 .commit-message {
     width: 50ch;
+    flex-grow: 1;
 }
 
 .commit-author {
@@ -789,10 +818,10 @@ html {
     text-decoration: underline;
 }
 .repo-info{
-    font-size: 1.2em;
-    display: flex;
-    gap: 0.5em;
+    font-size: 1.4em;
     margin-top: 0.5em;
+    padding-right: 1em;
+    text-align: right;
 }
 
 .commit-img {
@@ -1024,6 +1053,7 @@ html {
         width: 60%;
     }
     .commit-message {
+        margin-right: 1em;
         width: 25ch;
     }
 
@@ -1041,6 +1071,11 @@ html {
         font-size: 0.9em;
         padding: 0.65em 1.75em;
         border-radius: 1em;
+    }
+
+    .commit {
+        gap: 2.5em;
+        margin-left: 2.5em;
     }
 
 }
@@ -1142,6 +1177,11 @@ html {
         width: 15ch;
     }
 
+    .commit {
+        gap: 5em;
+        margin-left: 4em;
+    }
+
 }
 
 
@@ -1235,9 +1275,11 @@ html {
     .about-intro {
         font-size: 4rem;
     }
+
     .commit {
-        justify-content: space-between;
-        font-size: 10px;
+        font-size: 1.1rem;
+        gap: 4em;
+        margin-left: 4em;
     }
 
     .commit-message {

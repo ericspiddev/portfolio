@@ -15,7 +15,10 @@ export function PortContributeFeature({ feature }){
         isFullyMerged(feature.pull_requests);
     }, [feature])
     const mergedSymbol = String.fromCodePoint(0x1f7e2)
-    const underReviewSymbol = String.fromCodePoint(0x1f7e1)
+    const mergedMsg = "Merged " + mergedSymbol
+
+    const inReviewSymbol = String.fromCodePoint(0x1f7e1)
+    const inReviewMsg = "In Review " + inReviewSymbol
 
     const [isMerged, setIsMerged] = useState(false);
     function isFullyMerged(pull_requests) {
@@ -46,7 +49,7 @@ export function PortContributeFeature({ feature }){
                  {feature.displayTitle}
             </div>
                 <div className="commit-count" title={ isMerged ? 'Merged' : 'In Review'}>
-                    <span className="mr-status"> {isMerged ? `${mergedSymbol}` : `${underReviewSymbol}`} </span>
+                    <span className="mr-status"> {isMerged ? `${mergedSymbol}` : `${inReviewSymbol}`} </span>
                     {getCommitTotals(feature.pull_requests)} commits
                 </div>
             <div>
@@ -54,7 +57,7 @@ export function PortContributeFeature({ feature }){
             </div>
         </div>
             <PortContributeModal showModal={showModal} closeModal={hideProjectModal} feature={feature}
-                mergedMsg={mergedSymbol} reviewMsg={underReviewSymbol}/>
+                mergedMsg={mergedMsg} reviewMsg={inReviewMsg}/>
         </>
     );
 }
