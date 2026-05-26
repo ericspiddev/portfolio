@@ -1,0 +1,34 @@
+{
+  "project": "seL4",
+  "camkes-vm": {
+    "commits": [
+      {
+        "sha": "8596294032606fb36f4bd0625d08affd6b7e0455",
+        "message": "VM_Arm: add pl011 vuart module",
+        "author": "ericspidledw"
+      }
+    ],
+    "is_merged": false
+  },
+  "seL4_projects_libs": {
+    "commits": [
+      {
+        "sha": "9d3fdd74d7372f7d818cbeed9b4217a055da644f",
+        "message": "pl011_vuart: add generic arm amba pl011 virtual uart device",
+        "author": "ericspidledw"
+      },
+      {
+        "sha": "3b0698cf9d553d63e4768dbad158a36192a9e799",
+        "message": "pl011_vuart: add zynqmp platform support",
+        "author": "ericspidledw"
+      },
+      {
+        "sha": "07399071517d99811915ae0867c8693aa552b1b5",
+        "message": "pl011_vuart: add qemu-arm-virt support",
+        "author": "ericspidledw"
+      }
+    ],
+    "is_merged": false
+  }
+}
+

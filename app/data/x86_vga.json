@@ -1,0 +1,23 @@
+{
+  "project": "seL4",
+  "seL4": {
+    "commits": [
+      {
+        "sha": "0f798639b49c29b1bb0c6c4bb1f0a6ce896506f2",
+        "message": "x86: add VGA as possible earlyprint device",
+        "author": "ericspidledw"
+      }
+    ],
+    "is_merged": false
+  },
+  "util_libs": {
+    "commits": [
+      {
+        "sha": "5c0fa3d215216e87c4f34593a3fe2baddcb67f5d",
+        "message": "pc99,libplatsupport: rename ega --> vga to keep device names consistent",
+        "author": "ericspidledw"
+      }
+    ],
+    "is_merged": false
+  }
+}

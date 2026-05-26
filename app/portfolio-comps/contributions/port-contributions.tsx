@@ -3,6 +3,8 @@ import {PortContributeFeature} from "./port-contribute-feature";
 import {vuartBackendData, x86VgaBackendData} from "./port-contributions-data";
 import {useState, useEffect} from "react";
 import {apiUrl} from "../../env/env";
+import vga from `../../data/x86_vga.json`;
+import pl011 from `../../data/pl011_vuart.json`;
 
 interface Commit {
     id : number;
@@ -65,16 +67,28 @@ export function PortContributions() {
     async function getProjectContributions(featureName)
     {
         let ret = {}
-        let req = `${apiUrl}/api/62567c58947/contributions/${featureName}` // make the request PER feature
-        let contributions = {}
-        try {
-            let res = await fetch(req);
-            contributions = await res.json();
-        } catch (error) {
-            console.error("Something went wrong getting contributions " + error);
+        if (import.meta.env.DEV) {
+            let data = {}
+            if (featureName == "x86_vga") {
+                data = vga;
+            } else if (featureName == "pl011_vuart") {
+                data = pl011;
+            }
+            ret["project"] = data["project"];
+            ret["prs"] = requestToPullRequest(data);
         }
-        ret["project"] = contributions["project"];
-        ret["prs"] = requestToPullRequest(contributions);
+        else {
+            let req = `${apiUrl}/api/62567c58947/contributions/${featureName}` // make the request PER feature
+            let contributions = {}
+            try {
+                let res = await fetch(req);
+                contributions = await res.json();
+            } catch (error) {
+                console.error("Something went wrong getting contributions " + error);
+            }
+            ret["project"] = contributions["project"];
+            ret["prs"] = requestToPullRequest(contributions);
+        }
         return ret;
     }
 
