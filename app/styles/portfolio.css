@@ -875,7 +875,7 @@ html {
     border-radius: 1em;
     font-family: var(--smooth-font);
     min-width: 30%;
-    animation: animatetop 1s;
+    animation: opacity-animatetop 1s;
 }
 
 .success {
@@ -889,7 +889,7 @@ html {
     color: var(--fail-text);
 }
 
-@keyframes animatetop{
+@keyframes opacity-animatetop{
     from{top:-300px;opacity:0}
     to{top:2.5em;opacity:1}
 }
