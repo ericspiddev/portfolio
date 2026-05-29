@@ -1263,6 +1263,10 @@ html {
         grid-template-columns: 40%;
     }
 
+    .hamburger-menu {
+        height: 50vh;
+    }
+
 }
 
 @media screen and (max-width: 450px) {
