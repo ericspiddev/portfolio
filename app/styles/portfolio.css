@@ -894,6 +894,11 @@ html {
     to{top:2.5em;opacity:1}
 }
 
+@keyframes animatetop{
+    from{top:0;opacity:1}
+    to{top:2.9em;opacity:1}
+}
+
 @media screen and (max-width: 1800px) {
     .port-projects{
             grid-template-columns: repeat(4, 1fr);
@@ -982,17 +987,29 @@ html {
     }
 
     .hamburger-menu {
-        display: flex; /* Hide menu items by default */
+        display: flex;
         font-family: var(--header-font), serif;
-        background-color: var(--accent-color-bg);
+        background-color: var(--bg-color);
         font-size: 1.2rem;
         text-align: center;
         position: absolute;
         top: 2.9em;
+        width: 100%;
+        height: 40vh;
         padding: 1.2em;
         right:0;
         z-index: 3;
         flex-direction: column;
+        animation: animatetop 0.5s
+    }
+
+    .hamburger-links {
+        font-size: 1.25rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
     }
 
     .modal-content {
@@ -1008,9 +1025,17 @@ html {
         grid-template-columns: repeat(3, 1fr);
     }
 
-    .hamburger-menu li {
-        border-bottom: 0.05em solid white;
+    .hamburger-menu a {
+        font-family: var(--header-font);
         margin-bottom: 0.75em;
+        padding: 1em;
+        border-radius :1em;
+        background-color: var(--secondary-bg-color);
+        width: 60%;
+    }
+
+    .hamburger-menu span {
+        border-bottom: 3px solid var(--accent-color);
     }
 
     .filler {

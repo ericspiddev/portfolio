@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {useState, useRef, useEffect} from 'react';
-import {faBars, faCircleInfo, faCode, faCodeCommit, faComment, faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import {faBars, faCircleInfo, faCode, faCodeCommit, faComment, faEnvelope, faX} from "@fortawesome/free-solid-svg-icons";
 
 
 export function HamburgerMenu() {
@@ -9,8 +9,13 @@ export function HamburgerMenu() {
     const buttonRef = useRef(null);
 
     const handleHamburgerClick = () => {
-        setShow(!show);
+        setShow(!show)
     }
+
+    const closeHamburger = () => {
+        setShow(false)
+    }
+
 
     useEffect(() => {
         function closeOnOutsideClick(event) {
@@ -29,16 +34,17 @@ export function HamburgerMenu() {
     return (
     <>
         <div className="hamburger-toggle">
-            <FontAwesomeIcon icon={faBars} onClick={handleHamburgerClick} ref={buttonRef} size="lg"/>
+            <FontAwesomeIcon icon={faBars} onClick={handleHamburgerClick} size="lg" className={`${show ? 'hidden' : ''}`}/>
+            <FontAwesomeIcon icon={faX} onClick={handleHamburgerClick} ref={buttonRef} size="lg" className={`${show ? '' : 'hidden'}`}/>
         </div>
 
-        <div className= {show ? 'hamburger-menu' : 'hidden'} ref={menuRef}>
-        <ul>
-            <li onClick={handleHamburgerClick} ><a href="#about-section"> <FontAwesomeIcon icon={faCircleInfo}/> About</a> </li>
-            <li onClick={handleHamburgerClick}><a href="#portfolio-section"> <FontAwesomeIcon icon={faCode}/> Portfolio </a></li>
-            <li onClick={handleHamburgerClick}><a href="#contact-section"> <FontAwesomeIcon icon={faEnvelope}/> Contact</a></li>
-            <li onClick={handleHamburgerClick}> <a href="#blog-section"> <FontAwesomeIcon icon={faComment}/> Blog</a></li>
-            <li onClick={handleHamburgerClick}> <a href="#contributions-section"> <FontAwesomeIcon icon={faCodeCommit}/> Contributions</a></li>
+        <div className={`${show ? 'hamburger-menu' : 'hidden'}` } ref={menuRef}>
+        <ul className="hamburger-links">
+            <a href="#about-section" onClick={closeHamburger}> <li> <span> <FontAwesomeIcon icon={faCircleInfo}/> About </span> </li> </a>
+            <a href="#portfolio-section" onClick={closeHamburger}> <li> <span> <FontAwesomeIcon icon={faCode}/> Portfolio </span></li> </a>
+            <a href="#contact-section" onClick={closeHamburger}> <li> <span> <FontAwesomeIcon icon={faEnvelope}/> Contact </span></li> </a>
+            <a href="#blog-section" onClick={closeHamburger}> <li> <span> <FontAwesomeIcon icon={faComment}/> Blog </span></li> </a>
+            <a href="#contributions-section" onClick={closeHamburger}> <li> <span> <FontAwesomeIcon icon={faCodeCommit}/> Contributions </span> </li></a>
         </ul>
         </div>
     </>
