@@ -906,6 +906,10 @@ html {
 }
 
 @media screen and (max-width: 1500px) {
+
+    #code-background {
+        background-position: center center;
+    }
     .modal-content {
         display: flex;
         flex-direction: column;
@@ -1213,6 +1217,9 @@ html {
 @media screen and (max-width: 650px) {
     .about-intro h1 {
         font-size: 0.9em;
+    }
+    .portfolio-header {
+        text-decoration-thickness: 3px;
     }
 }
 
