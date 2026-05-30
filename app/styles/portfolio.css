@@ -999,7 +999,7 @@ html {
         position: absolute;
         top: 2.9em;
         width: 100%;
-        height: 40vh;
+        height: auto;
         padding: 1.2em;
         right:0;
         z-index: 3;
@@ -1113,6 +1113,13 @@ html {
 @media screen and (max-height: 750px) {
     .project-modal {
         overflow-y: auto;
+    }
+}
+
+@media screen and (max-height: 600px) {
+    .hamburger-menu a {
+        padding: 0.75em;
+        width: 50%;
     }
 }
 
