@@ -53,7 +53,7 @@ export function PortContributeFeature({ feature }){
                     {getCommitTotals(feature.pull_requests)} commits
                 </div>
             <div>
-                <button className="feature-learn-more clickable" onClick={showProjectModal}> Learn More </button>
+                <button className="feature-learn-more clickable sm-port-button" onClick={showProjectModal}> Learn More </button>
             </div>
         </div>
             <PortContributeModal showModal={showModal} closeModal={hideProjectModal} feature={feature}

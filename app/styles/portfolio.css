@@ -26,6 +26,22 @@ body {
     background-color: #000000
 }
 
+.port-button {
+    box-shadow: inset 0 3px hsla(0, 0%, 100%, 0.25);
+}
+
+.port-button:active {
+    box-shadow: none;
+}
+
+.sm-port-button {
+    box-shadow: inset 0 1px hsla(0, 0%, 100%, 0.25);
+}
+
+.sm-port-button:active {
+    box-shadow: none;
+}
+
 .clickable:hover {
     cursor: pointer;
 }
@@ -37,6 +53,7 @@ body {
 .section-content {
     background-color: var(--secondary-bg-color);
     border-radius: 25px;
+    box-shadow: inset 0 -4px hsla(0, 0%, 90%, .15);
 }
 
 .underline-header {
@@ -1004,7 +1021,9 @@ html {
         right:0;
         z-index: 3;
         flex-direction: column;
-        animation: animatetop 0.5s
+        animation: animatetop 0.5s;
+        border-bottom: 5px solid var(--secondary-bg-color);
+        box-shadow: 0 0 10px black;
     }
 
     .hamburger-links {
@@ -1036,6 +1055,7 @@ html {
         border-radius :1em;
         background-color: var(--secondary-bg-color);
         width: 60%;
+        box-shadow: inset 0 -1px hsla(0, 0%, 100%, 0.15);
     }
 
     .hamburger-menu span {
@@ -1368,6 +1388,13 @@ html {
 
     .tech-highlight {
         gap: 1em;
+    }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+    .hamburger-menu {
+        height: 80vh;
+        overflow-y: scroll;
     }
 }
 

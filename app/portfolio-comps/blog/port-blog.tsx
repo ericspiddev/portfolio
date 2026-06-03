@@ -15,7 +15,7 @@ export function PortBlog() {
                             <PortBlogEntry blog={blog} key={blog.id}/>))
                         }
                     </div>
-                    <div id="blogs-carousel">
+                    <div id="blogs-carousel" className="section-content">
                        <PortCarousel items={blogs} maxIndex={blogs.length}/>
                     </div>
                     <div className="filler">
