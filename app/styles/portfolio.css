@@ -1022,8 +1022,7 @@ html {
         z-index: 3;
         flex-direction: column;
         animation: animatetop 0.5s;
-        border-bottom: 5px solid var(--secondary-bg-color);
-        box-shadow: 0 0 10px black;
+        box-shadow: 0px 5px 5px black;
     }
 
     .hamburger-links {
